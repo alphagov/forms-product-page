@@ -56,14 +56,8 @@ div.feature-panel {
 // scss-lint:enable IdSelector
 .hero-alternative-action {
   @include govuk-font($size: 19);
-  white-space: nowrap;
   margin-bottom: govuk-spacing(3);
   position: relative;
-
-  @include govuk-media-query(tablet) {
-    top: govuk-spacing(2);
-    margin-left: govuk-spacing(3);
-  }
 }
 
 .hero-breadcrumb-banner {
@@ -84,6 +78,15 @@ div.feature-panel {
   }
 }
 
+@include govuk-media-query($from: tablet) {
+  #index-hero-body {
+    .govuk-button {
+      margin-bottom: govuk-spacing(1);
+      margin-right: govuk-spacing(1);
+    }
+  }
+}
+
 // scss-lint:disable IdSelector
 #main-content {
   display: block;
@@ -92,14 +95,8 @@ div.feature-panel {
 // scss-lint:enable IdSelector
 .hero-alternative-action {
   @include govuk-font($size: 19);
-  white-space: nowrap;
   margin-bottom: govuk-spacing(3);
   position: relative;
-
-  @include govuk-media-query(tablet) {
-    top: govuk-spacing(2);
-    margin-left: govuk-spacing(3);
-  }
 }
 
 .hero-breadcrumb-banner {
