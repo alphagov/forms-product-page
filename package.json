@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "govuk-frontend": "^4.1.0"
+  },
+  "scripts": {
+    "copy-assets": "cp -R node_modules/govuk-frontend/govuk/assets source/assets",
+    "start": "yarn run copy-assets && bundle exec middleman server",
+    "build": "yarn run copy-assets && bundle exec middleman build"
+  }
+}
