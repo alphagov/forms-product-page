@@ -81,7 +81,7 @@ div.feature-panel {
 @include govuk-media-query($from: tablet) {
   #index-hero-body {
     .govuk-button {
-      margin-bottom: govuk-spacing(1);
+      margin-bottom: govuk-spacing(2);
       margin-right: govuk-spacing(1);
     }
   }
