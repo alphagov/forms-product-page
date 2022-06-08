@@ -69,10 +69,12 @@
 
   &__description {
     @include govuk-font($size: 24);
+    color: govuk-colour("white");
   }
 
   &__paragraph {
     @include govuk-font($size: 19);
+    color: govuk-colour("white");
   }
 
   &__title,
