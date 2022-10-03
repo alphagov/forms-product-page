@@ -69,11 +69,11 @@
             <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
 
             <ul id="navigation" class="govuk-header__navigation-list">
-              <li class="govuk-header__navigation-item">
+              <% content_tag :li, :class => ["govuk-header__navigation-item",  current_page.url == ('/features/') ? "govuk-header__navigation-item--active" : ""] do %>
                 <a class="govuk-header__link" href="/features">
                   Features
                 </a>
-              </li>
+              <% end %>
             </ul>
           </nav>
         </div>
