@@ -5,6 +5,18 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :external_pipeline,
+  name: :copy_assets,
+  command: "cp -R node_modules/govuk-frontend/govuk/assets source",
+  source: "source/assets",
+  latency: 1
+
+activate :external_pipeline,
+  name: :rollup,
+  command: "npx esbuild source/javascripts/site.js --bundle --outfile=source/javascripts/site.min.js --minify --target=es5 #{"--watch --sourcemap" unless build?}",
+  source: "source/javascripts",
+  latency: 1
+
 activate :directory_indexes
 
 # Layouts

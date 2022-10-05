@@ -1,1 +1,3 @@
-// This is where it all goes :)
+import { initAll } from 'govuk-frontend'
+
+initAll()
