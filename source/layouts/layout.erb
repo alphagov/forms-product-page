@@ -1,34 +1,64 @@
-<!doctype html>
-<html lang="en" class="govuk-template ">
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title><%= current_page.data.title %> - GOV.UK Forms</title>
     <% if current_page.data.description %>
-      <meta name="description" content="<%= current_page.data.description %>">
+    <meta name="description" content="<%= current_page.data.description %>" />
     <% end %>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="theme-color" content="#0b0c0c">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0b0c0c" />
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+    <link
+      rel="shortcut icon"
+      sizes="16x16 32x32 48x48"
+      href="/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="mask-icon"
+      href="/assets/images/govuk-mask-icon.svg"
+      color="#0b0c0c"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/govuk-apple-touch-icon-180x180.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="167x167"
+      href="/assets/images/govuk-apple-touch-icon-167x167.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/assets/images/govuk-apple-touch-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/images/govuk-apple-touch-icon.png"
+    />
 
     <%= stylesheet_link_tag "site" %>
 
-    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+    <meta
+      property="og:image"
+      content="/assets/images/govuk-opengraph-image.png"
+    />
   </head>
-    <body class="govuk-template__body">
+  <body class="govuk-template__body">
     <script>
       document.body.className = document.body.className
         ? document.body.className + " js-enabled"
         : "js-enabled";
     </script>
-       <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
     <header
       class="govuk-header"
       role="banner"
@@ -65,14 +95,22 @@
           </a>
         </div>
         <div class="govuk-header__content">
-          <nav aria-label="Menu" class="govuk-header__navigation ">
-            <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
+          <nav aria-label="Menu" class="govuk-header__navigation">
+            <button
+              type="button"
+              class="govuk-header__menu-button govuk-js-header-toggle"
+              aria-controls="navigation"
+              aria-label="Show or hide menu"
+              hidden
+            >
+              Menu
+            </button>
 
             <ul id="navigation" class="govuk-header__navigation-list">
-              <% content_tag :li, :class => ["govuk-header__navigation-item",  current_page.url == ('/features/') ? "govuk-header__navigation-item--active" : ""] do %>
-                <a class="govuk-header__link" href="/features">
-                  Features
-                </a>
+              <% content_tag :li, :class => ["govuk-header__navigation-item",
+              current_page.url == ('/features/') ?
+              "govuk-header__navigation-item--active" : ""] do %>
+              <a class="govuk-header__link" href="/features"> Features </a>
               <% end %>
             </ul>
           </nav>
@@ -89,7 +127,9 @@
             <h2 class="govuk-visually-hidden">Support links</h2>
             <ul class="govuk-footer__inline-list">
               <li class="govuk-footer__inline-list-item">
-                <a class="govuk-footer__link" href="/accessibility">Accessibility</a>
+                <a class="govuk-footer__link" href="/accessibility"
+                  >Accessibility</a
+                >
               </li>
               <li class="govuk-footer__inline-list-item">
                 <a class="govuk-footer__link" href="/cookies">Cookies</a>
@@ -101,7 +141,9 @@
 
             <div class="govuk-footer__meta-custom">
               Built by the
-              <a href="https://www.gov.uk/government/organisations/government-digital-service" class="govuk-footer__link"
+              <a
+                href="https://www.gov.uk/government/organisations/government-digital-service"
+                class="govuk-footer__link"
                 >Government Digital Service</a
               >
             </div>
