@@ -1,10 +1,12 @@
 {
   "dependencies": {
-    "govuk-frontend": "^4.1.0"
+    "govuk-frontend": "^4.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.10"
   },
   "scripts": {
-    "copy-assets": "cp -R node_modules/govuk-frontend/govuk/assets source",
-    "start": "yarn run copy-assets && bundle exec middleman server",
-    "build": "yarn run copy-assets && bundle exec middleman build"
+    "start": "bundle exec middleman server",
+    "build": "bundle exec middleman build"
   }
 }

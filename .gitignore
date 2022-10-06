@@ -5,3 +5,5 @@
 build/
 node_modules
 source/assets
+source/javascripts/site.min.js
+source/javascripts/site.min.js.map
