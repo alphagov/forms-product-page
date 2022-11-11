@@ -110,7 +110,12 @@
               <% content_tag :li, :class => ["govuk-header__navigation-item",
               current_page.url == ('/features/') ?
               "govuk-header__navigation-item--active" : ""] do %>
-              <a class="govuk-header__link" href="/features"> Features </a>
+                <a class="govuk-header__link" href="/features"> Features </a>
+              <% end %>
+              <% content_tag :li, :class => ["govuk-header__navigation-item",
+              current_page.url == ('/support/') ?
+              "govuk-header__navigation-item--active" : ""] do %>
+                <a class="govuk-header__link" href="/support"> Support </a>
               <% end %>
             </ul>
           </nav>
