@@ -3,10 +3,12 @@
     "govuk-frontend": "^4.3.1"
   },
   "devDependencies": {
-    "esbuild": "^0.15.10"
+    "esbuild": "^0.15.10",
+    "standard": "17.1.0"
   },
   "scripts": {
     "start": "bundle exec middleman server",
-    "build": "bundle exec middleman build"
+    "build": "bundle exec middleman build",
+    "lint": "standard"
   }
 }
