@@ -13,7 +13,7 @@ activate :external_pipeline,
 
 activate :external_pipeline,
   name: :rollup,
-  command: "npx esbuild source/javascripts/site.js --bundle --outfile=source/javascripts/site.min.js --minify --target=es5 #{"--watch --sourcemap" unless build?}",
+  command: "npx esbuild source/javascripts/site.mjs --bundle --outfile=source/javascripts/site.min.js --minify --target=es5 --supported:const-and-let=true #{"--sourcemap" unless build?}#{" --watch" unless build? || config[:watcher_disable]}",
   source: "source/javascripts",
   latency: 1
 
