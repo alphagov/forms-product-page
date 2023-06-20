@@ -1,13 +1,18 @@
 # GOV.UK Forms Product Pages
 
-GOV.UK Forms Product Pages consist of the main product page content used for onboarding new users of GOV.UK Forms, and its supporting pages (for example, the accessibility statement and privacy policy). It is implemented as a Middleman app.
+GOV.UK Forms Product Pages consist of the main product page content used for
+onboarding new users of GOV.UK Forms, and its supporting pages (for example,
+the accessibility statement and privacy policy). It is implemented as a
+Middleman app.
 
 ## Before you start
 
 To run the project you will need to install:
 
-- [Ruby](https://www.ruby-lang.org/en/) - we use version 3 of Ruby. Before running the project, double check the [.ruby-version] file to see the exact version.
-- [Node.js](https://nodejs.org/en/) - the frontend build requires Node.js. We use Node 16 LTS versions.
+- [Ruby](https://www.ruby-lang.org/en/) - we use version 3 of Ruby. Before
+  running the project, double check the [.ruby-version] file to see the exact
+  version.
+- [Node.js](https://nodejs.org/en/) - the frontend build requires Node.js. We use Node 18 LTS versions.
 - [Yarn](https://yarnpkg.com/) - we use Yarn rather than `npm` to install and run the frontend.
 
 We recommend using a version manager to install and manage these, such as:
@@ -16,7 +21,7 @@ We recommend using a version manager to install and manage these, such as:
 - [nvm](https://github.com/nvm-sh/nvm) for Node.js
 - [asdf](https://github.com/asdf-vm/asdf) for both
 
-## Explain how to get started
+## To get started
 
 To run the project:
 
@@ -29,11 +34,35 @@ yarn
 
 # Then either:
 # 3a. Run the 'dev' task to start a local server for development
-yarn run dev
+yarn run start
 
 # or:
 # 3b: Run the 'build' task to generate the static site for deployment
 yarn run build
+```
+
+## Testing
+
+To run the tests:
+
+```bash
+# For just the unit tests:
+yarn run test:unit
+
+# to re-run the tests when files change:
+yarn run test:unit --watch
+
+# For the functional tests:
+yarn run test:functional
+
+# For both:
+yarn run tests
+```
+
+Run the linter with:
+
+```bash
+yarn run lint
 ```
 
 ## Support
