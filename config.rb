@@ -45,6 +45,8 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
+config[:service_name] = 'GOV.UK Forms'
+
 # helpers do
 #   def some_helper
 #     'Helping'
