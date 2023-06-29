@@ -8,8 +8,8 @@ export const CONSENT_STATUS = {
 
 export function loadConsentStatus () {
   const cookies = document.cookie ? document.cookie.split('; ') : []
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i].split('=')
+  cookies.forEach(function (rawCookie) {
+    cookie = cookies[i].split('=')
     if (cookie[0] === COOKIE_NAME) {
       if (cookie[1] === 'true') {
         return CONSENT_STATUS.GRANTED
@@ -17,7 +17,7 @@ export function loadConsentStatus () {
 
       return CONSENT_STATUS.DENIED
     }
-  }
+  })
 
   return CONSENT_STATUS.UNKNOWN
 }

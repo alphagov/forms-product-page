@@ -9,14 +9,13 @@
 export function deleteGoogleAnalyticsCookies () {
   const cookies = document.cookie ? document.cookie.split('; ') : []
   let i = 0
-  for (i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i]
+  cookies.forEach(function (cookie) {
     if (cookie.indexOf('_ga') === 0 || cookie.indexOf('_gid') === 0 || cookie.indexOf('_gat') === 0) {
       const domain = window.location.hostname
       const cookieToDelete = cookie.split('=')[0] + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domain
       document.cookie = cookieToDelete
     }
-  }
+  })
 }
 
 export function installAnalyticsScript (global) {
@@ -74,8 +73,8 @@ export function attachExternaLinkTracker () {
   // track external links
   window.addEventListener('load', function () {
     const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="https"]')
-    for (let i = 0; i < externalLinks.length; i++) {
-      externalLinks[i].addEventListener('click', function (event) {
+    externalLinks.forEach(function (externalLink) {
+      externalLink.addEventListener('click', function (event) {
         const target = event.target
         window.dataLayer.push({
           event: 'event_data',
@@ -89,6 +88,6 @@ export function attachExternaLinkTracker () {
           }
         })
       })
-    }
+    })
   })
 }

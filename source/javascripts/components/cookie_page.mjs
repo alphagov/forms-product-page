@@ -36,7 +36,7 @@ CookiePage.prototype.onSubmit = function (cb) {
 CookiePage.prototype.savePreferences = function (event) {
   event.preventDefault()
 
-  const selectedItem = this.$analyticsFieldset.querySelector('input[name=' + 'analytics' + ']:checked').value
+  const selectedItem = this.$analyticsFieldset.querySelector('input[name=analytics]:checked').value
 
   this.onSubmitCallback(selectedItem === 'yes')
   this.showSuccessNotification()
