@@ -8,7 +8,6 @@
 
 export function deleteGoogleAnalyticsCookies () {
   const cookies = document.cookie ? document.cookie.split('; ') : []
-  let i = 0
   cookies.forEach(function (cookie) {
     if (cookie.indexOf('_ga') === 0 || cookie.indexOf('_gid') === 0 || cookie.indexOf('_gat') === 0) {
       const domain = window.location.hostname
@@ -70,23 +69,20 @@ export function sendPageViewEvent () {
 }
 
 export function attachExternaLinkTracker () {
-  // track external links
-  window.addEventListener('load', function () {
-    const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="https"]')
-    externalLinks.forEach(function (externalLink) {
-      externalLink.addEventListener('click', function (event) {
-        const target = event.target
-        window.dataLayer.push({
-          event: 'event_data',
-          event_data: {
-            event_name: 'navigation',
-            external: true,
-            method: 'primary click',
-            text: target.innerText,
-            type: 'generic link',
-            url: target.href
-          }
-        })
+  const externalLinks = document.querySelectorAll('a[href^="http"], a[href^="https"]')
+  externalLinks.forEach(function (externalLink) {
+    externalLink.addEventListener('click', function (event) {
+      const target = event.target
+      window.dataLayer.push({
+        event: 'event_data',
+        event_data: {
+          event_name: 'navigation',
+          external: true,
+          method: 'primary click',
+          text: target.innerText,
+          type: 'generic link',
+          url: target.href
+        }
       })
     })
   })
