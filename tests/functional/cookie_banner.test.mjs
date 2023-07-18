@@ -5,7 +5,8 @@ describe('Cookie banner', () => {
   const cookieParam = {
     name: 'analytics_consent',
     value: 'true',
-    url: 'http://localhost:8888'
+    url: 'http://localhost:8888',
+    path: '/'
   }
 
   beforeEach(async () => {
