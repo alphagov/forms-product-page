@@ -42,13 +42,13 @@ describe('Cookie', () => {
     it('writes the correct value to the cookie when given true', () => {
       const fixedTestDate = new Date(2023, 1, 1, 0, 0, 0, 0)
       saveConsentStatus(true, fixedTestDate)
-      expect(window.document.cookie).toBe('analytics_consent=true; expires=Thu, 01 Feb 2024 00:00:00 GMT')
+      expect(window.document.cookie).toBe('analytics_consent=true; expires=Thu, 01 Feb 2024 00:00:00 GMT; path=/')
     })
 
     it('writes the correct value to the cookie when given false', () => {
       const fixedTestDate = new Date(2023, 1, 1, 0, 0, 0, 0)
       saveConsentStatus(false, fixedTestDate)
-      expect(window.document.cookie).toBe('analytics_consent=false; expires=Thu, 01 Feb 2024 00:00:00 GMT')
+      expect(window.document.cookie).toBe('analytics_consent=false; expires=Thu, 01 Feb 2024 00:00:00 GMT; path=/')
     })
   })
 
