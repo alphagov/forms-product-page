@@ -1,7 +1,0 @@
----
-applications:
-  - name: forms-product-pages
-    buildpack: staticfile_buildpack
-    memory: 256M
-    instances: 2
-    stack: cflinuxfs3
