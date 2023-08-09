@@ -20,6 +20,12 @@ group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "rspec-rails", "~> 6.0.0"
   gem "rubocop-govuk", require: false
+
+  # For security auditing gem vulnerabilities. RUN IN CI
+  gem "bundler-audit", "~> 0.9.0"
+
+  # For detecting security vulnerabilities in Ruby on Rails applications via static analysis.
+  gem "brakeman", "~> 6.0.1"
 end
 
 group :development do

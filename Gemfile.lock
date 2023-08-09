@@ -67,7 +67,11 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     ast (2.4.2)
+    brakeman (6.0.1)
     builder (3.2.4)
+    bundler-audit (0.9.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.3)
@@ -225,6 +229,8 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  brakeman (~> 6.0.1)
+  bundler-audit (~> 0.9.0)
   debug
   puma (~> 5.0)
   rails (~> 7.0.6)
