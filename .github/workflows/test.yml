@@ -1,0 +1,41 @@
+# This workflow uses actions that are not certified by GitHub.  They are
+# provided by a third-party and are governed by separate terms of service,
+# privacy policy, and support documentation.
+#
+# This workflow will install a prebuilt Ruby version, install dependencies, and
+# run tests and linters.
+
+name: "Tests"
+on:
+  push:
+    branches: [main-rails]
+  pull_request:
+    branches: [main-rails]
+  merge_group:
+    types: [checks_requested]
+permissions:
+  contents: read
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    env:
+      RAILS_ENV: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      # Add or replace dependency steps here
+      # The ruby version is taken from the .ruby-version file, no need to specify here.
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@250fcd6a742febb1123a77a841497ccaa8b9e939
+        with:
+          bundler-cache: true
+      # Add or replace test runners here
+      - name: Run Ruby tests
+        run: bundle exec rspec
+      # Add or replace any other lints here
+      - name: Security audit dependencies
+        run: bundler exec bundle audit check
+      - name: Security audit application code
+        run: bundler exec brakeman -q -w2
+      - name: Lint Ruby files
+        run: bundler exec rubocop --parallel
