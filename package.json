@@ -1,4 +1,7 @@
 {
+  "dependencies": {
+    "govuk-frontend": "^4.3.1"
+  },
   "devDependencies": {
     "vite": "4.4.9",
     "vite-plugin-ruby": "3.2.2"
