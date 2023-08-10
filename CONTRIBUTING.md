@@ -38,4 +38,4 @@ While the project is in beta, we're using [the Service Manual's assistive techno
 
 ## Commit hygiene
 
-Please see our [Git style guide in the 'How to store source code' page of the GDS Way](https://gds-way.cloudapps.digital/standards/source-code.html#commit-messages), which describes how we prefer Git history and commit messages to read.
+Please see our [Git style guide in the 'How to store source code' page of the GDS Way](https://gds-way.cloudapps.digital/standards/source-code/working-with-git.html#commit-messages), which describes how we prefer Git history and commit messages to read.
