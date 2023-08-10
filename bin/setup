@@ -17,6 +17,12 @@ FileUtils.chdir APP_ROOT do
   system! "gem install bundler --conservative"
   system("bundle check") || system!("bundle install")
 
+  puts "\n== Installing frontend dependencies =="
+  system! "npm install"
+
+  puts "\n== Building frontend assets =="
+  system! "bin/vite build"
+
   puts "\n== Removing old logs and tempfiles =="
   system! "bin/rails log:clear tmp:clear"
 
