@@ -6,22 +6,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application" %>
+    <%= vite_stylesheet_tag 'application.scss' %>
     <%= vite_client_tag %>
-    <%= vite_javascript_tag 'application' %>
-    <!--
-      If using a TypeScript entrypoint file:
-        vite_typescript_tag 'application'
 
-      If using a .jsx or .tsx entrypoint, add the extension:
-        vite_javascript_tag 'application.jsx'
-
-      Visit the guide for more information: https://vite-ruby.netlify.app/guide/rails
-    -->
-
+    <link rel="shortcut icon" type="image/x-icon" href="<%= vite_asset_path "#{govuk_assets_path}/images/favicon.ico"%>" sizes="16x16 32x32 48x48" />
   </head>
 
   <body>
     <%= yield %>
+    <%= vite_javascript_tag 'application' %>
   </body>
 </html>
