@@ -4,4 +4,5 @@ class PagesController < ApplicationController
   end
 
   def features; end
+  def support; end
 end
