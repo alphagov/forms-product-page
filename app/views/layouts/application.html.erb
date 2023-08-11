@@ -71,8 +71,12 @@
             </button>
 
             <ul id="navigation" class="govuk-header__navigation-list">
-              <li class="govuk-header__navigation-item"><a class="govuk-header__link" href="/features"> Features </a></li>
-              <li class="govuk-header__navigation-item"><a class="govuk-header__link" href="/support"> Support </a></li>
+              <li class="govuk-header__navigation-item <%= 'govuk-header__navigation-item--active' if current_page?(features_path) %>">
+                <%= link_to 'Features', features_path, class: "govuk-header__link" %>
+              </li>
+              <li class="govuk-header__navigation-item <%= 'govuk-header__navigation-item--active' if current_page?(support_path) %>">
+                <%= link_to 'Support', support_path, class: "govuk-header__link" %>
+              </li>
             </ul>
           </nav>
         </div>
