@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   root "pages#index"
 
   get "/features" => "pages#features"
+  get "/support" => "pages#support"
 end
