@@ -257,7 +257,7 @@ DEPENDENCIES
   rubocop-govuk
   sprockets-rails (~> 3.4)
   tzinfo-data
-  vite_rails
+  vite_rails (~> 3.0.0)
 
 RUBY VERSION
    ruby 3.2.2p53
