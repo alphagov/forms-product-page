@@ -29,6 +29,10 @@ jobs:
         uses: ruby/setup-ruby@250fcd6a742febb1123a77a841497ccaa8b9e939
         with:
           bundler-cache: true
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Run Frontend build
+        run: bin/vite build
       # Add or replace test runners here
       - name: Run Ruby tests
         run: bundle exec rspec
