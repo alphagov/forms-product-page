@@ -18,4 +18,22 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(helper.content_for(:title)).to eq("New Title")
     end
   end
+
+  describe "#page_description" do
+    it "returns the meta tag with description if description is set" do
+      helper.content_for(:description, "Test Description")
+      expect(helper.page_description).to eq('<meta name="description" content="Test Description">')
+    end
+
+    it "returns nil if description is not set" do
+      expect(helper.page_description).to be_nil
+    end
+  end
+
+  describe "#set_page_description" do
+    it "sets the page description" do
+      helper.set_page_description("New Description")
+      expect(helper.content_for(:description)).to eq("New Description")
+    end
+  end
 end
