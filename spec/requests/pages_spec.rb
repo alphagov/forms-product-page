@@ -7,4 +7,18 @@ RSpec.describe "Pages", type: :request do
       expect(response).to have_http_status(:ok)
     end
   end
+
+  describe "GET /features" do
+    it "returns ok" do
+      get "/features"
+      expect(response).to have_http_status(:ok)
+    end
+  end
+
+  describe "GET /support" do
+    it "returns ok" do
+      get "/support"
+      expect(response).to have_http_status(:ok)
+    end
+  end
 end

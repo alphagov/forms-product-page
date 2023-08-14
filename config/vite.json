@@ -2,7 +2,7 @@
   "all": {
     "sourceCodeDir": "app/frontend",
     "watchAdditionalPaths": [],
-    "additionalEntrypoints": ["node_modules/govuk-frontend/govuk/assets/**/*"]
+    "additionalEntrypoints": ["~/{assets,fonts,icons,images}/**/*", "node_modules/govuk-frontend/govuk/assets/**/*"]
   },
   "development": {
     "autoBuild": true,
