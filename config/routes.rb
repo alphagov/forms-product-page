@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   get "/features" => "pages#features"
   get "/support" => "pages#support"
+  get "/accessibility" => "pages#accessibility"
 end

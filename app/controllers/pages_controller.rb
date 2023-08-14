@@ -5,4 +5,5 @@ class PagesController < ApplicationController
 
   def features; end
   def support; end
+  def accessibility; end
 end
