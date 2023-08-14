@@ -8,38 +8,16 @@ RSpec.describe "Pages", type: :request do
     end
   end
 
-  describe "GET /features" do
-    it "returns ok" do
-      get "/features"
-      expect(response).to have_http_status(:ok)
-    end
-  end
-
-  describe "GET /support" do
-    it "returns ok" do
-      get "/support"
-      expect(response).to have_http_status(:ok)
-    end
-  end
-
-  describe "GET /accessibility" do
-    it "returns ok" do
-      get "/accessibility"
-      expect(response).to have_http_status(:ok)
-    end
-  end
-
-  describe "GET /cookies" do
-    it "returns ok" do
-      get "/cookies"
-      expect(response).to have_http_status(:ok)
-    end
-  end
-
-  describe "GET /privacy" do
-    it "returns ok" do
-      get "/privacy"
-      expect(response).to have_http_status(:ok)
+  %w[features
+     support
+     accessibility
+     cookies
+     privacy].each do |page|
+    describe "GET /#{page}" do
+      it "returns ok" do
+        get "/#{page}"
+        expect(response).to have_http_status(:ok)
+      end
     end
   end
 end
