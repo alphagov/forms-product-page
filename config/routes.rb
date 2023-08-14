@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "/support" => "pages#support"
   get "/accessibility" => "pages#accessibility"
   get "/cookies" => "pages#cookies"
+  get "/privacy" => "pages#privacy"
 end
