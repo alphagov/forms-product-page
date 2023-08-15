@@ -23,6 +23,13 @@
       : "js-enabled";
   </script>
   <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+  <% if content_for?(:cookie_banner) %>
+    <%= yield :cookie_banner %>
+  <% else %>
+    <%= render partial: "pages/cookie_banner" %>
+  <% end %>
+
   <header
       class="govuk-header"
       role="banner"
