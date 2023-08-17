@@ -20,47 +20,46 @@ We recommend using a version manager to install and manage these, such as:
 - [nvm](https://github.com/nvm-sh/nvm) for Node.js
 - [asdf](https://github.com/asdf-vm/asdf) for both
 
-## To get started
+## Getting started
 
-To run the project:
+### Installing for the first time
 
 ```bash
-# 1. Install the Ruby bundle
+# 1. Clone the git repository and change directory to the new folder
+git clone git@github.com/alphagov/forms-product-page.git
+cd forms-product-page
+
+# 2. Install the Ruby bundle
 bundle install
 
-# 2. Install npm dependencies
+# 3. Install npm dependencies
 npm install
-
-# 3. Run the 'dev' task to start a local server for development
-npm run start
 ```
 
-## Testing
+### Running the app
 
-### RSpec
-To run the rspec tests:
 ```bash
-rake test
+# 1. Run the 'dev' task to start a local server for development
+./bin/dev
+```
 
-# Equivalent to:
+## Development tools
+
+### Running the tests
+
+#### RSpec
+
+The app tests are written with [rspec-rails], and you can run them with:
+
+```bash
 bundle exec rspec
-```
-To run the rubocop linter:
-```bash
-rake lint
 
-# Equivalent to:
-bundle exec rubocop
-
-# to fix correctable offenses:
-bundle exec rubocop -A
+# This is equivalent to:
+rake test
 ```
 
-You can run the linter and tests in one:
-```bash
-rake
-```
-### Jest
+#### Jest
+
 To run the Jest tests:
 
 ```bash
@@ -77,17 +76,40 @@ npm run test:functional
 npm run tests
 ```
 
-Run the javascript linter with:
+### Linting
+
+We use [RuboCop GOV.UK] for linting ruby code. To autocorrect issues, run:
+
+```bash
+bundle exec rubocop -A
+```
+
+We also use [Standard] for linting javascript code:
 
 ```bash
 npm run lint
 ```
 
+[RuboCop GOV.UK]: https://github.com/alphagov/rubocop-govuk
+[Standard]: https://github.com/standard/standard
+
+### Running tasks with Rake
+
+We have a [Rakefile](./Rakefile) that is set up to follow the [GOV.UK conventions for Rails applications].
+
+To lint your ruby changes and run rspec tests with one command, you can run:
+
+```bash
+bundle exec rake
+```
+
+[GOV.UK conventions for Rails applications]: https://docs.publishing.service.gov.uk/manual/configure-linting.html#configuring-rails
+
 ## Support
 
-Raise a Github issue if you need support.
+Raise a GitHub issue if you need support.
 
-## Explain how users can contribute
+## How to contribute
 
 We welcome contributions - please read [CONTRIBUTING.md](CONTRIBUTING.md) and the [alphagov Code of Conduct](https://github.com/alphagov/.github/blob/main/CODE_OF_CONDUCT.md) before contributing.
 
