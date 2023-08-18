@@ -18,6 +18,9 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 # For compiling our frontend assets
 gem "vite_rails", "~> 3.0"
 
+# For structured logging
+gem "lograge", "~> 0.13"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
