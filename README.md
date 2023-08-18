@@ -105,6 +105,56 @@ bundle exec rake
 
 [GOV.UK conventions for Rails applications]: https://docs.publishing.service.gov.uk/manual/configure-linting.html#configuring-rails
 
+## Changing configuration
+
+### Changing settings
+
+Refer to the [the config gem](https://github.com/railsconfig/config#accessing-the-settings-object) to understand the `file based settings` loading order.
+
+To override file based via `Machine based env variables settings`
+
+```bash
+cat config/settings.yml
+file
+  based
+    settings
+      env1: 'foo'
+```
+
+```bash
+export SETTINGS__FILE__BASED__SETTINGS__ENV1="bar"
+```
+
+```ruby
+puts Settings.file.based.setting.env1
+bar
+```
+
+Refer to the [settings file](config/settings.yml) for all the settings required to run this app
+
+### Configuring Sentry
+
+We use [Sentry] to catch and alert us about exceptions in production apps.
+
+We currently have a very basic setup for Sentry in this repo for testing, which we will continue to build upon.
+
+In order to use Sentry locally, you will need to:
+
+1. Sign in to Sentry using your work Google account.
+2. Create a new project.
+3. Add the Sentry DSN to your environment as `SETTINGS__SENTRY__DSN`, or add it to a local config file:
+
+```
+# config/settings.local.yml
+
+sentry:
+  DSN: <DSN from Sentry>
+```
+
+If you want to deliberately raise an exception to test, uncomment out the triggers in the [Sentry initializer script](config/initializers/sentry.rb). Whenever you run the app errors will be raised and should also come through on Sentry.
+
+[Sentry]: https://sentry.io
+
 ## Support
 
 Raise a GitHub issue if you need support.
