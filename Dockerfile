@@ -26,6 +26,13 @@ ENV RAILS_ENV="${RAILS_ENV:-production}" \
 
 COPY --chown=ruby:ruby . .
 
+# you can't run rails commands like assets:precompile without a secret key set
+# even though the command doesn't use the value itself
+RUN SECRET_KEY_BASE=dummyvalue rails assets:precompile
+
+# Remove devDependencies once assets have been built
+RUN npm ci --ignore-scripts --only=production
+
 FROM ruby:3.2.2-alpine3.17@sha256:b529c297be08b526c03d9f3d6911e13b15be7b9e25b992f4584e9208108bb132 AS app
 
 ENV RAILS_ENV="${RAILS_ENV:-production}" \
