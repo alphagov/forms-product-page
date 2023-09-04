@@ -275,6 +275,8 @@ GEM
     timeout (0.4.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2023.3)
+      tzinfo (>= 1.0.0)
     unicode-display_width (2.4.2)
     vite_rails (3.0.15)
       railties (>= 5.1, < 8)
@@ -306,6 +308,7 @@ DEPENDENCIES
   rubocop-govuk
   sentry-rails (~> 5.10)
   sentry-ruby (~> 5.10)
+  tzinfo
   tzinfo-data
   vite_rails (~> 3.0)
 
