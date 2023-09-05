@@ -8,9 +8,9 @@
 name: "Tests"
 on:
   push:
-    branches: [main-rails]
+    branches: [main, main-rails]
   pull_request:
-    branches: [main-rails]
+    branches: [main, main-rails]
   merge_group:
     types: [checks_requested]
 permissions:
