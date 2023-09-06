@@ -4,9 +4,9 @@ export default {
     headless: 'new'
   },
   server: {
-    command: 'bundle exec middleman --port 8888 --watcher-disable',
+    command: './bin/rails s -p 8888',
     port: 8888,
-    launchTimeout: 9000,
+    launchTimeout: 18000,
     debug: true,
     usedPortAction: 'kill'
   }

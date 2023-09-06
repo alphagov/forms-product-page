@@ -55,7 +55,7 @@ describe('Cookie banner', () => {
   })
 
   describe('accept button', () => {
-    it('sets the consent cookie and adds the goolgle tag script to the page', async () => {
+    it('sets the consent cookie and adds the google tag script to the page', async () => {
       await expect(page.cookies()).resolves.toEqual([])
       await expect(page).toClick('button', { text: 'Accept analytics cookies' })
 

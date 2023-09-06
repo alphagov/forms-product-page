@@ -4,7 +4,7 @@ export default {
       displayName: 'unit',
       testEnvironment: 'jsdom',
       testMatch: [
-        '**/source/javascripts/**/*.test.{js,mjs}'
+        '**/app/frontend/javascript/**/*.test.{js,mjs}'
       ]
     },
     {
