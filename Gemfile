@@ -22,8 +22,8 @@ gem "lograge", "~> 0.13"
 gem "config", "~> 4.2"
 
 # Use Sentry (https://sentry.io/for/ruby/?platform=sentry.ruby.rails#)
-gem "sentry-rails", "~> 5.10"
-gem "sentry-ruby", "~> 5.10"
+gem "sentry-rails", "~> 5.11"
+gem "sentry-ruby", "~> 5.11"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
