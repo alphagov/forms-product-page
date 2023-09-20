@@ -100,6 +100,9 @@
       <%= yield(:main) %>
     <% else %>
       <div class="govuk-width-container">
+
+        <%= yield :back_link %>
+
         <main
           class="govuk-main-wrapper"
           id="main-content"

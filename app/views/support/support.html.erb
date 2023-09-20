@@ -1,20 +1,21 @@
-<% set_page_title('Support') %>
-<% set_page_description('How to get support for GOV.UK Forms - a new platform for people who work in government to create online forms for GOV.UK') %>
+<% set_page_title(title_with_error_prefix(t("page_titles.support.support"), error: @support_form.errors.any?)) %>
+<% set_page_description(t(".page_description")) %>
 
-<h1 class="govuk-heading-xl">Support</h1>
-<p>
-  GOV.UK Forms is a new platform for people who work in government to create online forms for GOV.UK.
-</p>
+<%= form_with model: @support_form, url: new_support_message_path do |f| %>
+  <% f.govuk_error_summary %>
 
-<p class="govuk-inset-text">
-  GOV.UK Forms does not provide support for individual members of the public about government forms. If you are a member of the public experiencing difficulties with a government form, please <a href="https://www.gov.uk/contact">contact that service directly</a>.
-</p>
+  <h1 class="govuk-heading-xl"><%= t("page_titles.support.support") %></h1>
 
-<h2 class="govuk-heading-m">How to contact us</h2>
+  <%= t(".form_body_html") %>
 
-<p>
-  If you have a question about GOV.UK Forms you can contact us at <a href="mailto:govuk-forms@digital.cabinet-office.gov.uk">govuk-forms@digital.cabinet-office.gov.uk</a>.
-</p>
+  <%= f.govuk_collection_radio_buttons(
+      :i_need_help_with,
+      SupportForm::I_NEED_HELP_WITH_OPTIONS,
+      -> (option) { option },
+    )
+  %>
+  <%= f.govuk_submit t("continue") %>
+<% end %>
 
 <h2 class="govuk-heading-m">Office hours</h2>
 
