@@ -4,7 +4,6 @@ class PagesController < ApplicationController
   end
 
   def features; end
-  def support; end
   def accessibility; end
   def cookies; end
   def privacy; end
