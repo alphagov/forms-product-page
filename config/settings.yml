@@ -3,3 +3,9 @@
 sentry:
   dsn:
   environment: local
+
+# Configuration for Zendesk
+zendesk:
+  api_user: changeme@example.com
+  api_token: changeme
+  subdomain: changeme
