@@ -9,3 +9,7 @@ zendesk:
   api_user: changeme@example.com
   api_token: changeme
   subdomain: changeme
+
+  defaults:
+    group_id: 5455184128796 # 1st Line--GOV.UK Forms
+    organization_id: 21891972 # GDS

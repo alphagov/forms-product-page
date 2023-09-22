@@ -9,6 +9,7 @@ class ZendeskTicketService
     ticket_json = { ticket: {
       comment:,
       **params,
+      **Settings.zendesk.defaults,
     } }.to_json
 
     post_json!("https://#{subdomain}.zendesk.com/api/v2/tickets.json", ticket_json, headers:)

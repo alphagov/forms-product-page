@@ -22,12 +22,12 @@ describe ZendeskTicketService do
       )
 
       expect(request
-        .with(body: { "ticket" => {
+        .with(body: { "ticket" => a_hash_including({
           "subject" => "Test message",
           "comment" => { "body" => "This is a test ticket." },
           "requester" => { "name" => "Test User", "email" => "test@example.com" },
           "tags" => %w[test],
-        } })).to have_been_made
+        }) })).to have_been_made
     end
 
     it "authenticates using secrets from settings" do
@@ -51,6 +51,22 @@ describe ZendeskTicketService do
       expect {
         described_class.create!(comment: { body: "Test" })
       }.to raise_error(/Creating Zendesk ticket failed/)
+    end
+
+    it "assigns the ticket to the correct group and organisation" do
+      allow(Settings.zendesk).to receive(:defaults).and_return({
+        group_id: "forms",
+        organization_id: "gds",
+      })
+      request = stub_successful_create
+
+      described_class.create!(comment: { body: "Test" })
+
+      expect(request
+        .with(body: { "ticket" => a_hash_including({
+          "group_id" => "forms",
+          "organization_id" => "gds",
+        }) })).to have_been_made
     end
   end
 end
