@@ -1,6 +1,11 @@
 require "rails_helper"
 
 describe "Support form", type: :system do
+  before do
+    stub_request(:post, "https://changeme.zendesk.com/api/v2/tickets.json")
+      .to_return { |request| { status: 201, body: request.body } }
+  end
+
   it "asks users what they need help with" do
     visit "/support"
 
