@@ -8,9 +8,9 @@
 
   <%= f.hidden_field :i_need_help_with %>
 
-  <%= f.govuk_text_area @support_form.i_need_help_with.to_sym == :using_forms ? :message : :question, rows: 10 %>
-  <%= f.govuk_text_field :name %>
-  <%= f.govuk_email_field :email_address %>
+  <%= f.govuk_text_area @support_form.i_need_help_with.to_sym == :using_forms ? :message : :question, rows: 10, spellcheck: true %>
+  <%= f.govuk_text_field :name, autocomplete: :name, spellcheck: false %>
+  <%= f.govuk_email_field :email_address, autocomplete: :email, spellcheck: false %>
 
   <%= f.govuk_submit t("send") %>
 <% end %>
