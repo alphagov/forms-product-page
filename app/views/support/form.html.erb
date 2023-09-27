@@ -1,4 +1,6 @@
 <% set_page_title(title_with_error_prefix(t("page_titles.support.#{@support_form.i_need_help_with}"), error: @support_form.errors.any?)) %>
+<% set_page_robots("noindex") %>
+
 <% content_for :back_link, govuk_back_link(href: support_path) %>
 
 <%= form_with model: @support_form, url: false do |f| %>
