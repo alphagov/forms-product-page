@@ -36,4 +36,22 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(helper.content_for(:description)).to eq("New Description")
     end
   end
+
+  describe "#page_robots" do
+    it "returns the meta tag with robots directive if robots is set" do
+      helper.content_for(:robots, "test")
+      expect(helper.page_robots).to eq('<meta name="robots" content="test">')
+    end
+
+    it "returns nil if robots is not set" do
+      expect(helper.page_robots).to be_nil
+    end
+  end
+
+  describe "#set_page_robots" do
+    it "sets the robots directive for the page" do
+      helper.set_page_robots("noindex")
+      expect(helper.content_for(:robots)).to eq("noindex")
+    end
+  end
 end
