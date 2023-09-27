@@ -1,0 +1,55 @@
+---
+en:
+  activemodel:
+    errors:
+      models:
+        support_form:
+          attributes:
+            email_address:
+              blank: Enter your email address
+              invalid_email: Enter an email address in the correct format, like name@example.com
+            i_need_help_with:
+              blank: Select one option
+            message:
+              blank: Enter your message
+            name:
+              blank: Enter your name
+            question:
+              blank: Enter your question
+  helpers:
+    label:
+      support_form:
+        email_address: Your email address
+        i_need_help_with_options:
+          about_forms: I work in a government service team and have a question about GOV.UK Forms
+          other_government_service: I’m a member of the public with a question about a government form or service
+          using_forms: I work in a government service team and need help using GOV.UK Forms
+        message: Your message
+        name: Your name
+        question: Your question
+    legend:
+      support_form:
+        i_need_help_with: What do you need help with?
+  page_titles:
+    support:
+      about_forms: Question about GOV.UK Forms
+      confirmation: Message sent
+      support: Support
+      using_forms: Help using GOV.UK Forms
+  support:
+    confirmation:
+      body_html: |
+        <h2 class="govuk-heading-m">What happens next</h2>
+
+        <p>
+          You’ll receive a confirmation email from our ticketing system.
+          We’ll get back to you as soon as we can.
+        </p>
+    support:
+      form_body_html: |
+        <p>
+          GOV.UK Forms is a new platform for people who work in government to create online forms for GOV.UK.
+        </p>
+      page_description: 'How to get support for GOV.UK Forms - a new platform for people who work in government to create online forms for GOV.UK
+
+        '

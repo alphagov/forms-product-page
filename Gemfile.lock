@@ -66,16 +66,29 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.5)
+      public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     brakeman (6.0.1)
     builder (3.2.4)
     bundler-audit (0.9.1)
       bundler (>= 1.2.0, < 3)
       thor (~> 1.0)
+    capybara (3.39.2)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
     concurrent-ruby (1.2.2)
     config (4.2.1)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
+    crack (0.4.5)
+      rexml
     crass (1.0.6)
     date (3.3.3)
     debug (1.8.0)
@@ -119,6 +132,18 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    govuk-components (4.1.1)
+      html-attributes-utils (~> 1.0.0, >= 1.0.0)
+      pagy (~> 6.0)
+      view_component (>= 3.3, < 3.6)
+    govuk_design_system_formbuilder (4.1.1)
+      actionview (>= 6.1)
+      activemodel (>= 6.1)
+      activesupport (>= 6.1)
+      html-attributes-utils (~> 1)
+    hashdiff (1.0.1)
+    html-attributes-utils (1.0.2)
+      activesupport (>= 6.1.4.4)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     io-console (0.6.0)
@@ -141,6 +166,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
+    matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
     minitest (5.20.0)
@@ -162,12 +188,14 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
+    pagy (6.0.4)
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
       racc
     psych (5.1.0)
       stringio
+    public_suffix (5.0.3)
     puma (6.3.1)
       nio4r (~> 2.0)
     racc (1.7.1)
@@ -265,6 +293,11 @@ GEM
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
     ruby-progressbar (1.13.0)
+    rubyzip (2.3.2)
+    selenium-webdriver (4.12.0)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
     sentry-rails (5.11.0)
       railties (>= 5.0)
       sentry-ruby (~> 5.11.0)
@@ -278,6 +311,10 @@ GEM
     tzinfo-data (1.2023.3)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.4.2)
+    view_component (3.5.0)
+      activesupport (>= 5.2.0, < 8.0)
+      concurrent-ruby (~> 1.0)
+      method_source (~> 1.0)
     vite_rails (3.0.15)
       railties (>= 5.1, < 8)
       vite_ruby (~> 3.0, >= 3.2.2)
@@ -285,9 +322,16 @@ GEM
       dry-cli (>= 0.7, < 2)
       rack-proxy (~> 0.6, >= 0.6.1)
       zeitwerk (~> 2.2)
+    webmock (3.19.1)
+      addressable (>= 2.8.0)
+      crack (>= 0.3.2)
+      hashdiff (>= 0.4.0, < 2.0.0)
+    websocket (1.2.9)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
     zeitwerk (2.6.11)
 
 PLATFORMS
@@ -299,18 +343,23 @@ PLATFORMS
 DEPENDENCIES
   brakeman (~> 6.0.1)
   bundler-audit (~> 0.9.0)
+  capybara
   config (~> 4.2)
   debug
+  govuk-components (~> 4.1.0)
+  govuk_design_system_formbuilder (~> 4.1.1)
   lograge (~> 0.13)
   puma (~> 6.3)
   rails (~> 7.0.8)
   rspec-rails (~> 6.0.0)
   rubocop-govuk
+  selenium-webdriver
   sentry-rails (~> 5.11)
   sentry-ruby (~> 5.11)
   tzinfo
   tzinfo-data
   vite_rails (~> 3.0)
+  webmock
 
 RUBY VERSION
    ruby 3.2.2p53

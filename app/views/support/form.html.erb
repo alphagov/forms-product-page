@@ -1,0 +1,16 @@
+<% set_page_title(title_with_error_prefix(t("page_titles.support.#{@support_form.i_need_help_with}"), error: @support_form.errors.any?)) %>
+<% content_for :back_link, govuk_back_link(href: support_path) %>
+
+<%= form_with model: @support_form, url: false do |f| %>
+  <% f.govuk_error_summary %>
+
+  <h1 class="govuk-heading-l"><%= t("page_titles.support.#{@support_form.i_need_help_with}") %></h1>
+
+  <%= f.hidden_field :i_need_help_with %>
+
+  <%= f.govuk_text_area @support_form.i_need_help_with.to_sym == :using_forms ? :message : :question, rows: 10, spellcheck: true %>
+  <%= f.govuk_text_field :name, autocomplete: :name, spellcheck: false %>
+  <%= f.govuk_email_field :email_address, autocomplete: :email, spellcheck: false %>
+
+  <%= f.govuk_submit t("send") %>
+<% end %>

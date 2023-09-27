@@ -33,6 +33,9 @@ module FormsProductPage
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # All forms should use GOVUKDesignSystemFormBuilder by default
+    config.action_view.default_form_builder = GOVUKDesignSystemFormBuilder::FormBuilder
+
     # Don't generate system test files.
     config.generators.system_tests = nil
 

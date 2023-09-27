@@ -1,5 +1,18 @@
+# When set to true, any system tests will run Chrome normally rather than in headless mode.
+show_browser_during_tests: false
+
 # Configuration for Sentry
 # Sentry will only initialise if dsn is set to some other value
 sentry:
   dsn:
   environment: local
+
+# Configuration for Zendesk
+zendesk:
+  api_user: changeme@example.com
+  api_token: changeme
+  subdomain: changeme
+
+  defaults:
+    group_id: 5455184128796 # 1st Line--GOV.UK Forms
+    organization_id: 21891972 # GDS

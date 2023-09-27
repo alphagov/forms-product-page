@@ -1,0 +1,35 @@
+<% set_page_title(title_with_error_prefix(t("page_titles.support.support"), error: @support_form.errors.any?)) %>
+<% set_page_description(t(".page_description")) %>
+
+<%= form_with model: @support_form, url: new_support_message_path do |f| %>
+  <% f.govuk_error_summary %>
+
+  <h1 class="govuk-heading-xl"><%= t("page_titles.support.support") %></h1>
+
+  <%= t(".form_body_html") %>
+
+  <%= f.govuk_collection_radio_buttons(
+      :i_need_help_with,
+      SupportForm::I_NEED_HELP_WITH_OPTIONS,
+      -> (option) { option },
+    )
+  %>
+  <%= f.govuk_submit t("continue") %>
+<% end %>
+
+<h2 class="govuk-heading-m">Office hours</h2>
+
+<p>
+  We provide support for GOV.UK Forms during office hours.
+</p>
+
+<p>
+  Our office hours are 9:00am to 5:00pm on weekdays, except bank holidays.
+</p>
+
+<h2 class="govuk-heading-m">Out-of-hours support</h2>
+
+<p>
+  While GOV.UK Forms is in private beta, we don’t provide support for problems outside of our office hours.
+</p>
+
