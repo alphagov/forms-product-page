@@ -196,7 +196,7 @@ GEM
     psych (5.1.0)
       stringio
     public_suffix (5.0.3)
-    puma (6.3.1)
+    puma (6.4.0)
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.8)
@@ -349,7 +349,7 @@ DEPENDENCIES
   govuk-components (~> 4.1.0)
   govuk_design_system_formbuilder (~> 4.1.1)
   lograge (~> 0.13)
-  puma (~> 6.3)
+  puma (~> 6.4)
   rails (~> 7.0.8)
   rspec-rails (~> 6.0.0)
   rubocop-govuk
