@@ -19,4 +19,13 @@ module ApplicationHelper
   def set_page_description(description)
     content_for(:description) { description.html_safe }
   end
+
+  def page_robots
+    directive = content_for(:robots)
+    tag.meta(name: "robots", content: directive) if directive.present?
+  end
+
+  def set_page_robots(directive)
+    content_for(:robots) { directive }
+  end
 end

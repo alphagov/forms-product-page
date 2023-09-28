@@ -1,5 +1,6 @@
 <% set_page_title(title_with_error_prefix(t("page_titles.support.support"), error: @support_form.errors.any?)) %>
 <% set_page_description(t(".page_description")) %>
+<% set_page_robots("noindex") %>
 
 <%= form_with model: @support_form, url: new_support_message_path do |f| %>
   <% f.govuk_error_summary %>
