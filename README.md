@@ -1,6 +1,6 @@
 # GOV.UK Forms Product Pages [![Tests](https://github.com/alphagov/forms-product-page/actions/workflows/test.yml/badge.svg)](https://github.com/alphagov/forms-product-page/actions/workflows/test.yml)
 
-GOV.UK Forms Product Pages consist of the main product page content used for onboarding new users of GOV.UK Forms, and its supporting pages (for example, the accessibility statement and privacy policy). It is implemented as a Rails app.
+[GOV.UK Forms Product Pages](https://www.forms.service.gov.uk/) consist of the main product page content used for onboarding new users of GOV.UK Forms, and its supporting pages (for example, the accessibility statement and privacy policy). It is implemented as a Rails app.
 
 ## Before you start
 
