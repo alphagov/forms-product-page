@@ -298,10 +298,10 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sentry-rails (5.11.0)
+    sentry-rails (5.12.0)
       railties (>= 5.0)
-      sentry-ruby (~> 5.11.0)
-    sentry-ruby (5.11.0)
+      sentry-ruby (~> 5.12.0)
+    sentry-ruby (5.12.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
     stringio (3.0.8)
     thor (1.2.2)
@@ -354,8 +354,8 @@ DEPENDENCIES
   rspec-rails (~> 6.0.0)
   rubocop-govuk
   selenium-webdriver
-  sentry-rails (~> 5.11)
-  sentry-ruby (~> 5.11)
+  sentry-rails (~> 5.12)
+  sentry-ruby (~> 5.12)
   tzinfo
   tzinfo-data
   vite_rails (~> 3.0)
