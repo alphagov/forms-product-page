@@ -1,4 +1,6 @@
 {
+  "name": "app",
+  "private": "true",
   "dependencies": {
     "govuk-frontend": "^4.7.0"
   },
