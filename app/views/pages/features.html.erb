@@ -10,10 +10,7 @@
 
 <p class="govuk-inset-text">
   If you’re interested in using GOV.UK Forms, you can
-  <a
-    href="https://service.us12.list-manage.com/subscribe?u=cb74eb9a6898b0e5870fede0a&id=451fe4c1e1"
-    >register to get a notification when it's available</a
-  >
+  <%= govuk_link_to "register to get a notification when it's available", mailing_list_path %>
   for all of central government.
 </p>
 
@@ -227,9 +224,5 @@ Use simple metrics to see how many forms were submitted in the past 7 days and w
 </p>
 
 <p>
-  You can
-  <a
-    href="https://service.us12.list-manage.com/subscribe?u=cb74eb9a6898b0e5870fede0a&amp;id=451fe4c1e1"
-    >join our mailing list to get updates</a
-  >.
+  You can <%= govuk_link_to "join our mailing list to get updates", mailing_list_path %>.
 </p>

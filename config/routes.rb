@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "/cookies" => "pages#cookies"
   get "/privacy" => "pages#privacy"
 
+  get "/mailing-list" => redirect("https://service.us12.list-manage.com/subscribe?u=cb74eb9a6898b0e5870fede0a&id=451fe4c1e1")
+
   get "/support" => "support#support", as: :support
   post "/support" => "support#new", as: :new_support_message
   get "/support/help-using-forms" => "support#help_using_forms", as: :help_using_forms
