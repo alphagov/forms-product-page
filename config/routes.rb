@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "pages#index"
 
+  get "/get-started" => "pages#get_started"
   get "/features" => "pages#features"
   get "/accessibility" => "pages#accessibility"
   get "/cookies" => "pages#cookies"
