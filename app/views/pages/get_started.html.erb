@@ -1,0 +1,73 @@
+<% set_page_title("Get started") %>
+
+<h1 class="govuk-heading-xl">Get started</h1>
+
+<p>
+  GOV.UK Forms is a new platform that makes it easy to create accessible online
+  forms for the GOV.UK website.
+</p>
+
+<p>
+  Because it’s still in the early stages of development,
+  <%= govuk_link_to "the features available are limited", features_path %>.
+  So it will not be suitable for creating all types of online form.
+</p>
+
+<p>You can create a trial account to see if GOV.UK Forms meets your needs.</p>
+
+<h2 class="govuk-heading-l">Try GOV.UK Forms with a trial account</h2>
+
+<p>
+  With a trial account you will not be able to make your forms live, but you’ll
+  be able to try out the form builder and preview your forms.
+</p>
+
+<p>
+  If GOV.UK Forms meets your needs, you’ll be able to ask for your account to
+  be upgraded so you can make your forms live.
+</p>
+
+<p>You’ll need your government email address to create a trial account.</p>
+
+<%= govuk_start_button text: "Create a trial account", href: Settings.forms_admin.base_url %>
+
+<h2 class="govuk-heading-l">Upgrading to an editor account</h2>
+
+<p>
+  If you’ve tried GOV.UK Forms and it meets your needs, you can request to
+  upgrade to an editor account. With an editor account you can make a form live
+  so it can be published on GOV.UK.
+</p>
+
+<p>You can request to upgrade to an editor account if:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>you’re confident you can create your forms using the limited features available at the moment</li>
+  <li>you’ll only use GOV.UK Forms to make forms for the GOV.UK website</li>
+  <li>you do not expect any of the forms you’re planning to make to get more than 10,000 submissions a year</li>
+  <li>you’re happy to be asked for feedback and to take part in user research</li>
+</ul>
+
+<p>
+  You can send us a request to upgrade from within your trial account. We’ll
+  then get in touch with you to discuss the next steps.
+</p>
+
+<p>
+  If you’re upgraded to an editor account, you’ll keep all of the forms you
+  made with your trial account.
+</p>
+
+<h2 class="govuk-heading-l">Subscribe to updates about GOV.UK Forms</h2>
+
+<p>
+  If GOV.UK Forms doesn’t meet your needs yet, you can
+  <%= govuk_link_to "subscribe to our mailing list", mailing_list_path %>
+  to get updates about new features.
+</p>
+
+<h2 class="govuk-heading-l">Contact us</h2>
+
+<p>
+  If you have questions or feedback, <%= govuk_link_to "contact us", support_path %>.
+</p>
