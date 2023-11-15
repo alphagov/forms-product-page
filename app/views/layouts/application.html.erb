@@ -40,8 +40,10 @@
   <%= render(HeaderComponent::View.new(
     phase_name: "beta",
     navigation_items: [
+      {text: "Get started", href: get_started_path},
       {text: "Features", href: features_path},
       {text: "Support", href: support_path},
+      {text: "Sign in", href: Settings.forms_admin.base_url},
     ]
   )) %>
 
