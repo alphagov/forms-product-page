@@ -49,8 +49,7 @@ RSpec.describe HeaderComponent::View, type: :component do
   end
 
   describe "render" do
-    # TODO: fix this test once x-govuk/govuk-components#461 has been released
-    it "outputs HTML matching our existing header", skip: "expected to viewBox bug" do
+    it "outputs HTML matching our existing header" do
       # rubocop:disable Layout/HeredocIndentation
       expect(normalize_html(rendered_content)).to eq normalize_html(<<~HTML)
   <header
