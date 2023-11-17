@@ -1,4 +1,6 @@
 {
+  "name": "forms-product-page",
+  "private": "true",
   "dependencies": {
     "govuk-frontend": "^4.7.0"
   },
