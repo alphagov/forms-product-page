@@ -5,7 +5,7 @@
     "govuk-frontend": "^4.7.0"
   },
   "devDependencies": {
-    "esbuild": "^0.19.6",
+    "esbuild": "^0.19.7",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-puppeteer": "^9.0.1",
