@@ -15,6 +15,7 @@ require "action_view/railtie"
 # require "rails/test_unit/railtie"
 
 require "./app/lib/json_log_formatter"
+require "./app/lib/lograge/custom_options"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -60,13 +61,6 @@ module FormsProductPage
     # information.
     config.lograge.keep_original_rails_log = false
 
-    config.lograge.custom_options = lambda do |event|
-      {}.tap do |h|
-        h[:host] = event.payload[:host]
-        h[:user_ip] = event.payload[:user_ip]
-        h[:request_id] = event.payload[:request_id]
-        h[:exception] = event.payload[:exception] if event.payload[:exception]
-      end
-    end
+    config.lograge.custom_options = Lograge::CustomOptions
   end
 end
