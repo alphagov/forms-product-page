@@ -13,7 +13,12 @@ module HeaderComponent
         header.with_product_name(**product_name_with_tag)
 
         navigation_items.each do |item|
-          header.with_navigation_item(**item.to_h)
+          item = item.to_h
+          if item[:html].present?
+            header.with_navigation_item(text: item[:html])
+          else
+            header.with_navigation_item(**item)
+          end
         end
       end
     end

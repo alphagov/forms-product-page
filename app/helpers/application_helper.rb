@@ -28,4 +28,10 @@ module ApplicationHelper
   def set_page_robots(directive)
     content_for(:robots) { directive }
   end
+
+  def sign_in_button
+    form_with url: sign_in_path do |form|
+      form.submit "Sign in"
+    end
+  end
 end
