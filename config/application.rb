@@ -59,5 +59,14 @@ module FormsProductPage
     #  make lograge output it which includes some extra debugging
     # information.
     config.lograge.keep_original_rails_log = false
+
+    config.lograge.custom_options = lambda do |event|
+      {}.tap do |h|
+        h[:host] = event.payload[:host]
+        h[:user_ip] = event.payload[:user_ip]
+        h[:request_id] = event.payload[:request_id]
+        h[:exception] = event.payload[:exception] if event.payload[:exception]
+      end
+    end
   end
 end
