@@ -30,7 +30,7 @@ module ApplicationHelper
   end
 
   def sign_in_button
-    form_with url: sign_in_path do |form|
+    form_with url: "/auth/auth0" do |form|
       form.submit "Sign in"
     end
   end
