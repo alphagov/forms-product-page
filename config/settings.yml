@@ -10,6 +10,7 @@ show_browser_during_tests: false
 sentry:
   dsn:
   environment: local
+  filter_mask: "[Filtered (client-side)]"
 
 # Configuration for Zendesk
 zendesk:
