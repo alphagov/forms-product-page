@@ -39,7 +39,7 @@ private
     if response.is_a? Net::HTTPSuccess
       JSON.parse(response.body)
     else
-      raise "Creating Zendesk ticket failed: #{response.code}: #{response.body}"
+      raise "Creating Zendesk ticket failed: #{response.code}"
     end
   end
 end
