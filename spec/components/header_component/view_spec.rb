@@ -12,7 +12,7 @@ RSpec.describe HeaderComponent::View, type: :component do
     ]
   end
 
-  let(:phase_name) { "beta" }
+  let(:phase_name) { "Beta" }
 
   let(:header_component) do
     described_class.new(navigation_items:, phase_name:)
@@ -80,7 +80,7 @@ RSpec.describe HeaderComponent::View, type: :component do
       <!--<![endif]-->
               <span class="govuk-header__logotype-text">GOV.UK</span>
             </span>
-            <span class="govuk-header__product-name">Forms <strong class="govuk-tag govuk-phase-banner__content__tag">beta</strong></span>
+            <span class="govuk-header__product-name">Forms <strong class="govuk-tag govuk-phase-banner__content__tag">Beta</strong></span>
           </a>
         </div>
         <div class="govuk-header__content">
