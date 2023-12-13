@@ -1,6 +1,6 @@
 module ApplicationHelper
   def govuk_assets_path
-    "/node_modules/govuk-frontend/govuk/assets"
+    "/node_modules/govuk-frontend/dist/govuk/assets"
   end
 
   def page_title(separator = " – ")
