@@ -1,11 +1,21 @@
 import { initAll } from 'govuk-frontend'
-import { nodeListForEach } from 'govuk-frontend/govuk-esm/common.mjs'
 
 import { CookieBanner } from '../javascript/components/cookie_banner.mjs'
 import { CookiePage } from '../javascript/components/cookie_page.mjs'
 
-import { loadConsentStatus, saveConsentStatus, CONSENT_STATUS } from '../javascript/services/cookie.mjs'
-import { installAnalyticsScript, deleteGoogleAnalyticsCookies, setDefaultConsent, updateCookieConsent, sendPageViewEvent, attachExternaLinkTracker } from '../javascript/services/google_tag.mjs'
+import {
+  loadConsentStatus,
+  saveConsentStatus,
+  CONSENT_STATUS
+} from '../javascript/services/cookie.mjs'
+import {
+  installAnalyticsScript,
+  deleteGoogleAnalyticsCookies,
+  setDefaultConsent,
+  updateCookieConsent,
+  sendPageViewEvent,
+  attachExternaLinkTracker
+} from '../javascript/services/google_tag.mjs'
 
 initAll()
 
@@ -26,7 +36,7 @@ if (analyticsConsentStatus === CONSENT_STATUS.GRANTED) {
 
 // Initialise cookie banner
 const $banners = document.querySelectorAll('[data-module="cookie-banner"]')
-nodeListForEach($banners, function ($banner) {
+$banners.forEach(function ($banner) {
   new CookieBanner($banner).init({
     showBanner: analyticsConsentStatus === CONSENT_STATUS.UNKNOWN,
     onSubmit: handleUpdateConsent
