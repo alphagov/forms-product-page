@@ -15,6 +15,7 @@ require "action_view/railtie"
 # require "rails/test_unit/railtie"
 
 require "./app/lib/json_log_formatter"
+require "./app/lib/lograge/custom_options"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -48,10 +49,8 @@ module FormsProductPage
     # logging use the Logger::Formatter.new.
     config.log_formatter = JsonLogFormatter.new
 
-    if ENV["RAILS_LOG_TO_STDOUT"].present?
-      config.logger = ActiveSupport::Logger.new($stdout)
-      config.logger.formatter = config.log_formatter
-    end
+    config.logger = ActiveSupport::Logger.new($stdout)
+    config.logger.formatter = config.log_formatter
 
     # Lograge is used to format the standard HTTP request logging
     config.lograge.enabled = true
@@ -61,5 +60,7 @@ module FormsProductPage
     #  make lograge output it which includes some extra debugging
     # information.
     config.lograge.keep_original_rails_log = false
+
+    config.lograge.custom_options = Lograge::CustomOptions
   end
 end
