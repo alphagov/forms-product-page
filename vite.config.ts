@@ -18,7 +18,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@govuk': path.resolve(__dirname, 'node_modules/govuk-frontend/govuk'),
+      '@govuk': path.resolve(__dirname, 'node_modules/govuk-frontend/dist/govuk'),
       '@images': path.resolve(__dirname, 'app/frontend/images')
     }
   }
