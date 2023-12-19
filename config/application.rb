@@ -49,9 +49,6 @@ module FormsProductPage
     # logging use the Logger::Formatter.new.
     config.log_formatter = JsonLogFormatter.new
 
-    config.logger = ActiveSupport::Logger.new($stdout)
-    config.logger.formatter = config.log_formatter
-
     # Lograge is used to format the standard HTTP request logging
     config.lograge.enabled = true
     config.lograge.formatter = Lograge::Formatters::Json.new
