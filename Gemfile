@@ -19,7 +19,7 @@ gem "vite_rails", "~> 3.0"
 # For structured logging
 gem "lograge", "~> 0.14"
 
-gem "config", "~> 5.0"
+gem "config", "~> 5.1"
 
 # Use Sentry (https://sentry.io/for/ruby/?platform=sentry.ruby.rails#)
 gem "sentry-rails", "~> 5.15"
