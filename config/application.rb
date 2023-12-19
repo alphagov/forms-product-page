@@ -49,8 +49,10 @@ module FormsProductPage
     # logging use the Logger::Formatter.new.
     config.log_formatter = JsonLogFormatter.new
 
-    config.logger = ActiveSupport::Logger.new($stdout)
-    config.logger.formatter = config.log_formatter
+    if ENV["RAILS_LOG_TO_STDOUT"].present?
+      config.logger = ActiveSupport::Logger.new($stdout)
+      config.logger.formatter = config.log_formatter
+    end
 
     # Lograge is used to format the standard HTTP request logging
     config.lograge.enabled = true
