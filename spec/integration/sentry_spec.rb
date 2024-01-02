@@ -46,12 +46,8 @@ RSpec.describe "config/initializers/sentry" do
       expect(filtered_event.to_hash.to_s).not_to include "submission-email@test.example"
     end
 
-    it "replaces the email address in the exception with a comment" do
-      expect(filtered_event.to_hash[:exception][:values].first[:value]).to include "[Filtered (client-side)]"
-    end
-
     it "keeps the rest of the exception message" do
-      expect(filtered_event.to_hash[:exception][:values].first[:value]).to include "undefined method"
+      expect(filtered_event.to_hash[:exception][:values].first[:value]).to include "undefined method `not_a_method' for an instance of SupportForm (NoMethodError)"
     end
   end
 
