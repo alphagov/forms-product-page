@@ -10,6 +10,8 @@ require "rspec/rails"
 # Add additional requires below this line. Rails is not loaded until this point!
 require_relative "support/capybara_selenium_webdriver"
 
+require "sentry/test_helper"
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -58,4 +60,5 @@ RSpec.configure do |config|
 
   config.include ViewComponent::TestHelpers, type: :component
   config.include Capybara::RSpecMatchers, type: :component
+  config.include Sentry::TestHelper
 end
