@@ -26,7 +26,7 @@ gem "sentry-rails", "~> 5.16"
 gem "sentry-ruby", "~> 5.16"
 
 # For GOV.UK branding
-gem "govuk-components", "~> 5.0.2"
+gem "govuk-components", require: "govuk/components", github: "x-govuk/govuk-components", ref: "1136580771a34c373f4a723baa68c3433bcdcd40"
 gem "govuk_design_system_formbuilder", "~> 5.0.0"
 
 group :development, :test do
