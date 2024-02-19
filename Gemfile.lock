@@ -148,11 +148,11 @@ GEM
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    govuk-components (5.0.2)
+    govuk-components (5.1.0)
       html-attributes-utils (~> 1.0.0, >= 1.0.0)
       pagy (~> 6.0)
-      view_component (>= 3.9, < 3.10)
-    govuk_design_system_formbuilder (5.0.0)
+      view_component (>= 3.9, < 3.11)
+    govuk_design_system_formbuilder (5.1.0)
       actionview (>= 6.1)
       activemodel (>= 6.1)
       activesupport (>= 6.1)
@@ -185,7 +185,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.5)
-    minitest (5.21.2)
+    minitest (5.22.2)
     mutex_m (0.2.0)
     net-imap (0.4.9.1)
       date
@@ -205,7 +205,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
-    pagy (6.2.0)
+    pagy (6.5.0)
     parallel (1.24.0)
     parser (3.3.0.5)
       ast (~> 2.4.1)
@@ -337,7 +337,7 @@ GEM
     tzinfo-data (1.2024.1)
       tzinfo (>= 1.0.0)
     unicode-display_width (2.5.0)
-    view_component (3.9.0)
+    view_component (3.10.0)
       activesupport (>= 5.2.0, < 8.0)
       concurrent-ruby (~> 1.0)
       method_source (~> 1.0)
@@ -375,8 +375,8 @@ DEPENDENCIES
   capybara
   config (~> 5.1)
   debug
-  govuk-components (~> 5.0.2)
-  govuk_design_system_formbuilder (~> 5.0.0)
+  govuk-components
+  govuk_design_system_formbuilder
   lograge (~> 0.14)
   puma (~> 6.4)
   rails (~> 7.1.3)

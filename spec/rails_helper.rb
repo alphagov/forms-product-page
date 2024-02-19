@@ -62,3 +62,7 @@ RSpec.configure do |config|
   config.include Capybara::RSpecMatchers, type: :component
   config.include Sentry::TestHelper
 end
+
+Capybara.configure do |config|
+  config.automatic_label_click = true
+end

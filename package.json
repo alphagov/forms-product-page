@@ -2,7 +2,7 @@
   "name": "forms-product-page",
   "private": "true",
   "dependencies": {
-    "govuk-frontend": "^5.0.0"
+    "govuk-frontend": "5.1.0"
   },
   "devDependencies": {
     "esbuild": "^0.20.0",

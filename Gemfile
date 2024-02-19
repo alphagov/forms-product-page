@@ -26,8 +26,8 @@ gem "sentry-rails", "~> 5.16"
 gem "sentry-ruby", "~> 5.16"
 
 # For GOV.UK branding
-gem "govuk-components", "~> 5.0.2"
-gem "govuk_design_system_formbuilder", "~> 5.0.0"
+gem "govuk-components"
+gem "govuk_design_system_formbuilder"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
