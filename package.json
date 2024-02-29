@@ -1,6 +1,7 @@
 {
   "name": "forms-product-page",
   "private": "true",
+  "type": "module",
   "dependencies": {
     "govuk-frontend": "5.2.0"
   },
