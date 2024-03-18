@@ -22,8 +22,8 @@ gem "lograge", "~> 0.14"
 gem "config", "~> 5.3"
 
 # Use Sentry (https://sentry.io/for/ruby/?platform=sentry.ruby.rails#)
-gem "sentry-rails", "~> 5.17"
-gem "sentry-ruby", "~> 5.17"
+gem "sentry-rails"
+gem "sentry-ruby"
 
 # For GOV.UK branding
 gem "govuk-components"
