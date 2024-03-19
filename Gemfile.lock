@@ -339,7 +339,7 @@ DEPENDENCIES
   brakeman (~> 6.1.2)
   bundler-audit (~> 0.9.0)
   capybara
-  config (~> 5.4)
+  config
   debug
   govuk-components
   govuk_design_system_formbuilder
