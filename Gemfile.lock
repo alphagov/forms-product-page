@@ -96,7 +96,7 @@ GEM
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
     concurrent-ruby (1.2.3)
-    config (5.3.0)
+    config (5.4.0)
       deep_merge (~> 1.2, >= 1.2.1)
     connection_pool (2.4.1)
     crack (1.0.0)
@@ -339,7 +339,7 @@ DEPENDENCIES
   brakeman (~> 6.1.2)
   bundler-audit (~> 0.9.0)
   capybara
-  config (~> 5.3)
+  config
   debug
   govuk-components
   govuk_design_system_formbuilder
