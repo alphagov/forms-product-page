@@ -53,7 +53,6 @@ RSpec.describe HeaderComponent::View, type: :component do
       # rubocop:disable Layout/HeredocIndentation
       expect(normalize_html(rendered_content)).to eq normalize_html(<<~HTML)
   <header
-      role="banner"
       data-module="govuk-header"
       class="govuk-header"
     >
