@@ -32,8 +32,7 @@ COPY --chown=ruby:ruby package.json package-lock.json ./
 RUN npm ci --ignore-scripts
 
 ARG RAILS_ENV
-ENV RAILS_ENV="${RAILS_ENV:-production}" \
-    USER="ruby" 
+ENV RAILS_ENV="${RAILS_ENV:-production}"
 
 COPY --chown=ruby:ruby . .
 
@@ -47,7 +46,6 @@ RUN npm ci --ignore-scripts --omit=dev
 FROM base AS app
 
 ENV RAILS_ENV="${RAILS_ENV:-production}" \
-    USER="ruby" \
     SECRET_KEY_BASE="dummyvalue"
 
 WORKDIR /app
