@@ -58,9 +58,6 @@ RUN chown ruby:ruby -R /app
 
 USER ruby
 
-COPY --chown=ruby:ruby bin/ ./bin
-RUN chmod 0755 bin/*
-
 COPY --chown=ruby:ruby --from=build /usr/local/bundle /usr/local/bundle
 COPY --chown=ruby:ruby --from=build /app /app
 
