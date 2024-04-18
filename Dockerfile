@@ -33,7 +33,6 @@ RUN npm ci --ignore-scripts
 
 ARG RAILS_ENV
 ENV RAILS_ENV="${RAILS_ENV:-production}" \
-    PATH="${PATH}:/home/ruby/.local/bin" \
     USER="ruby" 
 
 COPY --chown=ruby:ruby . .
@@ -48,7 +47,6 @@ RUN npm ci --ignore-scripts --omit=dev
 FROM base AS app
 
 ENV RAILS_ENV="${RAILS_ENV:-production}" \
-    PATH="${PATH}:/home/ruby/.local/bin" \
     USER="ruby" \
     SECRET_KEY_BASE="dummyvalue"
 
