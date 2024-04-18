@@ -45,8 +45,7 @@ RUN npm ci --ignore-scripts --omit=dev
 
 FROM base AS app
 
-ENV RAILS_ENV="${RAILS_ENV:-production}" \
-    SECRET_KEY_BASE="dummyvalue"
+ENV RAILS_ENV="${RAILS_ENV:-production}"
 
 WORKDIR /app
 
