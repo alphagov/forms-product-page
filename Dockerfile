@@ -4,12 +4,13 @@ ARG RUBY_VERSION=3.2.3
 ARG DOCKER_IMAGE_DIGEST=sha256:a709ff05ff5e471ab0f824487d9b5777f36850694981c61d10d29290daad735c
 
 FROM ruby:${RUBY_VERSION}-alpine${ALPINE_VERSION}@${DOCKER_IMAGE_DIGEST} AS base
+
 ARG NODEJS_VERSION=20
 ENV NODEJS_VERSION=${NODEJS_VERSION}
 
-FROM base AS build
-
 WORKDIR /app
+
+FROM base AS build
 
 RUN apk update
 RUN apk upgrade --available
@@ -46,8 +47,6 @@ RUN npm ci --ignore-scripts --omit=dev
 FROM base AS app
 
 ENV RAILS_ENV="${RAILS_ENV:-production}"
-
-WORKDIR /app
 
 RUN apk update
 RUN apk upgrade --available
