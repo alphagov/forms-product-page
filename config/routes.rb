@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/get-started" => "pages#get_started"
   get "/features" => "pages#features"
   get "/forthcoming-features" => "pages#forthcoming_features"
+  get "/create-good-forms" => "pages#create_good_forms"
   get "/accessibility" => "pages#accessibility"
   get "/cookies" => "pages#cookies"
   get "/privacy" => "pages#privacy"
