@@ -1,2 +1,7 @@
 GOV.UK Forms is built by a team at the Government Digital Service in London, 
 Manchester and Bristol. If you'd like to join us, see https://gdscareers.gov.uk/
+
+This week GOV.UK Forms had its Beta assessment. This is a huge milestone for us,
+and we want to shout out our assessment presentation team - thank you to Adam, 
+Anne, Betty, Chris, Dan, Emma, Hannah, Holly, Irina, James, Kelvin, Oliver, and 
+Sylvia! 
