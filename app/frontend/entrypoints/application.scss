@@ -22,6 +22,7 @@ $govuk-suppressed-warnings: (
 @import "../styles/related-items";
 @import "../styles/responsive-embed";
 @import "../styles/sub-navigation";
+@import "../styles/code-samples";
 
 @media (min-width: 415px) {
   div.feature-row {
