@@ -13,7 +13,7 @@
     "puppeteer": "^22.7.1",
     "sass": "^1.76.0",
     "standard": "^17.1.0",
-    "vite": "^5.2.10",
+    "vite": "^5.2.11",
     "vite-plugin-ruby": "^5.0.0"
   },
   "scripts": {
