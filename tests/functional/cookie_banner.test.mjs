@@ -20,13 +20,6 @@ describe('Cookie banner', () => {
     await page.goto('http://localhost:8888/')
   })
 
-  it('is hidden on the cookies page', async () => {
-    await page.setCookie(cookieParam)
-    await page.goto('http://localhost:8888/cookies/')
-
-    await expect(page).not.toMatchElement('#cookie-banner')
-  })
-
   describe('when JavaScript is disabled', () => {
     it('is hidden', async () => {
       await page.setJavaScriptEnabled(false)

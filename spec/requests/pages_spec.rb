@@ -18,13 +18,26 @@ RSpec.describe "Pages", type: :request do
   %w[features
      support
      accessibility
-     cookies
      privacy].each do |page|
     describe "GET /#{page}" do
       it "returns ok" do
         get "/#{page}"
         expect(response).to have_http_status(:ok)
       end
+    end
+  end
+
+  describe "GET /cookies" do
+    before do
+      get cookies_path
+    end
+
+    it "returns ok" do
+      expect(response).to have_http_status(:ok)
+    end
+
+    it "does not contain the cookie banner" do
+      expect(Capybara.string(response.body)).not_to have_selector("#cookie-banner")
     end
   end
 end
