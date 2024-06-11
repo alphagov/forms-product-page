@@ -1,4 +1,3 @@
-import { readFileSync } from 'fs'
 import { CookiePage } from './cookie_page.mjs'
 
 describe('CookiePage', () => {

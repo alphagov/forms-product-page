@@ -1,4 +1,3 @@
-import { readFileSync } from 'fs'
 import { CookieBanner } from './cookie_banner.mjs'
 
 describe('CookieBanner', () => {
