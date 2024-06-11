@@ -1,4 +1,9 @@
+/**
+ * @vitest-environment jsdom
+ */
+
 import { loadConsentStatus, saveConsentStatus, COOKIE_NAME, CONSENT_STATUS } from './cookie.mjs'
+import { describe, beforeEach, afterEach, it, expect } from 'vitest'
 
 describe('Cookie', () => {
   const cookieValue = `${COOKIE_NAME}=true`

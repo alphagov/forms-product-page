@@ -1,4 +1,9 @@
+/**
+ * @vitest-environment jsdom
+ */
+
 import { deleteGoogleAnalyticsCookies, installAnalyticsScript } from './google_tag.mjs'
+import { describe, afterEach, it, expect } from 'vitest'
 
 describe('google_tag.mjs', () => {
   afterEach(() => {
