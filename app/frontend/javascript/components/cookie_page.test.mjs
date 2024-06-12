@@ -1,3 +1,8 @@
+/**
+ * @vitest-environment jsdom
+ */
+
+import { describe, beforeEach, test, expect } from 'vitest'
 import { CookiePage } from './cookie_page.mjs'
 
 describe('CookiePage', () => {
@@ -30,7 +35,7 @@ describe('CookiePage', () => {
     cookiePage = new CookiePage(document.querySelector('[data-module="app-cookies-page"]'))
   })
 
-  test('Initialzes ok when given valid html', () => {
+  test('Initializes ok when given valid html', () => {
     expect(cookiePage).toBeDefined()
   })
 })

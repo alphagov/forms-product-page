@@ -1,3 +1,8 @@
+/**
+ * @vitest-environment jsdom
+ */
+
+import { describe, beforeEach, test, expect } from 'vitest'
 import { CookieBanner } from './cookie_banner.mjs'
 
 describe('CookieBanner', () => {
