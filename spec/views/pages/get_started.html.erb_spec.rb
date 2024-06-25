@@ -11,7 +11,7 @@ describe "pages/get_started.html.erb", type: :view do
     expect(rendered).to have_selector(".govuk-button--start") do |start_button|
       expect(start_button).to match_selector(
         :link,
-        "Create a trial account",
+        "Create an account",
         href: "forms-admin.test/sign-up",
       )
     end
