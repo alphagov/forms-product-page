@@ -3,7 +3,9 @@ require_relative "../../../app/lib/lograge/custom_options"
 
 describe Lograge::CustomOptions do
   describe ".call" do
+    # rubocop:disable RSpec/VerifiedDoubleReference
     let(:event) { instance_double("Event") }
+    # rubocop:enable RSpec/VerifiedDoubleReference
     let(:payload) do
       {
         host: "somehost",

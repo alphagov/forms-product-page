@@ -45,7 +45,7 @@ RSpec.describe ApplicationController, type: :controller do
 
     context "when HTTP_X_FORWARDED_FOR is empty" do
       it "returns nil" do
-        expect(controller.user_ip("")).to be nil
+        expect(controller.user_ip("")).to be_nil
       end
     end
   end
