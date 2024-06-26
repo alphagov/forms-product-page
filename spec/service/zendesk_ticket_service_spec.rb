@@ -31,8 +31,7 @@ describe ZendeskTicketService do
     end
 
     it "authenticates using secrets from settings" do
-      allow(Settings.zendesk).to receive(:api_user).and_return("zendesk_user@test.example")
-      allow(Settings.zendesk).to receive(:api_token).and_return("supersecret")
+      allow(Settings.zendesk).to receive_messages(api_user: "zendesk_user@test.example", api_token: "supersecret")
 
       request = stub_successful_create
 
