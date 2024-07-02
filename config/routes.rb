@@ -16,8 +16,8 @@ Rails.application.routes.draw do
 
   get "/mailing-list" => redirect("https://service.us12.list-manage.com/subscribe?u=cb74eb9a6898b0e5870fede0a&id=451fe4c1e1")
 
-  get "/security.txt.html" => redirect("https://vdp.cabinetoffice.gov.uk/.well-known/security.txt")
-  get "/.well-known/security.txt.html" => redirect("https://vdp.cabinetoffice.gov.uk/.well-known/security.txt")
+  get "/security.txt" => redirect("https://vdp.cabinetoffice.gov.uk/.well-known/security.txt")
+  get "/.well-known/security.txt" => redirect("https://vdp.cabinetoffice.gov.uk/.well-known/security.txt")
 
   get "/support" => "support#support", as: :support
   post "/support" => "support#new", as: :new_support_message
