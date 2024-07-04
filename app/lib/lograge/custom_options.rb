@@ -1,4 +1,7 @@
 # frozen_string_literal: true
+
+# rubocop:disable Metrics/AbcSize
+
 module Lograge
   class CustomOptions
     def self.call(event)
@@ -12,3 +15,5 @@ module Lograge
     end
   end
 end
+
+# rubocop:enable Metrics/AbcSize
