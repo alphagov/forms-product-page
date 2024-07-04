@@ -1,17 +1,56 @@
 # .rubocop.yml
 
-inherit_mode:
-  merge:
-    - Exclude
+require: rubocop-rake
 
-# **************************************************************
-# TRY NOT TO ADD OVERRIDES IN THIS FILE
-#
-# This repo is configured to follow the RuboCop GOV.UK styleguide.
-# Any rules you override here will cause this repo to diverge from
-# the way we write code in all other GOV.UK repos.
-#
-# See https://github.com/alphagov/rubocop-govuk/blob/main/CONTRIBUTING.md
-# **************************************************************
+AllCops:
+  NewCops: enable
 
+  Exclude:
+    - 'bin/**'
+    - 'config.ru'
+    - 'tmp/**/*'
+    - 'db/schema.rb'
+    - 'db/migrate/201*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
 
+Layout/AccessModifierIndentation:
+  Enabled: true
+  EnforcedStyle: outdent
+
+Layout/LineLength:
+  Max: 180
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented_relative_to_receiver
+
+Metrics/BlockLength:
+  Max: 100
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/MultipleExpectations:
+  Max: 4
