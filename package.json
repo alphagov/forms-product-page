@@ -15,6 +15,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "vitest"
+    "test": "vitest run",
+    "test:watch": "vitest watch"
   }
 }
