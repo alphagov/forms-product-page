@@ -1,23 +1,17 @@
-require "rails_helper"
+# frozen_string_literal: true
 
-def normalize_html(html)
-  Nokogiri::XML(html, &:noblanks).to_xhtml(indent: 2)
-end
+require "rails_helper"
 
 RSpec.describe HeaderComponent::View, type: :component do
   let(:navigation_items) do
     [
       { text: "Features", href: "/features" },
-      { text: "Support", href: "/support" },
+      { text: "Support", href: "/support" }
     ]
   end
 
   let(:phase_name) { "Beta" }
-
-  let(:header_component) do
-    described_class.new(navigation_items:, phase_name:)
-  end
-
+  let(:header_component) { described_class.new(navigation_items:, phase_name:) }
   let(:current_page) { "/" }
 
   before do
@@ -30,7 +24,7 @@ RSpec.describe HeaderComponent::View, type: :component do
     context "when on the homepage" do
       it "renders the navigation items as inactive" do
         expect(page).not_to have_selector(
-          ".govuk-header__navigation-item.govuk-header__navigation-item--active",
+          ".govuk-header__navigation-item.govuk-header__navigation-item--active"
         )
       end
     end
@@ -41,7 +35,7 @@ RSpec.describe HeaderComponent::View, type: :component do
 
         it "renders the #{view} navigation item as active" do
           expect(
-            page.find(".govuk-header__navigation-item", text: view.capitalize),
+            page.find(".govuk-header__navigation-item", text: view.capitalize)
           ).to match_selector ".govuk-header__navigation-item--active"
         end
       end
@@ -92,4 +86,8 @@ RSpec.describe HeaderComponent::View, type: :component do
       # rubocop:enable Layout/HeredocIndentation
     end
   end
+end
+
+def normalize_html(html)
+  Nokogiri::XML(html, &:noblanks).to_xhtml(indent: 2)
 end

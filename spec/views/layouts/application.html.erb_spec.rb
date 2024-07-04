@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # spec/views/layouts/application.html.erb_spec.rb
 
 require "rails_helper"

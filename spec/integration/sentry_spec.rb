@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
 RSpec.describe "config/initializers/sentry" do
-  let(:test_dsn) { "https://fake@test-dsn/1".freeze }
+  let(:test_dsn) { "https://fake@test-dsn/1" }
 
   before do
     allow(Settings.sentry).to receive(:dsn).and_return(test_dsn)
@@ -47,11 +49,11 @@ RSpec.describe "config/initializers/sentry" do
             params: {
               forms_submission_form: {
                 temporary_submission: "new-submission-email@test.example",
-                notify_response_id: "some-random-number-0000",
-              },
-            },
-          },
-        ),
+                notify_response_id: "some-random-number-0000"
+              }
+            }
+          }
+        )
       )
 
       Sentry.capture_message("breadcrumbs test")

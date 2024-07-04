@@ -1,17 +1,17 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 require_relative "../../../app/lib/lograge/custom_options"
 
 describe Lograge::CustomOptions do
   describe ".call" do
-    # rubocop:disable RSpec/VerifiedDoubleReference
     let(:event) { instance_double("Event") }
-    # rubocop:enable RSpec/VerifiedDoubleReference
     let(:payload) do
       {
         host: "somehost",
         user_ip: "192.168.0.1",
         request_id: "abcd1234",
-        exception: "MockException",
+        exception: "MockException"
       }
     end
 
@@ -26,7 +26,7 @@ describe Lograge::CustomOptions do
         host: "somehost",
         user_ip: "192.168.0.1",
         request_id: "abcd1234",
-        exception: "MockException",
+        exception: "MockException"
       )
     end
 

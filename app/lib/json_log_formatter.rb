@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class JsonLogFormatter < ActiveSupport::Logger::Formatter
   def call(severity, timestamp, _progname, message)
     log_event = {

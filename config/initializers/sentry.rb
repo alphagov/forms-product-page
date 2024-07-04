@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "active_support/parameter_filter"
 
 require "./app/lib/email_parameter_filter_proc"
@@ -12,7 +14,7 @@ if Settings.sentry.dsn.present?
 
     filter = ActiveSupport::ParameterFilter.new(
       [EmailParameterFilterProc.new(mask: Settings.sentry.filter_mask)],
-      mask: Settings.sentry.filter_mask,
+      mask: Settings.sentry.filter_mask
     )
     config.before_send = lambda do |event, _hint|
       filter.filter(event.to_hash)

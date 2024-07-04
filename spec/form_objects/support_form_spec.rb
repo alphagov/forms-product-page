@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
 describe SupportForm, type: :model do
@@ -14,7 +16,7 @@ describe SupportForm, type: :model do
                i_need_help_with: "using_forms",
                message: "I need help using GOV.UK Forms",
                name: "A. User",
-               email_address: "test@example.com",
+               email_address: "test@example.com"
              )).to be_valid(:submit)
     end
 
@@ -24,7 +26,7 @@ describe SupportForm, type: :model do
           i_need_help_with: "using_forms",
           message: "I need help using GOV.UK Forms",
           name: "A. User",
-          email_address: "test@example.com",
+          email_address: "test@example.com"
         }
         attrs.delete(attr)
 
@@ -40,7 +42,7 @@ describe SupportForm, type: :model do
                i_need_help_with: "other_government_service",
                message: "I need help using GOV.UK Forms",
                name: "A. User",
-               email_address: "test@example.com",
+               email_address: "test@example.com"
              )).not_to be_valid(:submit)
     end
 
@@ -49,7 +51,7 @@ describe SupportForm, type: :model do
         i_need_help_with: "using_forms",
         message: "I need help using GOV.UK Forms",
         name: "A. User",
-        email_address: "not_an_email_address",
+        email_address: "not_an_email_address"
       )
 
       expect(support_form).not_to be_valid(:submit)
@@ -67,7 +69,7 @@ describe SupportForm, type: :model do
         i_need_help_with: "other_government_service",
         message: "I need help with my tax return",
         name: "A. User",
-        email_address: "test@example.com",
+        email_address: "test@example.com"
       )
 
       expect(support_form.submit).to be_falsey
@@ -79,34 +81,34 @@ describe SupportForm, type: :model do
         i_need_help_with: "using_forms",
         message: "I need help with GOV.UK Forms",
         name: "A. User",
-        email_address: "test@example.com",
+        email_address: "test@example.com"
       )
 
       expect(support_form.submit).to be_truthy
       expect(ZendeskTicketService).to have_received(:create!).with(
         hash_including(
           comment: { body: "I need help with GOV.UK Forms" },
-          requester: { name: "A. User", email: "test@example.com" },
-        ),
+          requester: { name: "A. User", email: "test@example.com" }
+        )
       )
     end
 
     [
       %w[using_forms govuk_forms_support],
-      %w[about_forms govuk_forms_enquiries],
+      %w[about_forms govuk_forms_enquiries]
     ].each do |i_need_help_with, tag|
       it "tags the Zendesk ticket with what they need help with" do
         described_class.new(
           i_need_help_with:,
           message: "My message",
           name: "A. User",
-          email_address: "test@example.com",
+          email_address: "test@example.com"
         ).submit
 
         expect(ZendeskTicketService).to have_received(:create!).with(
           hash_including(
-            tags: [tag],
-          ),
+            tags: [tag]
+          )
         )
       end
     end

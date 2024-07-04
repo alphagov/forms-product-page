@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
 describe "pages/get_started.html.erb", type: :view do
@@ -12,7 +14,7 @@ describe "pages/get_started.html.erb", type: :view do
       expect(start_button).to match_selector(
         :link,
         "Create an account",
-        href: "forms-admin.test/sign-up",
+        href: "forms-admin.test/sign-up"
       )
     end
   end

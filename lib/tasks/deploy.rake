@@ -1,7 +1,11 @@
+# frozen_string_literal: true
+
 require "English"
 require "json"
 require "net/http"
 require "shellwords"
+
+# rubocop:disable Metrics/MethodLength
 
 namespace :pipeline do
   namespace :dev do
@@ -47,15 +51,15 @@ def push_commit_to_dev(git_hash)
       {
         actionName: "get-forms-product-page",
         revisionType: "COMMIT_ID",
-        revisionValue: git_hash,
-      },
+        revisionValue: git_hash
+      }
     ],
     variables: [
       {
         name: "tag_prefix",
-        value: "dev-",
-      },
-    ],
+        value: "dev-"
+      }
+    ]
   }
 
   puts ""
@@ -70,7 +74,7 @@ def push_commit_to_dev(git_hash)
     "--name",
     "forms-product-page-image-builder",
     "--cli-input-json",
-    cli_input,
+    cli_input
   ]
   sh_aws(*command_args)
 end
@@ -79,3 +83,5 @@ def sh_aws(*cmd)
   all_args = ["gds", "aws", "forms-deploy-support", "--", *cmd]
   system({ **ENV, "AWS_VAULT" => nil }, *all_args, exception: true)
 end
+
+# rubocop:enable Metrics/MethodLength

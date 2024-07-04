@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
 RSpec.describe ApplicationController, type: :controller do
@@ -9,7 +11,9 @@ RSpec.describe ApplicationController, type: :controller do
 
   describe "#append_info_to_payload" do
     let(:payload) { {} }
-    let(:request) { instance_double(ActionDispatch::Request, host: "localhost", request_id: "abc123", env: env_variable) }
+    let(:request) do
+      instance_double(ActionDispatch::Request, host: "localhost", request_id: "abc123", env: env_variable)
+    end
     let(:env_variable) { { "HTTP_X_FORWARDED_FOR" => "192.168.1.1" } }
 
     before do

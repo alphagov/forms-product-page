@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SupportController < ApplicationController
   def support
     @support_form = SupportForm.new
@@ -6,9 +8,7 @@ class SupportController < ApplicationController
   def new
     @support_form = SupportForm.new(support_form_params)
 
-    if @support_form.invalid?
-      render :support and return
-    end
+    render :support and return if @support_form.invalid?
 
     case @support_form.i_need_help_with.to_sym
     when :using_forms
@@ -40,7 +40,7 @@ class SupportController < ApplicationController
     end
   end
 
-private
+  private
 
   def support_form_params
     params

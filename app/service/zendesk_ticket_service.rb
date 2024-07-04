@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ZendeskTicketService
   class << self
     def create!(...)
@@ -9,13 +11,13 @@ class ZendeskTicketService
     ticket_json = { ticket: {
       comment:,
       **params,
-      **Settings.zendesk.defaults,
+      **Settings.zendesk.defaults
     } }.to_json
 
     post_json!("https://#{subdomain}.zendesk.com/api/v2/tickets.json", ticket_json, headers:)
   end
 
-private
+  private
 
   def authorization
     basic_encoded = ["#{Settings.zendesk.api_user}/token:#{Settings.zendesk.api_token}"].pack("m0")
@@ -25,7 +27,7 @@ private
   def headers
     {
       "Authorization" => authorization,
-      "Content-Type" => "application/json",
+      "Content-Type" => "application/json"
     }
   end
 
@@ -36,10 +38,8 @@ private
   def post_json!(url, json_data, headers: nil)
     uri = URI.parse(url)
     response = Net::HTTP.post(uri, json_data, headers)
-    if response.is_a? Net::HTTPSuccess
-      JSON.parse(response.body)
-    else
-      raise "Creating Zendesk ticket failed: #{response.code}"
-    end
+    raise "Creating Zendesk ticket failed: #{response.code}" unless response.is_a? Net::HTTPSuccess
+
+    JSON.parse(response.body)
   end
 end

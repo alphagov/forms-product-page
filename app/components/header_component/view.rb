@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HeaderComponent
   class View < ViewComponent::Base
     attr_accessor :navigation_items, :phase_name
@@ -18,7 +20,7 @@ module HeaderComponent
       end
     end
 
-  private
+    private
 
     def homepage_url
       root_path
@@ -26,7 +28,7 @@ module HeaderComponent
 
     def product_name_with_tag
       {
-        name: "#{I18n.t('header.product_name')} #{product_tag}".html_safe,
+        name: "#{I18n.t('header.product_name')} #{product_tag}".html_safe
       }
     end
 
