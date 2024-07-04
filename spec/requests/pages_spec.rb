@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
-RSpec.describe "Pages", type: :request do
+RSpec.describe "Pages" do
   describe "GET /index" do
     before do
       get root_path
@@ -37,7 +39,7 @@ RSpec.describe "Pages", type: :request do
     end
 
     it "does not contain the cookie banner" do
-      expect(Capybara.string(response.body)).not_to have_selector("#cookie-banner")
+      expect(Capybara.string(response.body)).to have_no_css("#cookie-banner")
     end
   end
 end

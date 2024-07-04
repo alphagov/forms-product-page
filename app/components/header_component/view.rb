@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module HeaderComponent
   class View < ViewComponent::Base
     attr_accessor :navigation_items, :phase_name

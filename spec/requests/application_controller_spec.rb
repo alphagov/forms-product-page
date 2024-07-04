@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
-RSpec.describe ApplicationController, type: :request do
+RSpec.describe ApplicationController do
   context "when there is a application load balancer trace ID" do
     let(:payloads) { [] }
     let(:payload) { payloads.last }
@@ -12,7 +14,7 @@ RSpec.describe ApplicationController, type: :request do
     end
 
     before do
-      get root_path, headers: { "HTTP_X_AMZN_TRACE_ID": "Root=1-63441c4a-abcdef012345678912345678" }
+      get root_path, headers: { HTTP_X_AMZN_TRACE_ID: "Root=1-63441c4a-abcdef012345678912345678" }
     end
 
     after do

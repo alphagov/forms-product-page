@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
-RSpec.describe "Mailing list", type: :request do
+RSpec.describe "Mailing list" do
   it "redirects users to the mailing list subscription page" do
     get mailing_list_path
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EmailParameterFilterProc
   # email regexp from regular-expressions.info/email.html
   EMAIL_REGEXP = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/i

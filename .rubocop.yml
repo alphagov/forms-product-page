@@ -1,6 +1,11 @@
 # .rubocop.yml
 
-require: rubocop-rake
+require:
+  - rubocop-capybara
+  - rubocop-rails
+  - rubocop-rake
+  - rubocop-rspec
+  - rubocop-rspec_rails
 
 AllCops:
   NewCops: enable

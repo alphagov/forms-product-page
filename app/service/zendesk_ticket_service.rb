@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ZendeskTicketService
   class << self
     def create!(...)
@@ -36,10 +38,8 @@ private
   def post_json!(url, json_data, headers: nil)
     uri = URI.parse(url)
     response = Net::HTTP.post(uri, json_data, headers)
-    if response.is_a? Net::HTTPSuccess
-      JSON.parse(response.body)
-    else
-      raise "Creating Zendesk ticket failed: #{response.code}"
-    end
+    raise "Creating Zendesk ticket failed: #{response.code}" unless response.is_a? Net::HTTPSuccess
+
+    JSON.parse(response.body)
   end
 end

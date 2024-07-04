@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
 def normalize_html(html)
@@ -29,7 +31,7 @@ RSpec.describe HeaderComponent::View, type: :component do
   describe "call" do
     context "when on the homepage" do
       it "renders the navigation items as inactive" do
-        expect(page).not_to have_selector(
+        expect(page).to have_no_css(
           ".govuk-header__navigation-item.govuk-header__navigation-item--active",
         )
       end

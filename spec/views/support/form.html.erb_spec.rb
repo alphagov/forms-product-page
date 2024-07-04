@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
-describe "support/form.html.erb", type: :view do
+describe "support/form.html.erb" do
   let(:i_need_help_with) { "using_forms" }
 
   before do

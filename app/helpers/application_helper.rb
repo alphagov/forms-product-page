@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def govuk_assets_path
     "/node_modules/govuk-frontend/dist/govuk/assets"

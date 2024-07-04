@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "active_support/parameter_filter"
 
 require "./app/lib/email_parameter_filter_proc"

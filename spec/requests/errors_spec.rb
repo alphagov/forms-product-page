@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
-RSpec.describe "Errors", type: :request do
+RSpec.describe "Errors" do
   describe "Page not found" do
     before do
       get "/404"

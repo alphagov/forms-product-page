@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Lograge
   class CustomOptions
     def self.call(event)

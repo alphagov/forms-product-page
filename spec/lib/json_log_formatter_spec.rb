@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 require_relative "../../app/lib/json_log_formatter"
 

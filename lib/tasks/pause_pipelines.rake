@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "aws-sdk-codepipeline"
 
 namespace :pipeline do
@@ -12,17 +14,13 @@ namespace :pipeline do
         codepipeline = Aws::CodePipeline::Client.new
         pipeline_definition = codepipeline.get_pipeline(name: pipeline_name)
 
-        unless pipeline_definition.pipeline.stages.any?
-          raise "Pipeline definition has no stages"
-        end
+        raise "Pipeline definition has no stages" unless pipeline_definition.pipeline.stages.any?
 
-        unless pipeline_definition.pipeline.stages.count > 1
-          raise "Pipeline has only one stage. It cannot be paused in a way that can be unpaused from the console if necessary."
-        end
+        raise "Pipeline has only one stage. It cannot be paused in a way that can be unpaused from the console if necessary." unless pipeline_definition.pipeline.stages.count > 1
 
         second_stage = pipeline_definition.pipeline.stages[1]
 
-        default_reason = "Pipeline paused by #{ENV['USER']} using rake task"
+        default_reason = "Pipeline paused by #{ENV.fetch('USER', nil)} using rake task"
         reason = get_pause_reason(default_reason)
         codepipeline.disable_stage_transition(
           pipeline_name:,
@@ -43,9 +41,7 @@ namespace :pipeline do
         codepipeline = Aws::CodePipeline::Client.new
         pipeline_definition = codepipeline.get_pipeline(name: pipeline_name)
 
-        unless pipeline_definition.pipeline.stages.any?
-          raise "Pipeline definition has no stages"
-        end
+        raise "Pipeline definition has no stages" unless pipeline_definition.pipeline.stages.any?
 
         unless pipeline_definition.pipeline.stages.count > 1
           raise "Pipeline has only one stage. It cannot be unpaused because there is no transition from the source stage to unpause."
@@ -70,9 +66,7 @@ namespace :pipeline do
         pipeline_definition = codepipeline.get_pipeline_state(name: pipeline_name)
 
         paused_transitions = pipeline_definition.stage_states.filter_map do |stage|
-          unless stage.inbound_transition_state.enabled
-            [stage.stage_name, "inbound", stage.inbound_transition_state.disabled_reason]
-          end
+          [stage.stage_name, "inbound", stage.inbound_transition_state.disabled_reason] unless stage.inbound_transition_state.enabled
         end
 
         if paused_transitions.any?
@@ -121,9 +115,9 @@ def get_pause_reason(default)
   content =
     # Can't use temp_file.read because we closed the stream
     File.read(temp_file.path)
-        .split("\n")
-        .reject { |line| line.start_with? "#" }
-        .join("\n")
+      .split("\n")
+      .reject { |line| line.start_with? "#" }
+      .join("\n")
 
   temp_file.delete
   content

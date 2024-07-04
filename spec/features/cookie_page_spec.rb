@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rails_helper"
 
 feature "Cookie page", type: :system do
@@ -11,7 +13,7 @@ feature "Cookie page", type: :system do
     end
 
     it "does not load in Google Analytics" do
-      expect(page).not_to have_selector('script[src*="googletagmanager"]', visible: :hidden)
+      expect(page).to have_no_css('script[src*="googletagmanager"]', visible: :hidden)
     end
   end
 
@@ -33,7 +35,7 @@ feature "Cookie page", type: :system do
       visit cookies_path
 
       expect(page).to have_checked_field("Yes", visible: :hidden)
-      expect(page).to have_selector('script[src*="googletagmanager"]', visible: :hidden)
+      expect(page).to have_css('script[src*="googletagmanager"]', visible: :hidden)
     end
 
     describe "when selecting yes and submitting form" do
@@ -49,11 +51,11 @@ feature "Cookie page", type: :system do
       end
 
       it "adds the google tag script" do
-        expect(page).to have_selector('script[src*="googletagmanager"]', visible: :hidden)
+        expect(page).to have_css('script[src*="googletagmanager"]', visible: :hidden)
       end
 
       it "shows notification banner" do
-        expect(page).to have_selector(".govuk-notification-banner")
+        expect(page).to have_css(".govuk-notification-banner")
       end
     end
 
@@ -70,11 +72,11 @@ feature "Cookie page", type: :system do
       end
 
       it "does not add the google tag script" do
-        expect(page).not_to have_selector('script[src*="googletagmanager"]', visible: :hidden)
+        expect(page).to have_no_css('script[src*="googletagmanager"]', visible: :hidden)
       end
 
       it "shows notification banner" do
-        expect(page).to have_selector(".govuk-notification-banner")
+        expect(page).to have_css(".govuk-notification-banner")
       end
     end
   end
