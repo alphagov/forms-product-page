@@ -18,33 +18,33 @@ describe "Support form", type: :system do
 
   scenario "a civil servant needs help using GOV.UK Forms" do
     choose "I work in a government service team and need help using GOV.UK Forms", visible: :all
-    click_button "Continue"
+    click_on "Continue"
 
     expect(page).to have_text "Help using GOV.UK Forms"
     fill_in "Your message", with: "I need help using GOV.UK Forms"
     fill_in "Your name", with: "Test User"
     fill_in "Your email address", with: "test@example.com"
-    click_button "Send"
+    click_on "Send"
 
     expect(page).to have_text "Message sent"
   end
 
   scenario "a civil servant has a question about GOV.UK Forms" do
     choose "I work in a government service team and have a question about GOV.UK Forms", visible: :all
-    click_button "Continue"
+    click_on "Continue"
 
     expect(page).to have_text "Question about GOV.UK Forms"
     fill_in "Your question", with: "I have a question about GOV.UK Forms"
     fill_in "Your name", with: "Test User"
     fill_in "Your email address", with: "test@example.com"
-    click_button "Send"
+    click_on "Send"
 
     expect(page).to have_text "Message sent"
   end
 
   scenario "a member of the public is looking for help with a form" do
     choose "I’m a member of the public with a question about a government form or service", visible: :all
-    click_button "Continue"
+    click_on "Continue"
 
     expect(page.current_url).to eq "https://www.gov.uk/contact"
     expect(page).to have_text "Find contact details for services"

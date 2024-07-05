@@ -33,7 +33,7 @@ module HeaderComponent
     end
 
     def product_tag
-      govuk_tag(text: phase_name, classes: %w[govuk-phase-banner__content__tag]).html_safe
+      govuk_tag(text: phase_name, classes: %w[govuk-phase-banner__content__tag])
     end
   end
 end

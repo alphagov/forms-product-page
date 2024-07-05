@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-describe "pages/get_started.html.erb", type: :view do
+describe "pages/get_started.html.erb" do
   before do
     allow(Settings.forms_admin).to receive(:base_url).and_return("forms-admin.test")
 
@@ -10,7 +10,7 @@ describe "pages/get_started.html.erb", type: :view do
   end
 
   it "has a call to action encouraging users to create an account in forms-admin" do
-    expect(rendered).to have_selector(".govuk-button--start") do |start_button|
+    expect(rendered).to have_css(".govuk-button--start") do |start_button|
       expect(start_button).to match_selector(
         :link,
         "Create an account",

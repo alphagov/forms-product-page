@@ -23,7 +23,7 @@ RSpec.describe HeaderComponent::View, type: :component do
   describe "call" do
     context "when on the homepage" do
       it "renders the navigation items as inactive" do
-        expect(page).not_to have_selector(
+        expect(page).to have_no_css(
           ".govuk-header__navigation-item.govuk-header__navigation-item--active"
         )
       end
@@ -44,8 +44,16 @@ RSpec.describe HeaderComponent::View, type: :component do
 
   describe "render" do
     it "outputs HTML matching our existing header" do
-      # rubocop:disable Layout/HeredocIndentation
-      expect(normalize_html(rendered_content)).to eq normalize_html(<<~HTML)
+      expect(normalize_html(rendered_content)).to eq normalize_html(html_example)
+    end
+  end
+end
+
+private
+
+def html_example
+  # rubocop:disable Layout/HeredocIndentation
+  <<~HTML
   <header
       data-module="govuk-header"
       class="govuk-header"
@@ -82,10 +90,8 @@ RSpec.describe HeaderComponent::View, type: :component do
         </div>
       </div>
     </header>
-      HTML
-      # rubocop:enable Layout/HeredocIndentation
-    end
-  end
+  HTML
+  # rubocop:enable Layout/HeredocIndentation
 end
 
 def normalize_html(html)

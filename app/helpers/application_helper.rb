@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def page_description(description)
-    content_for(:description) { description.html_safe }
+    content_for(:description) { description }
   end
 
   def page_description_tag

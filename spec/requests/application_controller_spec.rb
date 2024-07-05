@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ApplicationController, type: :request do
+RSpec.describe ApplicationController do
   context "when there is a application load balancer trace ID" do
     let(:payloads) { [] }
     let(:payload) { payloads.last }

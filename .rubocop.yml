@@ -1,6 +1,11 @@
 # .rubocop.yml
 
-require: rubocop-rake
+require:
+  - rubocop-capybara
+  - rubocop-rails
+  - rubocop-rake
+  - rubocop-rspec
+  - rubocop-rspec_rails
 
 AllCops:
   NewCops: enable
@@ -25,3 +30,9 @@ Layout/LineLength:
 
 Style/Documentation:
   Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/MultipleExpectations:
+  Max: 4

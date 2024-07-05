@@ -5,7 +5,7 @@ require_relative "../../../app/lib/lograge/custom_options"
 
 describe Lograge::CustomOptions do
   describe ".call" do
-    let(:event) { instance_double("Event") }
+    let(:event) { instance_double(ActiveSupport::Notifications::Event) }
     let(:payload) do
       {
         host: "somehost",

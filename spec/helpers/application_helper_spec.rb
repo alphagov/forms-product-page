@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe ApplicationHelper, type: :helper do
+RSpec.describe ApplicationHelper do
   describe "#page_title" do
     it "returns the title with separator and default suffix" do
       helper.content_for(:title, "Test Title")

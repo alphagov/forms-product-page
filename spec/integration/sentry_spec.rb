@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "config/initializers/sentry" do
+RSpec.describe Sentry do
   let(:test_dsn) { "https://fake@test-dsn/1" }
 
   before do
@@ -23,7 +23,7 @@ RSpec.describe "config/initializers/sentry" do
     before do
       raise "Something went wrong: #{support_form.inspect}"
     rescue RuntimeError => e
-      Sentry.capture_exception(e)
+      described_class.capture_exception(e)
     end
 
     it "scrubs email addresses from everywhere in the event" do
@@ -41,7 +41,7 @@ RSpec.describe "config/initializers/sentry" do
 
   context "when an breadcrumb is sent containing personally identifying information" do
     before do
-      Sentry.add_breadcrumb(
+      described_class.add_breadcrumb(
         Sentry::Breadcrumb.new(
           category: "spec.integration.sentry_spec",
           data: {
@@ -56,7 +56,7 @@ RSpec.describe "config/initializers/sentry" do
         )
       )
 
-      Sentry.capture_message("breadcrumbs test")
+      described_class.capture_message("breadcrumbs test")
     end
 
     it "scrubs email addresses from everywhere in the event" do
