@@ -38,7 +38,11 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "rspec-rails", "~> 6.1.3"
+  gem "rubocop-capybara", require: false
   gem "rubocop-rails-omakase", require: false
+  gem "rubocop-rake", require: false
+  gem "rubocop-rspec", require: false
+  gem "rubocop-rspec_rails", require: false
 
   # For security auditing gem vulnerabilities. RUN IN CI
   gem "bundler-audit", "~> 0.9.0"
