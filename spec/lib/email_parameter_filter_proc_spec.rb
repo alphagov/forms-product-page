@@ -7,7 +7,7 @@ require_relative "../../app/lib/email_parameter_filter_proc"
 RSpec.describe EmailParameterFilterProc do
   let(:email_parameter_filter) do
     ActiveSupport::ParameterFilter.new(
-      [described_class.new]
+      [described_class.new],
     )
   end
 

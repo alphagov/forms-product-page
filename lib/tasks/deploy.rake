@@ -51,15 +51,15 @@ def push_commit_to_dev(git_hash)
       {
         actionName: "get-forms-product-page",
         revisionType: "COMMIT_ID",
-        revisionValue: git_hash
-      }
+        revisionValue: git_hash,
+      },
     ],
     variables: [
       {
         name: "tag_prefix",
-        value: "dev-"
-      }
-    ]
+        value: "dev-",
+      },
+    ],
   }
 
   puts ""
@@ -74,7 +74,7 @@ def push_commit_to_dev(git_hash)
     "--name",
     "forms-product-page-image-builder",
     "--cli-input-json",
-    cli_input
+    cli_input,
   ]
   sh_aws(*command_args)
 end

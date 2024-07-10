@@ -4,7 +4,7 @@ class JsonLogFormatter < ActiveSupport::Logger::Formatter
   def call(severity, timestamp, _progname, message)
     log_event = {
       level: severity,
-      time: timestamp
+      time: timestamp,
     }
 
     if json?(message)

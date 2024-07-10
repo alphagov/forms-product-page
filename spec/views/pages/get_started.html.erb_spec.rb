@@ -14,7 +14,7 @@ describe "pages/get_started.html.erb" do
       expect(start_button).to match_selector(
         :link,
         "Create an account",
-        href: "forms-admin.test/sign-up"
+        href: "forms-admin.test/sign-up",
       )
     end
   end

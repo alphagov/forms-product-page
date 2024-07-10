@@ -49,11 +49,11 @@ RSpec.describe Sentry do
             params: {
               forms_submission_form: {
                 temporary_submission: "new-submission-email@test.example",
-                notify_response_id: "some-random-number-0000"
-              }
-            }
-          }
-        )
+                notify_response_id: "some-random-number-0000",
+              },
+            },
+          },
+        ),
       )
 
       described_class.capture_message("breadcrumbs test")

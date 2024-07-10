@@ -24,13 +24,13 @@ class SupportForm
 
     tags = {
       "using_forms" => %w[govuk_forms_support],
-      "about_forms" => %w[govuk_forms_enquiries]
+      "about_forms" => %w[govuk_forms_enquiries],
     }[i_need_help_with]
 
     ZendeskTicketService.create!(
       comment: { body: message },
       requester: { name:, email: email_address },
-      tags:
+      tags:,
     )
   end
 end

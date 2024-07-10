@@ -28,7 +28,7 @@ module HeaderComponent
 
     def product_name_with_tag
       {
-        name: "#{I18n.t('header.product_name')} #{product_tag}".html_safe
+        name: "#{I18n.t('header.product_name')} #{product_tag}".html_safe,
       }
     end
 

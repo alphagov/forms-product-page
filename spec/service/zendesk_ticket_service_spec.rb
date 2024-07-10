@@ -20,7 +20,7 @@ describe ZendeskTicketService do
         comment: { body: "This is a test ticket." },
         requester: { name: "Test User", email: "test@example.com" },
         subject: "Test message",
-        tags: %w[test]
+        tags: %w[test],
       )
 
       expect(request
@@ -29,7 +29,7 @@ describe ZendeskTicketService do
                                                      "comment" => { "body" => "This is a test ticket." },
                                                      "requester" => { "name" => "Test User",
                                                                       "email" => "test@example.com" },
-                                                     "tags" => %w[test]
+                                                     "tags" => %w[test],
                                                    }) })).to have_been_made
     end
 
@@ -42,7 +42,7 @@ describe ZendeskTicketService do
 
       expect(request
         .with(headers: {
-                "Authorization" => "Basic emVuZGVza191c2VyQHRlc3QuZXhhbXBsZS90b2tlbjpzdXBlcnNlY3JldA=="
+                "Authorization" => "Basic emVuZGVza191c2VyQHRlc3QuZXhhbXBsZS90b2tlbjpzdXBlcnNlY3JldA==",
               })).to have_been_made
     end
 
@@ -58,7 +58,7 @@ describe ZendeskTicketService do
     it "assigns the ticket to the correct group and organisation" do
       allow(Settings.zendesk).to receive(:defaults).and_return({
                                                                  group_id: "forms",
-                                                                 organization_id: "gds"
+                                                                 organization_id: "gds",
                                                                })
       request = stub_successful_create
 
@@ -67,7 +67,7 @@ describe ZendeskTicketService do
       expect(request
         .with(body: { "ticket" => a_hash_including({
                                                      "group_id" => "forms",
-                                                     "organization_id" => "gds"
+                                                     "organization_id" => "gds",
                                                    }) })).to have_been_made
     end
   end

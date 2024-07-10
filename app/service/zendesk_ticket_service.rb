@@ -11,7 +11,7 @@ class ZendeskTicketService
     ticket_json = { ticket: {
       comment:,
       **params,
-      **Settings.zendesk.defaults
+      **Settings.zendesk.defaults,
     } }.to_json
 
     post_json!("https://#{subdomain}.zendesk.com/api/v2/tickets.json", ticket_json, headers:)
@@ -27,7 +27,7 @@ class ZendeskTicketService
   def headers
     {
       "Authorization" => authorization,
-      "Content-Type" => "application/json"
+      "Content-Type" => "application/json",
     }
   end
 

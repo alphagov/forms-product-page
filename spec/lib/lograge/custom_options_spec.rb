@@ -11,7 +11,7 @@ describe Lograge::CustomOptions do
         host: "somehost",
         user_ip: "192.168.0.1",
         request_id: "abcd1234",
-        exception: "MockException"
+        exception: "MockException",
       }
     end
 
@@ -26,7 +26,7 @@ describe Lograge::CustomOptions do
         host: "somehost",
         user_ip: "192.168.0.1",
         request_id: "abcd1234",
-        exception: "MockException"
+        exception: "MockException",
       )
     end
 

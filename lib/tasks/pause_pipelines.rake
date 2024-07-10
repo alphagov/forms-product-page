@@ -28,7 +28,7 @@ namespace :pipeline do
           pipeline_name:,
           stage_name: second_stage.name,
           transition_type: "Inbound",
-          reason:
+          reason:,
         )
 
         puts "Pipeline paused at #{Time.zone.now.strftime('%Y-%m-%d %H:%M:%S %Z')} with reason\n\n'#{reason}'"
@@ -54,7 +54,7 @@ namespace :pipeline do
         codepipeline.enable_stage_transition(
           pipeline_name:,
           stage_name: second_stage.name,
-          transition_type: "Inbound"
+          transition_type: "Inbound",
         )
 
         puts "Pipeline unpaused at #{Time.zone.now.strftime('%Y-%m-%d %H:%M:%S %Z')}"
@@ -111,7 +111,7 @@ def get_pause_reason(default)
     chdir: Dir.pwd,
     in: $stdin,
     out: $stdout,
-    err: $stderr
+    err: $stderr,
   )
 
   content =
