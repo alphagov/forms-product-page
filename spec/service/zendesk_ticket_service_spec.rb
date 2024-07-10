@@ -27,7 +27,8 @@ describe ZendeskTicketService do
         .with(body: { "ticket" => a_hash_including({
                                                      "subject" => "Test message",
                                                      "comment" => { "body" => "This is a test ticket." },
-                                                     "requester" => { "name" => "Test User", "email" => "test@example.com" },
+                                                     "requester" => { "name" => "Test User",
+                                                                      "email" => "test@example.com" },
                                                      "tags" => %w[test],
                                                    }) })).to have_been_made
     end
