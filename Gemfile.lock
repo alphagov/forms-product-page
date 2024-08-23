@@ -92,7 +92,7 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     base64 (0.2.0)
     bigdecimal (3.1.8)
-    brakeman (6.1.2)
+    brakeman (6.2.1)
       racc
     builder (3.3.0)
     bundler-audit (0.9.1)
@@ -351,7 +351,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk-codepipeline (~> 1.78)
-  brakeman (~> 6.1.2)
+  brakeman (~> 6.2.1)
   bundler-audit (~> 0.9.0)
   capybara
   config
