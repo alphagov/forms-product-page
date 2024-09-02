@@ -15,10 +15,14 @@ RSpec.describe "Pages", type: :request do
     end
   end
 
-  %w[features
-     support
+  %w[get-started
+     features
+     forthcoming-features
+     create-good-forms
      accessibility
-     privacy].each do |page|
+     privacy
+     support
+     terms-of-use].each do |page|
     describe "GET /#{page}" do
       it "returns ok" do
         get "/#{page}"

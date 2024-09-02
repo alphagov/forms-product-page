@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "/accessibility" => "pages#accessibility"
   get "/cookies" => "pages#cookies"
   get "/privacy" => "pages#privacy"
+  get "/terms-of-use" => "pages#terms_of_use"
 
   get "/mailing-list" => redirect("https://service.us12.list-manage.com/subscribe?u=cb74eb9a6898b0e5870fede0a&id=451fe4c1e1")
 

@@ -9,4 +9,5 @@ class PagesController < ApplicationController
   def accessibility; end
   def cookies; end
   def privacy; end
+  def terms_of_use; end
 end
