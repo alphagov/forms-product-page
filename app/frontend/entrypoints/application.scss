@@ -63,9 +63,9 @@ div.feature-panel {
 }
 // scss-lint:enable IdSelector
 .hero-alternative-action {
-  @include govuk-font($size: 19);
   margin-bottom: govuk-spacing(3);
   position: relative;
+  @include govuk-font($size: 19);
 }
 
 .hero-breadcrumb-banner {
@@ -102,9 +102,9 @@ div.feature-panel {
 }
 // scss-lint:enable IdSelector
 .hero-alternative-action {
-  @include govuk-font($size: 19);
   margin-bottom: govuk-spacing(3);
   position: relative;
+  @include govuk-font($size: 19);
 }
 
 .hero-breadcrumb-banner {
@@ -170,12 +170,14 @@ div.feature-panel {
 
 .documentation-design-recommendations {
   .documentation-contents-item {
+    margin-bottom: 5px;
+
     &:before {
       content: "—";
       margin-left: -20px;
       color: #505a5f;
     }
-    margin-bottom: 5px;
+
     a {
       margin-left: 5px;
     }
