@@ -56,4 +56,7 @@ group :test do
   gem "selenium-webdriver"
 
   gem "webmock"
+
+  # Code coverage reporter
+  gem "simplecov", "~> 0.22.0", require: false
 end
