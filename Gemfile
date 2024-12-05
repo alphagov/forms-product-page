@@ -7,7 +7,7 @@ ruby file: ".ruby-version"
 gem "rails", "~> 8.0.0"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 6.4"
+gem "puma", "~> 6.5"
 
 # Alpine requires these to build the assets
 gem "tzinfo"
