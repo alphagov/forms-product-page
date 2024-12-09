@@ -39,4 +39,7 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions.
   config.action_controller.raise_on_missing_callback_actions = true
+
+  # Allow previews so we can run feature tests against components
+  config.view_component.show_previews = true
 end
