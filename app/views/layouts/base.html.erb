@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= page_title %></title>
+
+    <%= page_description %>
+    <%= page_robots %>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= vite_stylesheet_tag 'application.scss' %>
+    <%= vite_client_tag %>
+
+    <link rel="icon" sizes="48x48" href="<%= vite_asset_path "#{govuk_assets_path}/images/favicon.ico" %>">
+    <link rel="icon" sizes="any" href="<%= vite_asset_path "#{govuk_assets_path}/images/favicon.svg" %>" type="image/svg+xml">
+    <link rel="mask-icon" href="<%= vite_asset_path "#{govuk_assets_path}/images/govuk-icon-mask.svg" %>" color="#0b0c0c">
+    <link rel="apple-touch-icon" href="<%= vite_asset_path "#{govuk_assets_path}/images/govuk-icon-180.png"%>">
+    <%# This manifest file and the icons it references are currently being served from the `public` folder. %>
+    <%# TODO: update the build to either generate the manifest with references to fingerprinted assets, or automatically copy the manifest and its dependencies to `public`. %>
+    <link rel="manifest" href="/icons/manifest.json">
+    <meta property="og:image" content="<%= vite_asset_path "#{govuk_assets_path}/images/govuk-opengraph-image.png" %>">
+  </head>
+
+  <body class="govuk-template__body">
+    <script>
+      document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
+    </script>
+
+    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+    <div class="govuk-width-container ">
+
+      <%= yield :before_content %>
+
+      <main class="govuk-main-wrapper" id="main-content" role="main">
+        <%= yield %>
+      </main>
+    </div>
+
+    <%= vite_javascript_tag 'application' %>
+  </body>
+</html>
