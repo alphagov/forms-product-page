@@ -3,14 +3,13 @@ import { defineConfig } from 'vite'
 import RubyPlugin from 'vite-plugin-ruby'
 
 export default defineConfig({
-  plugins: [
-    RubyPlugin(),
-  ],
+  plugins: [RubyPlugin()],
   build: { emptyOutDir: true },
   css: {
     preprocessorOptions: {
       scss: {
-        includePaths: ['./node_modules/govuk-frontend/'],
+        api: 'modern',
+        loadPaths: ['./node_modules/govuk-frontend/'],
         quietDeps: true
       },
       devSourcemaps: true
@@ -18,7 +17,10 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@govuk': path.resolve(__dirname, 'node_modules/govuk-frontend/dist/govuk'),
+      '@govuk': path.resolve(
+        __dirname,
+        'node_modules/govuk-frontend/dist/govuk'
+      ),
       '@images': path.resolve(__dirname, 'app/frontend/images')
     }
   }
