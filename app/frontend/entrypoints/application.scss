@@ -7,9 +7,6 @@ $govuk-suppressed-warnings: (
 
 @import "pkg:govuk-frontend";
 
-@import "../styles/responsive-embed";
-@import "../styles/sub-navigation";
-
 @import "../styles/borders";
 @import "../styles/breadcrumbs";
 @import "../styles/header";
