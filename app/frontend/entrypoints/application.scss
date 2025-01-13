@@ -1,14 +1,10 @@
-$govuk-images-path: "@govuk/assets/images/";
-$govuk-fonts-path: "@govuk/assets/fonts/";
+$govuk-assets-path: "@govuk/assets/";
 $govuk-global-styles: true;
 $govuk-suppressed-warnings: (
   ie8
 );
 
-@import "@govuk/all";
-
-@import "../styles/responsive-embed";
-@import "../styles/sub-navigation";
+@import "pkg:govuk-frontend";
 
 @import "../styles/borders";
 @import "../styles/breadcrumbs";
