@@ -353,13 +353,12 @@ GEM
 
 PLATFORMS
   aarch64-linux-gnu
-  aarch64-linux-musl
   arm64-darwin-22
   arm64-darwin-23
+  arm64-darwin-24
   x86_64-darwin-22
   x86_64-darwin-23
   x86_64-linux-gnu
-  x86_64-linux-musl
 
 DEPENDENCIES
   aws-sdk-codepipeline (~> 1.93)
@@ -385,7 +384,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 3.3.4p94
+   ruby 3.3.7p123
 
 BUNDLED WITH
    2.5.3
