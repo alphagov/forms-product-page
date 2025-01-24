@@ -305,7 +305,7 @@ GEM
     sentry-rails (5.22.1)
       railties (>= 5.0)
       sentry-ruby (~> 5.22.1)
-    sentry-ruby (5.22.1)
+    sentry-ruby (5.22.2)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
     simplecov (0.22.0)
@@ -353,13 +353,11 @@ GEM
 
 PLATFORMS
   aarch64-linux-gnu
-  aarch64-linux-musl
   arm64-darwin-22
   arm64-darwin-23
   x86_64-darwin-22
   x86_64-darwin-23
   x86_64-linux-gnu
-  x86_64-linux-musl
 
 DEPENDENCIES
   aws-sdk-codepipeline (~> 1.93)
