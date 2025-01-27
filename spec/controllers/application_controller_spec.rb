@@ -17,8 +17,8 @@ RSpec.describe ApplicationController, type: :controller do
       controller.append_info_to_payload(payload)
     end
 
-    it "appends host to the payload" do
-      expect(payload[:host]).to eq "localhost"
+    it "appends request_host to the payload" do
+      expect(payload[:request_host]).to eq "localhost"
     end
 
     it "appends request_id to the payload" do

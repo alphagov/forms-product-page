@@ -8,7 +8,7 @@ describe Lograge::CustomOptions do
     # rubocop:enable RSpec/VerifiedDoubleReference
     let(:payload) do
       {
-        host: "somehost",
+        request_host: "somehost",
         user_ip: "192.168.0.1",
         request_id: "abcd1234",
         exception: "MockException",
@@ -23,7 +23,7 @@ describe Lograge::CustomOptions do
       result = described_class.call(event)
 
       expect(result).to include(
-        host: "somehost",
+        request_host: "somehost",
         user_ip: "192.168.0.1",
         request_id: "abcd1234",
         exception: "MockException",

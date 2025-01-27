@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   def append_info_to_payload(payload)
     super
-    payload[:host] = request.host
+    payload[:request_host] = request.host
     payload[:request_id] = request.request_id
     payload[:trace_id] = request.env["HTTP_X_AMZN_TRACE_ID"].presence
     payload[:user_ip] = user_ip(request.env.fetch("HTTP_X_FORWARDED_FOR", ""))
