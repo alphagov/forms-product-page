@@ -207,7 +207,7 @@ GEM
       date
       stringio
     public_suffix (6.0.1)
-    puma (6.5.0)
+    puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.8)
@@ -384,7 +384,7 @@ DEPENDENCIES
   govuk-components
   govuk_design_system_formbuilder
   lograge (~> 0.14)
-  puma (~> 6.5)
+  puma (~> 6.6)
   rails (~> 8.0.1)
   rspec-rails (~> 7.1.0)
   rubocop-govuk
