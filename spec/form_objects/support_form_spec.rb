@@ -105,7 +105,7 @@ describe SupportForm, type: :model do
 
         expect(ZendeskTicketService).to have_received(:create!).with(
           hash_including(
-            tags: [tag],
+            tags: [ tag ],
           ),
         )
       end

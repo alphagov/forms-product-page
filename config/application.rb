@@ -61,7 +61,7 @@ module FormsProductPage
     config.lograge.custom_options = Lograge::CustomOptions
 
     # Configure previews for ViewComponent
-    config.view_component.preview_paths = [Rails.root.join("spec/components")]
+    config.view_component.preview_paths = [ Rails.root.join("spec/components") ]
     config.view_component.preview_route = "/preview"
     config.view_component.preview_controller = "ComponentPreviewController"
   end
