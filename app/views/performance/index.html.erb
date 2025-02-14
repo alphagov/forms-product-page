@@ -2,20 +2,6 @@
 
 <h1 class="govuk-heading-xl">Performance metrics</h1>
 
-<%= govuk_table do |table| %>
-  <%= table.with_head do |head| %>
-    <% head.with_row do |row| %>
-      <%= row.with_cell text: "Metric" %>
-      <%= row.with_cell text: "Value" %>
-    <% end %>
-  <% end %>
-
-  <% table.with_body do |body| %>
-    <% @performance_metrics.each do |key, value| %>
-      <% body.with_row do |row| %>
-        <%= row.with_cell text: key %>
-        <%= row.with_cell text: value %>
-      <% end %>
-    <% end %>
-  <% end %>
+<% @performance_metrics.each do |metric, value| %>
+  <%= render MetricsSummaryComponent::View.new(label: metric, number: value) %>
 <% end %>
