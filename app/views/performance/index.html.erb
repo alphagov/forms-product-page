@@ -1,0 +1,7 @@
+<% set_page_title('Performance metrics') %>
+
+<h1 class="govuk-heading-xl">Performance metrics</h1>
+
+<% @performance_metrics.each do |metric, value| %>
+  <%= render MetricsSummaryComponent::View.new(label: metric, number: value) %>
+<% end %>
