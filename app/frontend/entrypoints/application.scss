@@ -1,9 +1,6 @@
 @use "pkg:govuk-frontend" as govuk with (
   $govuk-assets-path: "@govuk/assets/",
-  $govuk-global-styles: true,
-  $govuk-suppressed-warnings: (
-    ie8
-  )
+  $govuk-global-styles: true
 );
 
 @use "../styles/borders";
