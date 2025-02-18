@@ -5,19 +5,20 @@
     ie8
   )
 );
-@import "../styles/borders";
-@import "../styles/breadcrumbs";
-@import "../styles/header";
-@import "../styles/hero";
-@import "../styles/hero-alternative-action";
-@import "../styles/image";
-@import "../styles/inverted-button";
-@import "../styles/masthead";
-@import "../styles/navigation";
-@import "../styles/related-items";
-@import "../styles/responsive-embed";
-@import "../styles/sub-navigation";
-@import "../styles/code-samples";
+
+@use "../styles/borders";
+@use "../styles/breadcrumbs";
+@use "../styles/header";
+@use "../styles/hero";
+@use "../styles/hero-alternative-action";
+@use "../styles/image";
+@use "../styles/inverted-button";
+@use "../styles/masthead";
+@use "../styles/navigation";
+@use "../styles/related-items";
+@use "../styles/responsive-embed";
+@use "../styles/sub-navigation";
+@use "../styles/code-samples";
 
 @media (min-width: 415px) {
   div.feature-row {
