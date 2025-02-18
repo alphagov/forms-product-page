@@ -1,3 +1,5 @@
+@use "pkg:govuk-frontend" as govuk;
+
 .govuk-header__content {
   text-align: right;
 }
@@ -5,13 +7,13 @@
 .govuk-phase-banner {
   padding: 0;
 
-  @include govuk-media-query(tablet) {
-    margin-top: - govuk-spacing(5);
+  @include govuk.govuk-media-query(tablet) {
+    margin-top: - govuk.govuk-spacing(5);
   }
 }
 
 .service-info--name {
-  margin: govuk-spacing(2) 0 govuk-spacing(1);
+  margin: govuk.govuk-spacing(2) 0 govuk.govuk-spacing(1);
 }
 
 .service-info {
@@ -22,7 +24,7 @@
   margin: 0;
   float: left;
 
-  @include govuk-media-query(tablet) {
+  @include govuk.govuk-media-query(tablet) {
     margin: 0;
     float: right;
   }
@@ -34,12 +36,12 @@
   }
 
   &--list-item {
-    margin-top: govuk-spacing(2);
-    @include govuk-font($size: 16);
+    margin-top: govuk.govuk-spacing(2);
+    @include govuk.govuk-font($size: 16);
 
-    @include govuk-media-query(tablet) {
+    @include govuk.govuk-media-query(tablet) {
       display: inline-block;
-      margin: 0 0 0 govuk-spacing(6);
+      margin: 0 0 0 govuk.govuk-spacing(6);
       border-bottom: 5px solid transparent;
       border-left: 0;
     }
@@ -47,34 +49,34 @@
     a:link,
     a:visited {
       display: inline-block;
-      color: $govuk-link-colour;
+      color: govuk.$govuk-link-colour;
       text-decoration: none;
-      padding: govuk-spacing(2) 0;
+      padding: govuk.govuk-spacing(2) 0;
     }
 
     a:focus {
-      color: $govuk-text-colour;
-      background-color: $govuk-focus-colour;
-      outline: 3px solid $govuk-focus-colour;
+      color: govuk.$govuk-text-colour;
+      background-color: govuk.$govuk-focus-colour;
+      outline: 3px solid govuk.$govuk-focus-colour;
     }
 
     &-active {
-      padding-left: govuk-spacing(1);
-      border-left: 5px solid $govuk-text-colour;
+      padding-left: govuk.govuk-spacing(1);
+      border-left: 5px solid govuk.$govuk-text-colour;
 
-      @include govuk-media-query(tablet) {
+      @include govuk.govuk-media-query(tablet) {
         padding-left: 0;
         border-left: 0;
-        border-color: $govuk-text-colour;
+        border-color: govuk.$govuk-text-colour;
       }
     }
   }
 }
 
-@include govuk-media-query(tablet) {
+@include govuk.govuk-media-query(tablet) {
   .navigation--pad-bottom {
-    margin-bottom: govuk-spacing(9);
-    padding-bottom: govuk-spacing(9);
+    margin-bottom: govuk.govuk-spacing(9);
+    padding-bottom: govuk.govuk-spacing(9);
   }
 }
 

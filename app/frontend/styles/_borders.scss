@@ -1,15 +1,17 @@
+@use "pkg:govuk-frontend" as govuk;
+
 .product-page-\!-border-top {
-  border-top: 1px solid $govuk-border-colour;
+  border-top: 1px solid govuk.$govuk-border-colour;
 }
 
 .product-page-\!-border-right {
-  border-right: 1px solid $govuk-border-colour;
+  border-right: 1px solid govuk.$govuk-border-colour;
 }
 
 .product-page-\!-border-bottom {
-  border-bottom: 1px solid $govuk-border-colour;
+  border-bottom: 1px solid govuk.$govuk-border-colour;
 }
 
 .product-page-\!-border-left {
-  border-left: 1px solid $govuk-border-colour;
+  border-left: 1px solid govuk.$govuk-border-colour;
 }

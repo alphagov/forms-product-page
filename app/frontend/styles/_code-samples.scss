@@ -1,21 +1,23 @@
+@use "pkg:govuk-frontend" as govuk;
+
 $app-code-font: ui-monospace, menlo, "Cascadia Mono", "Segoe UI Mono", consolas, "Liberation Mono", monospace;
 
 pre code {
   display: block;
   margin: 0;
-  padding: govuk-spacing(4);
+  padding: govuk.govuk-spacing(4);
   overflow-x: auto;
-  border: $govuk-focus-width solid transparent;
-  outline: 1px solid $govuk-border-colour;
-  background-color: govuk-colour("light-grey");
+  border: govuk.$govuk-focus-width solid transparent;
+  outline: 1px solid govuk.$govuk-border-colour;
+  background-color: govuk.govuk-colour("light-grey");
 
-  @include govuk-font-size($size: 19);
-  @include govuk-responsive-margin(4, "bottom");
-  @include govuk-typography-common($font-family: $app-code-font);
+  @include govuk.govuk-font-size($size: 19);
+  @include govuk.govuk-responsive-margin(4, "bottom");
+  @include govuk.govuk-typography-common($font-family: $app-code-font);
 
   &:focus {
-    border: $govuk-focus-width solid $govuk-input-border-colour;
-    outline: $govuk-focus-width solid $govuk-focus-colour;
+    border: govuk.$govuk-focus-width solid govuk.$govuk-input-border-colour;
+    outline: govuk.$govuk-focus-width solid govuk.$govuk-focus-colour;
   }
 
 }

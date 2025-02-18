@@ -10,8 +10,10 @@
  *  [...]
  * </div>
  */
+@use "pkg:govuk-frontend" as govuk;
+
 
 .masthead {
-  background-color: $govuk-brand-colour;
-  margin-bottom: govuk-spacing(8);
+  background-color: govuk.$govuk-brand-colour;
+  margin-bottom: govuk.govuk-spacing(8);
 }

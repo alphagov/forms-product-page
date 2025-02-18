@@ -33,64 +33,65 @@
  *    </div>
  *  </div>
 */
+@use "pkg:govuk-frontend" as govuk;
 
 .hero {
   @extend .govuk-width-container;
   margin-top: -10px;
   margin-bottom: 0;
-  color: govuk-colour("white");
-  padding: 0 0 govuk-spacing(2) 0;
+  color: govuk.govuk-colour("white");
+  padding: 0 0 govuk.govuk-spacing(2) 0;
 
   &--breaded {
     padding-top: 0;
   }
 
   .govuk-breadcrumbs__list-item::before {
-    border-color: govuk-colour("white");
+    border-color: govuk.govuk-colour("white");
   }
 
   .govuk-link:link,
   .govuk-link:visited {
-    color: govuk-colour("white");
+    color: govuk.govuk-colour("white");
   }
 
   .govuk-link:hover,
   .govuk-link:active {
-    color: govuk-colour("white");
+    color: govuk.govuk-colour("white");
   }
 
   .govuk-link:focus {
-    color: $govuk-text-colour;
+    color: govuk.$govuk-text-colour;
   }
 
   &__title {
-    @include govuk-font($size: 48, $weight: bold);
+    @include govuk.govuk-font($size: 48, $weight: bold);
   }
 
   &__description {
-    color: govuk-colour("white");
-    @include govuk-font($size: 24);
+    color: govuk.govuk-colour("white");
+    @include govuk.govuk-font($size: 24);
   }
 
   &__paragraph {
-    color: govuk-colour("white");
-    @include govuk-font($size: 19);
+    color: govuk.govuk-colour("white");
+    @include govuk.govuk-font($size: 19);
   }
 
   &__title,
   &__description {
-    margin-top: govuk-spacing(3);
-    margin-bottom: govuk-spacing(3);
+    margin-top: govuk.govuk-spacing(3);
+    margin-bottom: govuk.govuk-spacing(3);
 
-    @include govuk-media-query(tablet) {
-      margin-bottom: govuk-spacing(6);
+    @include govuk.govuk-media-query(tablet) {
+      margin-bottom: govuk.govuk-spacing(6);
     }
   }
 
   &__inline-image {
     text-align: center;
 
-    @include govuk-media-query(tablet) {
+    @include govuk.govuk-media-query(tablet) {
       display: none;
       visibility: hidden;
     }
@@ -105,7 +106,7 @@
     display: none;
     visibility: hidden;
 
-    @include govuk-media-query(tablet) {
+    @include govuk.govuk-media-query(tablet) {
       display: block;
       visibility: visible;
     }
@@ -123,9 +124,9 @@
   &__body,
   &__aside-image {
     float: left;
-    width: govuk-grid-width(full);
+    width: govuk.govuk-grid-width(full);
     box-sizing: border-box;
-    padding: 0 govuk-spacing(3);
+    padding: 0 govuk.govuk-spacing(3);
 
     a:link,
     a:visited {
@@ -133,13 +134,13 @@
     }
   }
 
-  @include govuk-media-query($from: tablet) {
+  @include govuk.govuk-media-query($from: tablet) {
     &__body {
-      width: govuk-grid-width(two-thirds);
+      width: govuk.govuk-grid-width(two-thirds);
     }
 
     &__aside-image {
-      width: govuk-grid-width(one-third);
+      width: govuk.govuk-grid-width(one-third);
     }
   }
 }

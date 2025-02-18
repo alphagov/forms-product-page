@@ -11,23 +11,25 @@
 //   </ul>
 // </aside>
 
+@use "pkg:govuk-frontend" as govuk;
+
 .related-items {
-  border-top: 10px solid $govuk-brand-colour;;
-  margin: govuk-spacing(4) 0;
+  border-top: 10px solid govuk.$govuk-brand-colour;;
+  margin: govuk.govuk-spacing(4) 0;
 
   &__title {
-    margin-bottom: govuk-spacing(2);
-    @include govuk-font($size: 24, $weight: bold);
+    margin-bottom: govuk.govuk-spacing(2);
+    @include govuk.govuk-font($size: 24, $weight: bold);
   }
 
   &__list {
     list-style: none;
     padding-left: 0;
-    margin: 0 0 govuk-spacing(3);
-    @include govuk-font($size: 16);
+    margin: 0 0 govuk.govuk-spacing(3);
+    @include govuk.govuk-font($size: 16);
 
     li {
-      margin-bottom: govuk-spacing(2);
+      margin-bottom: govuk.govuk-spacing(2);
     }
   }
 }
