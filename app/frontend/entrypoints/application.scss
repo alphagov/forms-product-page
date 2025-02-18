@@ -1,11 +1,10 @@
-$govuk-assets-path: "@govuk/assets/";
-$govuk-global-styles: true;
-$govuk-suppressed-warnings: (
-  ie8
+@use "pkg:govuk-frontend" as govuk with (
+  $govuk-assets-path: "@govuk/assets/",
+  $govuk-global-styles: true,
+  $govuk-suppressed-warnings: (
+    ie8
+  )
 );
-
-@import "pkg:govuk-frontend";
-
 @import "../styles/borders";
 @import "../styles/breadcrumbs";
 @import "../styles/header";
