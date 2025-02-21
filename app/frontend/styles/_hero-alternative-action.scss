@@ -14,15 +14,16 @@
 // <span class="hero-alternative-action">
 //   or <a href="#">do another thing</a> because reasons
 // </span>
+@use "pkg:govuk-frontend" as govuk;
 
 .hero-alternative-action {
-  margin-bottom: govuk-spacing(3);
+  margin-bottom: govuk.govuk-spacing(3);
   position: relative;
   display: inline-block;
-  @include govuk-font($size: 19);
+  @include govuk.govuk-font($size: 19);
 
-  @include govuk-media-query(tablet) {
+  @include govuk.govuk-media-query(tablet) {
     white-space: nowrap;
-    top: govuk-spacing(2);
+    top: govuk.govuk-spacing(2);
   }
 }

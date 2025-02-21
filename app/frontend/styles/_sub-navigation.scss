@@ -1,5 +1,7 @@
+@use "pkg:govuk-frontend" as govuk;
+
 .sub-navigation {
-  margin-bottom: govuk-spacing(6);
+  margin-bottom: govuk.govuk-spacing(6);
 
   ol,
   ul {
@@ -9,11 +11,11 @@
   }
 
   &__item {
-    border-bottom: 1px $govuk-border-colour solid;
+    border-bottom: 1px govuk.$govuk-border-colour solid;
     display: block;
-    padding: govuk-spacing(2) 0;
+    padding: govuk.govuk-spacing(2) 0;
 
-    @include govuk-font($size: 19);
+    @include govuk.govuk-font($size: 19);
 
     a:link {
       text-decoration: none;
@@ -30,11 +32,11 @@
   }
 
   &__item--active {
-    @include govuk-font($size: 19, $weight: bold);
+    @include govuk.govuk-font($size: 19, $weight: bold);
 
     a:link,
     a:visited {
-      color: $govuk-text-colour;
+      color: govuk.$govuk-text-colour;
     }
   }
 }

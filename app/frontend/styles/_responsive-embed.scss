@@ -15,9 +15,11 @@
  *   </div>
  * </div>
  */
+@use "pkg:govuk-frontend" as govuk;
+
 
 .responsive-embed {
-  margin-bottom: govuk-spacing(6);
+  margin-bottom: govuk.govuk-spacing(6);
 
   .responsive-embed__wrapper {
     position: relative;
@@ -44,7 +46,7 @@
 
 .responsive-embed--bordered {
   padding: 5px;
-  outline: 1px solid $govuk-border-colour;
+  outline: 1px solid govuk.$govuk-border-colour;
 }
 
 // Modifier class for 16:9 aspect ratio
