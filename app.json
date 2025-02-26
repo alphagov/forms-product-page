@@ -1,0 +1,47 @@
+{
+"name": "rails-app-no-db",
+"description": "A Ruby on Rails application without a database",
+"keywords": ["ruby", "rails", "vite"],
+"website": "",
+"repository": "",
+"success_url": "/",
+"scripts": {
+    "postdeploy": "bundle exec rails assets:precompile"
+},
+"env": {
+    "RAILS_ENV": {
+    "value": "production"
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+    "value": "true"
+    },
+    "RAILS_LOG_TO_STDOUT": {
+    "value": "true"
+    },
+    "RAILS_SKIP_MIGRATIONS": {
+    "value": "true" 
+    },
+    "SKIP_DATABASE": {
+    "value": "true"
+    },
+    "VITE_RUBY_MODE": {
+    "value": "production"
+    }
+},
+"formation": {
+    "web": {
+    "quantity": 1,
+    "size": "basic"
+    }
+},
+"buildpacks": [
+    {
+    "url": "heroku/nodejs"
+    },
+    {
+    "url": "heroku/ruby"
+    }
+],
+"addons": []
+}
+
