@@ -1,7 +1,17 @@
-<% set_page_title('Performance metrics') %>
+<% set_page_title(t("performance_data.page_title")) %>
 
-<h1 class="govuk-heading-xl">Performance metrics</h1>
+<h1 class="govuk-heading-xl"><%= t("performance_data.page_title") %></h1>
+<div class="govuk-grid-row">
+  <h2 class="govuk-heading-m"><%= t("performance_data.subtitle") %></h2>
+  <div class="govuk-grid-column-one-half govuk-grid-column-one-half-from-desktop">
+    <%= render MetricsSummaryComponent::View.new(label: t('performance_data.submissions'), number: number_with_delimiter(@performance_data["submissions"])) %>
 
-<% @performance_metrics.each do |metric, value| %>
-  <%= render MetricsSummaryComponent::View.new(label: metric, number: value) %>
-<% end %>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <h2 class="govuk-heading-m"><%= t("performance_data.orgs_heading") %></h2>
+  <div class="govuk-grid-column-one-half">
+    <%= render MetricsSummaryComponent::View.new(label: t('performance_data.organisations'), number: number_with_delimiter(@performance_data["organisations"])) %>
+    <%= render MetricsSummaryComponent::View.new(label: t('performance_data.published'), number: number_with_delimiter(@performance_data["published"])) %>
+  </div>
+</div>

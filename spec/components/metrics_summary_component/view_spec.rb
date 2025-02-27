@@ -13,4 +13,12 @@ RSpec.describe MetricsSummaryComponent::View, type: :component do
     expect(page).to have_text("Processor Time Saved")
     expect(page).to have_text("100")
   end
+
+  context "when there  is no data to render" do
+    let(:number) { nil }
+
+    it "renders an error" do
+      expect(page).to have_text("No data available")
+    end
+  end
 end
