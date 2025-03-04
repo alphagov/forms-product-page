@@ -1,0 +1,35 @@
+@use "pkg:govuk-frontend" as govuk;
+
+.app-metrics__container {
+  margin-bottom: govuk.govuk-spacing(6);
+
+  @include govuk.govuk-media-query(tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(govuk.govuk-px-to-rem(260), 6fr));
+    gap: govuk.$govuk-gutter;
+  }
+}
+
+.app-metrics__big-number {
+  padding: govuk.govuk-spacing(1) govuk.govuk-spacing(0);
+  margin-bottom: govuk.govuk-spacing(2);
+
+  @include govuk.govuk-font-size(19);
+  @include govuk.govuk-typography-common;
+
+  @include govuk.govuk-media-query(tablet) {
+    @supports (display: grid) {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+    }
+  }
+}
+
+.app-metrics__big-number-number {
+  display: block;
+  margin-top: govuk.govuk-spacing(1);
+
+  @include govuk.govuk-font-size(48);
+  @include govuk.govuk-typography-weight-bold;
+}
