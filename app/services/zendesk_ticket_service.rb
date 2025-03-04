@@ -18,7 +18,7 @@ class ZendeskTicketService
 private
 
   def authorization
-    basic_encoded = ["#{Settings.zendesk.api_user}/token:#{Settings.zendesk.api_token}"].pack("m0")
+    basic_encoded = [ "#{Settings.zendesk.api_user}/token:#{Settings.zendesk.api_token}" ].pack("m0")
     "Basic #{basic_encoded}"
   end
 
