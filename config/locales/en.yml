@@ -3,8 +3,6 @@ en:
   continue: Continue
   header:
     product_name: Forms
-  page_titles:
-    terms_of_use: Terms of use
   terms_of_use:
     accessibility:
       heading: Make forms that are easy to use and accessible
@@ -24,6 +22,7 @@ en:
       section_1: You must make sure your use of GOV.UK Forms to collect personal data complies with data protection legislation and your organisation’s policies for collecting, processing and storing data.
       section_2: Your organisation is the ‘data controller’ for any data you collect using GOV.UK Forms.
       section_3: To get help with data protection legislation compliance, speak with your organisation’s data protection officer or data protection team.
+    page_title: Terms of use
     security:
       accessing_the_platform:
         heading: Accessing the platform
