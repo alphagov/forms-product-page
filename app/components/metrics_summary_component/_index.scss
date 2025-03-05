@@ -5,7 +5,7 @@
 
   @include govuk.govuk-media-query(tablet) {
     display: grid;
-    grid-template-columns: repeat(3, minmax(govuk.govuk-px-to-rem(260), 6fr));
+    grid-template-columns: repeat(3, minmax(govuk.govuk-px-to-rem(100), 1fr));
     gap: govuk.$govuk-gutter;
   }
 }
