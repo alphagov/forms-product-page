@@ -1,0 +1,16 @@
+<div class="app-metrics">
+  <% if error_message.present? %>
+    <div class="govuk-inset-text">
+      <%= error_message.html_safe %>
+    </div>
+  <% else %>
+    <div class="app-metrics__container">
+      <% metrics.each do |key, value| %>
+      <div class="app-metrics__big-number">
+        <span class="app-metrics__big-number-number"><%= number_with_delimiter(value) %></span>
+        <%= t("performance_data.#{key}") %>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
