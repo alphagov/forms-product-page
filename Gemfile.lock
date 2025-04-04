@@ -91,7 +91,7 @@ GEM
     base64 (0.2.0)
     benchmark (0.4.0)
     bigdecimal (3.1.9)
-    brakeman (7.0.0)
+    brakeman (7.0.1)
       racc
     builder (3.3.0)
     bundler-audit (0.9.2)
@@ -384,7 +384,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-sdk-codepipeline (~> 1.96)
-  brakeman (~> 7.0.0)
+  brakeman (~> 7.0.1)
   bundler-audit (~> 0.9.2)
   capybara
   config
