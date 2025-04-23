@@ -19,5 +19,9 @@ RSpec.describe HeaderComponent::View, type: :component do
     it "includes the phase tag" do
       expect(page).to have_css(".govuk-tag", text: phase_name)
     end
+
+    it "has a full width border" do
+      expect(page).to have_css(".govuk-header--full-width-border")
+    end
   end
 end

@@ -8,7 +8,7 @@ module HeaderComponent
     end
 
     def call
-      govuk_header(homepage_url:) do |header|
+      govuk_header(homepage_url:, classes: "govuk-header--full-width-border") do |header|
         header.with_product_name(**product_name_with_tag)
       end
     end
