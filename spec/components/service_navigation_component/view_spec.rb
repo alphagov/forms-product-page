@@ -25,6 +25,28 @@ RSpec.describe ServiceNavigationComponent::View, type: :component do
   end
 
   describe "render" do
+    it "has the app-service-navigation class" do
+      expect(page).to have_css(".app-service-navigation")
+    end
+
+    context "when no sign-in link is supplied" do
+      it "has no items with the app-service-navigation__item--featured" do
+        expect(page).not_to have_css(".app-service-navigation__item--featured")
+        expect(page).not_to have_link("Sign in")
+      end
+    end
+
+    context "when a sign-in link is supplied" do
+      let(:service_navigation_component) do
+        described_class.new(navigation_items:, featured_link: { text: "Sign in", href: "/sign-in" })
+      end
+
+      it "has an item with the app-service-navigation__item--featured" do
+        expect(page).to have_css(".app-service-navigation__item--featured", text: "Sign in")
+        expect(page).to have_link("Sign in", href: "/sign-in")
+      end
+    end
+
     context "when on the homepage" do
       it "renders the navigation items as inactive" do
         expect(page).not_to have_selector(
