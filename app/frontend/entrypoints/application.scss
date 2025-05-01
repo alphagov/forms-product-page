@@ -32,7 +32,7 @@
 
 div.feature-panel {
   text-align: left;
-  border: 3px solid #f3f2f1;
+  border: 3px solid govuk.govuk-colour("light-grey");
   box-sizing: border-box;
 }
 
@@ -169,7 +169,7 @@ div.feature-panel {
     &:before {
       content: "—";
       margin-left: -20px;
-      color: #505a5f;
+      color: govuk.govuk-colour("dark-grey");
     }
 
     a {
