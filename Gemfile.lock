@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/x-govuk/govuk-components.git
+  revision: f0bfa9bd6b15a5e3f719987c7329e2b6a9f5d30d
+  ref: f0bfa9bd6b15a5e3f719987c7329e2b6a9f5d30d
+  specs:
+    govuk-components (5.10.0b1)
+      html-attributes-utils (~> 1.0.0, >= 1.0.0)
+      pagy (>= 6, < 10)
+      view_component (>= 3.18, < 3.22)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -128,10 +138,6 @@ GEM
     erubi (1.13.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    govuk-components (5.10.0)
-      html-attributes-utils (~> 1.0.0, >= 1.0.0)
-      pagy (>= 6, < 10)
-      view_component (>= 3.18, < 3.22)
     govuk_design_system_formbuilder (5.10.0)
       actionview (>= 6.1)
       activemodel (>= 6.1)
@@ -392,7 +398,7 @@ DEPENDENCIES
   capybara
   config
   debug
-  govuk-components
+  govuk-components!
   govuk_design_system_formbuilder
   lograge (~> 0.14)
   puma (~> 6.6)
