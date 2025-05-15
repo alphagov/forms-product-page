@@ -3,7 +3,7 @@
   "private": "true",
   "type": "module",
   "dependencies": {
-    "govuk-frontend": "5.10.0"
+    "govuk-frontend": "5.10.1"
   },
   "devDependencies": {
     "sass": "^1.87.0",
