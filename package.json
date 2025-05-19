@@ -6,7 +6,7 @@
     "govuk-frontend": "5.10.1"
   },
   "devDependencies": {
-    "sass": "^1.88.0",
+    "sass": "^1.89.0",
     "standard": "^17.1.2",
     "vite": "^6.3.5",
     "vite-plugin-ruby": "^5.1.1",
