@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  before_action :rebrand
+
   def append_info_to_payload(payload)
     super
     payload[:request_host] = request.host
@@ -10,5 +12,9 @@ class ApplicationController < ActionController::Base
   def user_ip(forwarded_for = "")
     first_ip_string = forwarded_for.split(",").first
     Regexp.union([Resolv::IPv4::Regex, Resolv::IPv6::Regex]).match(first_ip_string) && first_ip_string
+  end
+
+  def rebrand
+    @rebrand = Settings.features.rebrand
   end
 end
