@@ -1,6 +1,3 @@
-features:
-  rebrand: false
-
 forms_admin:
   # URL to form-admin
   base_url: http://localhost:3000
