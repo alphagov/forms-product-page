@@ -1,0 +1,35 @@
+<% set_page_title('Forthcoming features') %>
+<% set_page_description("The features we're working on next and when we plan to release them.") %>
+
+# Forthcoming features
+ 
+These are the features we're working on next and approximately when we hope to release them.
+
+This information is just a guide. It's not everything we're doing, and things may move.
+
+We'll update everyone with an account when we release new features. Or you can <%= govuk_link_to "sign up to our mailing list for updates", mailing_list_path %>.
+
+## What we're working on now
+
+- 'Exit pages' to tell someone they cannot use the form after they've answered some qualifying questions
+- Form components in Welsh so you can make a Welsh language form
+
+## Later in 2025
+
+- Allowing people to save their progress through a form and return later on
+- Improving how you manage users and forms in an organisation
+- Allowing people to answer a group of questions multiple times
+- Previews of what each question will look like as you're adding them to your form
+
+## Further in the future
+
+- Customisable branding so you can change the way forms look
+- 'Branching' improvements to allow you to have more than 2 branches from a question
+- The ability to receive form submissions in different ways - for example from cloud storage
+- Opening up use of GOV.UK Forms to the wider public sector
+- A history of previous versions of a form, and the ability to revert back to them
+- Question templates so you can add common questions to a form even faster
+- Taking payments via API - so you can collect payments part way through the journey through a form
+- More detailed metrics about a form's performance and an integrated way to get feedback from people who fill in a form
+
+There are many other features and iterations we know will be useful. We'll update this page when we know when we're likely to work on them.
