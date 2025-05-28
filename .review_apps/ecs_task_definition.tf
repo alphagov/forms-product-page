@@ -30,11 +30,12 @@ resource "aws_ecs_task_definition" "task" {
 
     # forms-product-page
     {
-      name        = "forms-product-page"
-      image       = var.forms_product_page_container_image
-      command     = []
-      essential   = true
-      environment = local.forms_product_page_env_vars
+      name                   = "forms-product-page"
+      image                  = var.forms_product_page_container_image
+      command                = []
+      essential              = true
+      environment            = local.forms_product_page_env_vars
+      readonlyRootFilesystem = true
 
       dockerLabels = {
         "traefik.http.middlewares.forms-product-page-pr-${var.pull_request_number}.basicauth.users" : data.terraform_remote_state.review.outputs.traefik_basic_auth_credentials
