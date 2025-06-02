@@ -37,7 +37,7 @@ If GOV.UK Forms doesn’t meet your needs yet, you can:
 
 - [subscribe to our mailing list](<%= mailing_list_path %>)
 to get updates about new features
-- [read about our forthcoming features](<%= forthcoming_features_path %>
+- [read about our forthcoming features](<%= forthcoming_features_path %>)
 
 ## Contact us
 
