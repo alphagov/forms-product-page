@@ -18,7 +18,7 @@ These are the steps to make a form with GOV.UK Forms.
 
 ## Features available now
 
-During this early phase of development, we're focusing on the simplest and most commonly needed form features first.
+During this early phase of development, we're focusing on the most commonly needed form features first.
 
 ### Create questions
 
@@ -50,7 +50,7 @@ For questions that ask for certain types of personal information (such as a name
 
 ### Add a route to skip questions based on a specific answer
 
-You can add a route to a question where people select only one option from a list. You'll specify which option the route starts from and, if someone selects that option, they'll be skipped forward to a later question, or the end of the form.
+You can add a route to a question where people select only one option from a list. You'll specify which option the route starts from and, if someone selects that option, they'll be skipped forward to a later question, the end of the form, or an exit page to remove them from the form.
 
 People who select any other answer will continue to the next question and through the rest of the form.
 
@@ -64,6 +64,10 @@ So, for example, you can:
 
 - ask one set of questions for people who answer 'Yes' and another set for people who answer 'No'
 - ask one set of questions if the answer is 'A' and another set if the answer is 'B', 'C' or 'D'
+
+### Add an ‘exit page’ to remove someone from a form 
+
+You can route someone to an ‘exit page’ based on their response to a question. You can use the exit page to tell them why they cannot use the form and explain what they should do instead.
 
 ### Forms use GOV.UK Design System styles, components and patterns
 
