@@ -39,17 +39,17 @@
     <% end %>
 
     <%= render(HeaderComponent::View.new(
-    phase_name: "Beta"
-  )) %>
+      phase_name: "Beta"
+    )) %>
 
     <%= render(ServiceNavigationComponent::View.new(
-    navigation_items: [
-      {text: "Get started", href: get_started_path},
-      {text: "Features", href: features_path},
-      {text: "Support", href: support_path},
-    ],
-    featured_link: {text: "Sign in", href: Settings.forms_admin.base_url}
-  )) %>
+      navigation_items: [
+        {text: "Get started", href: get_started_path},
+        {text: "Features", href: features_path},
+        {text: "Support", href: support_path},
+      ],
+      featured_link: {text: "Sign in", href: Settings.forms_admin.base_url}
+    )) %>
 
     <% if content_for?(:main) %>
       <%= yield(:main) %>
