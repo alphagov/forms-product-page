@@ -40,7 +40,8 @@
     phase_name: "Beta"
   )) %>
 
-  <%= render(ServiceNavigationComponent::View.new(
+  <%=
+    render(ServiceNavigationComponent::View.new(
     navigation_items: [
       {text: "Get started", href: get_started_path},
       {text: "Features", href: features_path},
