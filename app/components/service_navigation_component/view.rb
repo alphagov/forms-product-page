@@ -1,5 +1,7 @@
 module ServiceNavigationComponent
   class View < ViewComponent::Base
+    include Rails.application.routes.url_helpers
+
     attr_accessor :navigation_items
 
     def initialize(navigation_items: [], featured_link: nil)
@@ -11,9 +13,12 @@ module ServiceNavigationComponent
     def call
       add_featured_link if @featured_link.present?
 
+      classes = %w[app-service-navigation]
+      classes << "govuk-service-navigation--inverse" if request.fullpath == root_path
+
       govuk_service_navigation(current_path: request.fullpath,
                                navigation_items:,
-                               classes: %w[app-service-navigation])
+                               classes:)
     end
 
   private
