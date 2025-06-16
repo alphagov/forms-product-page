@@ -6,7 +6,6 @@
 @use "../styles/borders";
 @use "../styles/breadcrumbs";
 @use "../styles/hero";
-@use "../styles/hero-alternative-action";
 @use "../styles/image";
 @use "../styles/inverted-button";
 @use "../styles/masthead";
@@ -55,12 +54,6 @@ div.feature-panel {
   display: block;
   margin-bottom: govuk-spacing(9);
 }
-// scss-lint:enable IdSelector
-.hero-alternative-action {
-  margin-bottom: govuk-spacing(3);
-  position: relative;
-  @include govuk.govuk-font($size: 19);
-}
 
 .hero-breadcrumb-banner {
   background-color: govuk.$govuk-brand-colour;
@@ -70,12 +63,6 @@ div.feature-panel {
   #index-hero-body {
     .govuk-button {
       margin-bottom: 12px;
-    }
-    .hero-alternative-action {
-      display: block;
-      margin-left: 0;
-      margin-bottom: 20px;
-      top: 0;
     }
   }
 }
@@ -93,13 +80,6 @@ div.feature-panel {
 #main-content {
   display: block;
   margin-bottom: govuk.govuk-spacing(9);
-}
-
-// scss-lint:enable IdSelector
-.hero-alternative-action {
-  margin-bottom: govuk.govuk-spacing(3);
-  position: relative;
-  @include govuk.govuk-font($size: 19);
 }
 
 .hero-breadcrumb-banner {
