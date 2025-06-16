@@ -106,25 +106,6 @@ div.feature-panel {
   background-color: govuk.$govuk-brand-colour;
 }
 
-.documentation-design-recommendations {
-  .documentation-contents-item {
-    margin-bottom: 5px;
-
-    &:before {
-      content: "—";
-      margin-left: -20px;
-      color: #505a5f;
-    }
-
-    a {
-      margin-left: 5px;
-    }
-  }
-  .documentation-contents {
-    list-style-type: none;
-  }
-}
-
 .app-back-to-top {
   margin-top: govuk-spacing(4);
   margin-bottom: govuk-spacing(6);
