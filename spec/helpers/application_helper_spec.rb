@@ -54,4 +54,15 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(helper.content_for(:robots)).to eq("noindex")
     end
   end
+
+  describe "#meta_items" do
+    it "returns a hash containing the meta links" do
+      expect(helper.meta_items).to eq({
+        t("footer.meta_items.accessibility") => "/accessibility",
+        t("footer.meta_items.cookies") => "/cookies",
+        t("footer.meta_items.privacy") => "/privacy",
+        t("footer.meta_items.terms_of_use") => "/terms-of-use",
+      })
+    end
+  end
 end
