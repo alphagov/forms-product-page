@@ -28,4 +28,13 @@ module ApplicationHelper
   def set_page_robots(directive)
     content_for(:robots) { directive }
   end
+
+  def meta_items
+    {
+      t("footer.meta_items.accessibility") => "/accessibility",
+      t("footer.meta_items.cookies") => "/cookies",
+      t("footer.meta_items.privacy") => "/privacy",
+      t("footer.meta_items.terms_of_use") => "/terms-of-use",
+    }
+  end
 end

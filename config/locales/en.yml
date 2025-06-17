@@ -1,17 +1,24 @@
 ---
 en:
   continue: Continue
+  footer:
+    meta_items:
+      accessibility: Accessibility
+      cookies: Cookies
+      privacy: Privacy
+      terms_of_use: Terms of use
+    meta_items_title: Support links
   header:
     product_name: Forms
   metrics_summary:
     errors:
-      no_data: 'No data available'
+      no_data: No data available
   performance_data:
-    page_title: 'Performance'
-    subtitle: 'How GOV.UK Forms is being used'
-    submissions: 'form submissions since September 2022'
-    organisations: 'organisations using GOV.UK Forms'
-    published: 'published forms'
+    organisations: organisations using GOV.UK Forms
+    page_title: Performance
+    published: published forms
+    submissions: form submissions since September 2022
+    subtitle: How GOV.UK Forms is being used
   terms_of_use:
     accessibility:
       heading: Make forms that are easy to use and accessible

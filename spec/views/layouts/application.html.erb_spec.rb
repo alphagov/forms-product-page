@@ -10,13 +10,47 @@ RSpec.describe "layouts/application", type: :view do
   end
 
   describe "the footer" do
-    it "contains a link to the terms of use" do
+    before do
       render
+    end
 
+    it "contains a link to the accessibility statement" do
       expect(rendered).to have_selector(
         ".govuk-footer",
       ) do |footer|
-        expect(footer).to have_link("Terms of use", href: "/terms-of-use")
+        expect(footer).to have_link(I18n.t("footer.meta_items.accessibility"), href: "/accessibility")
+      end
+    end
+
+    it "contains a link to the cookies page" do
+      expect(rendered).to have_selector(
+        ".govuk-footer",
+      ) do |footer|
+        expect(footer).to have_link(I18n.t("footer.meta_items.cookies"), href: "/cookies")
+      end
+    end
+
+    it "contains a link to the privacy statement" do
+      expect(rendered).to have_selector(
+        ".govuk-footer",
+      ) do |footer|
+        expect(footer).to have_link(I18n.t("footer.meta_items.privacy"), href: "/privacy")
+      end
+    end
+
+    it "contains a link to the terms of use" do
+      expect(rendered).to have_selector(
+        ".govuk-footer",
+      ) do |footer|
+        expect(footer).to have_link(I18n.t("footer.meta_items.terms_of_use"), href: "/terms-of-use")
+      end
+    end
+
+    it "contains a link to the GDS organisation page" do
+      expect(rendered).to have_selector(
+        ".govuk-footer",
+      ) do |footer|
+        expect(footer).to have_link("Government Digital Service", href: "https://www.gov.uk/government/organisations/government-digital-service")
       end
     end
   end
