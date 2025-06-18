@@ -1,14 +1,14 @@
 # Privacy notice: how we use your data
 
-Last updated: 22 July 2024
+Last updated: 18 June 2025
 
-GOV.UK Forms is a platform provided by the Government Digital Service (GDS), which is part of the Cabinet Office. The GOV.UK Forms platform lets UK government teams create online forms to collect information from people and organisations.
+GOV.UK Forms is a platform provided by the Government Digital Service (GDS), which is part of the Department for Science, Innovation and Technology. The GOV.UK Forms platform lets UK government teams create online forms to collect information from people and organisations.
 
 This privacy notice sets out what data we collect from you when you use the GOV.UK Forms platform, the GOV.UK Forms website (www.forms.service.gov.uk) and the services associated with them (together 'GOV.UK Forms'). It also sets out what we do with that data.
 
 ## Data we collect from your users
 
-Your organisation is the data controller for any data you collect through forms you publish using GOV.UK Forms. Cabinet Office - through GDS - is a data processor, collecting data on your behalf.
+Your organisation is the data controller for any data you collect through forms you publish using GOV.UK Forms. The Department for Science, Innovation and Technology - through GDS - is a data processor, collecting data on your behalf.
 
 This privacy notice does not cover how we use data we collect from people who fill in forms you create with GOV.UK Forms.
 
@@ -16,7 +16,7 @@ How we use that data is covered in the standard privacy notice that's created au
 
 ## Data we collect from you
 
-This privacy notice explains what personal data the Cabinet Office collects from you, as someone using GOV.UK Forms - for example, to create and publish forms. Cabinet Office is the data controller for this data. [Read the Cabinet Office's entry in the Data Protection Public Register](https://ico.org.uk/ESDWebPages/Entry/Z7414053) for more information.
+This privacy notice explains what personal data the Department for Science, Innovation and Technology collects from you, as someone using GOV.UK Forms - for example, to create and publish forms. The Department for Science, Innovation and Technology is the data controller for this data. [Read the Department for Science, Innovation and Technology's entry in the Data Protection Public Register](https://ico.org.uk/ESDWebPages/Entry/ZB546218) for more information.
 
 The legal basis for processing this data is:
 
@@ -141,13 +141,14 @@ Contact [gds-privacy-office@digital.cabinet-office.gov.uk](mailto:gds-privacy-of
 - have questions about anything in this document
 - think that your personal data has been misused or mishandled
 
-You can also contact the Cabinet Office Data Protection Officer.
+You can also contact our Data Protection Officer.
 
-[DPO@cabinetoffice.gov.uk](mailto:DPO@cabinetoffice.gov.uk)  
-Data Protection Officer  
-Cabinet Office  
-70 Whitehall  
-London SW1A 2AS
+[dataprotection@dsit.gov.uk](mailto:dataprotection@dsit.gov.uk)  
+DSIT Data Protection Officer
+Department for Science, Innovation and Technology
+22-26 Whitehall
+London
+SW1A 2EG
 
 If you have a complaint, you can also contact the [Information Commissioner's Office](https://ico.org.uk/).
 
