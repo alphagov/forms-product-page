@@ -144,10 +144,10 @@ Contact [gds-privacy-office@digital.cabinet-office.gov.uk](mailto:gds-privacy-of
 You can also contact our Data Protection Officer.
 
 [dataprotection@dsit.gov.uk](mailto:dataprotection@dsit.gov.uk)  
-DSIT Data Protection Officer
-Department for Science, Innovation and Technology
-22-26 Whitehall
-London
+DSIT Data Protection Officer  
+Department for Science, Innovation and Technology  
+22-26 Whitehall  
+London  
 SW1A 2EG
 
 If you have a complaint, you can also contact the [Information Commissioner's Office](https://ico.org.uk/).
