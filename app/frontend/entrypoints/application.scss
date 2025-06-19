@@ -1,6 +1,7 @@
 @use "pkg:govuk-frontend" as govuk with (
   $govuk-assets-path: "@govuk/assets/",
-  $govuk-global-styles: true
+  $govuk-global-styles: true,
+  $govuk-new-typography-scale: true
 );
 
 @use "../styles/borders";
