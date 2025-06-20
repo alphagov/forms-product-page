@@ -19,8 +19,8 @@ Rails.application.routes.draw do
 
   resources :performance, only: %i[index]
 
-  get "/security.txt" => redirect("https://vdp.cabinetoffice.gov.uk/.well-known/security.txt")
-  get "/.well-known/security.txt" => redirect("https://vdp.cabinetoffice.gov.uk/.well-known/security.txt")
+  get "/security.txt" => redirect("https://vulnerability-reporting.service.security.gov.uk/.well-known/security.txt")
+  get "/.well-known/security.txt" => redirect("https://vulnerability-reporting.service.security.gov.uk/.well-known/security.txt")
 
   get "/support" => "support#support", as: :support
   post "/support" => "support#new", as: :new_support_message
