@@ -30,7 +30,7 @@ gem "govuk_markdown", "~> 2.0"
 gem "markdown-rails", "~> 2.1"
 
 # For GOV.UK branding
-gem "govuk-components"
+gem "govuk-components", "5.10.2b1"
 gem "govuk_design_system_formbuilder"
 
 # For pausing pipelines

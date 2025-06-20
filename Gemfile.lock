@@ -129,7 +129,7 @@ GEM
     erubi (1.13.1)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    govuk-components (5.10.1)
+    govuk-components (5.10.2b1)
       html-attributes-utils (~> 1.0.0, >= 1.0.0)
       pagy (>= 6, < 10)
       view_component (>= 3.18, < 3.24)
@@ -403,7 +403,7 @@ DEPENDENCIES
   capybara
   config
   debug
-  govuk-components
+  govuk-components (= 5.10.2b1)
   govuk_design_system_formbuilder
   govuk_markdown (~> 2.0)
   lograge (~> 0.14)

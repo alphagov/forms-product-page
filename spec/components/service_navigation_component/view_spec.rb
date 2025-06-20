@@ -53,6 +53,12 @@ RSpec.describe ServiceNavigationComponent::View, type: :component do
           ".govuk-service-navigation__item.govuk-service-navigation__item--active",
         )
       end
+
+      it "inverts the colours" do
+        expect(page).to have_selector(
+          ".govuk-service-navigation.govuk-service-navigation--inverse",
+        )
+      end
     end
 
     %w[features support].each do |view|
@@ -63,6 +69,12 @@ RSpec.describe ServiceNavigationComponent::View, type: :component do
           expect(
             page.find(".govuk-service-navigation__item", text: view.capitalize),
           ).to match_selector ".govuk-service-navigation__item--active"
+        end
+
+        it "does not invert the colours" do
+          expect(page).not_to have_selector(
+            ".govuk-service-navigation.govuk-service-navigation--inverse",
+          )
         end
       end
     end
