@@ -5,7 +5,9 @@
     "additionalEntrypoints": [
       "~/{assets,fonts,icons,images}/**/*",
       "node_modules/govuk-frontend/dist/govuk/assets/**/*"
-    ]
+    ],
+    "publicOutputDir": "assets",
+    "assetsDir": ""
   },
   "development": {
     "autoBuild": true,
