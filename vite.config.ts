@@ -24,5 +24,6 @@ export default defineConfig({
       ),
       '@images': path.resolve(__dirname, 'app/frontend/images')
     }
-  }
+  },
+  cacheDir: '../../node_modules/.vite'
 })
