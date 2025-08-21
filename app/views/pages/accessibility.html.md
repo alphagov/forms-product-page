@@ -24,7 +24,9 @@ We've also made the text as simple as possible to understand.
 
 ## How accessible the website and platform are
 
-We know that some parts of the platform are not yet fully accessible - these issues are mainly to do with the sign in page. People with visual impairments may find it harder to navigate this page, as described under the heading 'Non-accessible content'.
+We know that some parts of the platform are not yet fully accessible:
+
+- there’s only one way for ‘super admin’ users to access the list of users in the form builder’s user management pages. Some people may find it harder to navigate to this page, as described under the heading 'Non-accessible content'.
 
 ## Feedback and contact information
 
@@ -62,27 +64,13 @@ The content listed below is non-accessible for the following reasons:
 
 ### Non-compliance with the accessibility regulations
 
-The following content on the platform is not compliant with the WCAG 2.2 level AA standard.
+There's only one way for 'super admin' users to access the list of users in the form builder's user management pages. This does not meet WCAG 2.2 level AA [success criterion 2.4.5 (Multiple Ways)](https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways.html).
 
-#### Issues affecting the Auth0 sign in page
-
-There's a lack of contrast between the 'Continue' button's outline and its background. This could make it harder to navigate the page if you have a visual impairment. This does not meet [success criterion 1.4.11 (Non-text Contrast)](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html).
-
-There's a lack of contrast between the 'Create an account' link text and its background. This could make it harder to navigate the page if you have a visual impairment affecting how you perceive colour. This does not meet [success criterion 1.4.3 (Contrast (Minimum))](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
-
-When an error is caused on this page the error text will not be read out automatically. This means that screen reader users will not be alerted to the message in the way they should be. This does not meet [success criterion 4.1.3 (Status Messages)](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html).
-
-We're working with our supplier, Auth0, to resolve these issues as soon as possible.
-
-#### Other issues
-
-There's only one way to access the list of users in the form builder's user management pages. This does not meet [success criterion 2.4.5 (Multiple Ways)](https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways.html).
-
-We plan to resolve this by the end of 2024.
+We plan to resolve this by the end of 2025.
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 5 June 2024. It was last reviewed on 5 June 2024.
+This statement was prepared on 5 June 2024. It was last reviewed and updated on 21 August 2025.
 
 This website was last tested on 8 June 2022. The test was carried out by GDS.
 
