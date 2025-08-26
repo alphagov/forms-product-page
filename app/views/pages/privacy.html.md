@@ -1,6 +1,6 @@
 # Privacy notice: how we use your data
 
-Last updated: 18 June 2025
+Last updated: 26 August 2025
 
 GOV.UK Forms is a platform provided by the Government Digital Service (GDS), which is part of the Department for Science, Innovation and Technology. The GOV.UK Forms platform lets UK government teams create online forms to collect information from people and organisations.
 
@@ -22,7 +22,7 @@ The legal basis for processing this data is:
 
 - it's necessary to perform a task in the public interest
 - it's necessary in the exercise of our functions as a government department
-- consent (when you sign up to the GOV.UK Forms mailing list)
+- consent (when you sign up to the GOV.UK Forms mailing list or agree to be contacted about taking part in user research)
 
 ### Data we collect when you use the GOV.UK Forms website
 
