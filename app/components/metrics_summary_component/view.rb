@@ -1,5 +1,5 @@
 module MetricsSummaryComponent
-  class View < ViewComponent::Base
+  class View < ApplicationComponent
     attr_reader :error_message, :metrics
 
     def initialize(metrics)

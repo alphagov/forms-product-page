@@ -1,5 +1,5 @@
 module HeaderComponent
-  class View < ViewComponent::Base
+  class View < ApplicationComponent
     attr_accessor :phase_name
 
     def initialize(phase_name: nil)

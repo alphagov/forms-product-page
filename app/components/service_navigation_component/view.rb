@@ -1,5 +1,5 @@
 module ServiceNavigationComponent
-  class View < ViewComponent::Base
+  class View < ApplicationComponent
     include Rails.application.routes.url_helpers
 
     attr_accessor :navigation_items
