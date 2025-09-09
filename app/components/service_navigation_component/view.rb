@@ -1,11 +1,11 @@
 module ServiceNavigationComponent
-  class View < ViewComponent::Base
+  class View < ApplicationComponent
     include Rails.application.routes.url_helpers
 
     attr_accessor :navigation_items
 
     def initialize(navigation_items: [], featured_link: nil)
-      super
+      super()
       @navigation_items = navigation_items
       @featured_link = featured_link
     end
