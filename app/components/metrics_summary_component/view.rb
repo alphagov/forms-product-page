@@ -3,7 +3,7 @@ module MetricsSummaryComponent
     attr_reader :error_message, :metrics
 
     def initialize(metrics)
-      super
+      super()
       @metrics = metrics
 
       if metrics.blank?

@@ -3,7 +3,7 @@ module HeaderComponent
     attr_accessor :phase_name
 
     def initialize(phase_name: nil)
-      super
+      super()
       @phase_name = phase_name
     end
 
