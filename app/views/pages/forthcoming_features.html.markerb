@@ -12,23 +12,31 @@ We'll update everyone with an account when we release new features. Or you can <
 ## What we're working on now
 
 - Form components in Welsh so you can make a Welsh language form
+- Making a copy of a form
+- Getting each completed form as a JSON file - this can make it easier to use automated processing for form submissions
+- Allowing people to provide an answer if they select ‘None of the above’ from a question that asks them to select from a list of options
 
-## Later in 2025
+## What we’re working on next
+
+- Improving how you manage users and forms in an organisation
+- Sending a copy of the answers a person has provided to their email address
+- ‘Branching’ improvements to allow you to have more than 2 branches from a question
+
+## Later in 2026
 
 - Allowing people to save their progress through a form and return later on
-- Improving how you manage users and forms in an organisation
 - Allowing people to answer a group of questions multiple times
-- Previews of what each question will look like as you're adding them to your form
+- Opening up use of GOV.UK Forms to local government
 
 ## Further in the future
 
 - Customisable branding so you can change the way forms look
-- 'Branching' improvements to allow you to have more than 2 branches from a question
-- The ability to receive form submissions in different ways - for example from cloud storage
+- Previews of what each question will look like as you're adding them to your form
 - Opening up use of GOV.UK Forms to the wider public sector
 - A history of previous versions of a form, and the ability to revert back to them
 - Question templates so you can add common questions to a form even faster
 - Taking payments via API - so you can collect payments part way through the journey through a form
 - More detailed metrics about a form's performance and an integrated way to get feedback from people who fill in a form
+- Allowing people to fill in forms using information they've already provided to government
 
 There are many other features and iterations we know will be useful. We'll update this page when we know when we're likely to work on them.
