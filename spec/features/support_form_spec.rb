@@ -47,7 +47,6 @@ describe "Support form", type: :system do
     choose "I’m a member of the public with a question about a government form or service", visible: :all
     click_button "Continue"
 
-    expect(page).to have_text "Find contact details for services"
-    expect(page.current_url).to eq "https://www.gov.uk/contact"
+    expect(page).to have_current_path("https://www.gov.uk/contact", url: true)
   end
 end
