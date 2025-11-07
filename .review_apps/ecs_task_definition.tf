@@ -6,6 +6,7 @@ locals {
   forms_product_page_env_vars = [
     { name = "RACK_ENV", value = "production" },
     { name = "RAILS_ENV", value = "production" },
+    { name = "SECRET_KEY_BASE", value = "unsecured_secret_key_material" },
     { name = "SETTINGS__FORMS_ENV", value = "review" },
   ]
 }
