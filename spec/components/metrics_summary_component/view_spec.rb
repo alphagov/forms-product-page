@@ -17,7 +17,7 @@ RSpec.describe MetricsSummaryComponent::View, type: :component do
     end
 
     it "renders the component" do
-      expect(page).to have_text("published")
+      expect(page).to have_text("forms (live and archived)")
       expect(page).to have_text("118")
     end
   end
