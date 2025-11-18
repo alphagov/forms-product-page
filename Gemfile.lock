@@ -91,7 +91,7 @@ GEM
     aws-sigv4 (1.12.1)
       aws-eventstream (~> 1, >= 1.0.2)
     base64 (0.3.0)
-    benchmark (0.4.1)
+    benchmark (0.5.0)
     bigdecimal (3.3.1)
     brakeman (7.1.0)
       racc
@@ -130,10 +130,10 @@ GEM
     erubi (1.13.1)
     globalid (1.3.0)
       activesupport (>= 6.1)
-    govuk-components (5.11.3)
+    govuk-components (5.13.0)
       html-attributes-utils (~> 1.0.0, >= 1.0.0)
       pagy (>= 6, < 10)
-      view_component (>= 4.0, < 4.1)
+      view_component (>= 4.0, < 4.2)
     govuk_design_system_formbuilder (5.11.0)
       actionview (>= 6.1)
       activemodel (>= 6.1)
@@ -178,7 +178,7 @@ GEM
       redcarpet (>= 3.0.0)
     matrix (0.4.2)
     mini_mime (1.1.5)
-    minitest (5.25.5)
+    minitest (5.26.2)
     mutex_m (0.3.0)
     net-imap (0.5.10)
       date
@@ -360,10 +360,11 @@ GEM
     unicode-display_width (3.1.5)
       unicode-emoji (~> 4.0, >= 4.0.4)
     unicode-emoji (4.0.4)
-    uri (1.0.4)
+    uri (1.1.1)
     useragent (0.16.11)
-    view_component (4.0.2)
-      activesupport (>= 7.1.0, < 8.1)
+    view_component (4.1.1)
+      actionview (>= 7.1.0, < 8.2)
+      activesupport (>= 7.1.0, < 8.2)
       concurrent-ruby (~> 1)
     vite_rails (3.0.19)
       railties (>= 5.1, < 9)
@@ -442,7 +443,7 @@ CHECKSUMS
   aws-sdk-core (3.237.0) sha256=9a8b14167a75be07ba7cfd9d27075aa12f1ed897d6eaed808a1c6a20963af32b
   aws-sigv4 (1.12.1) sha256=6973ff95cb0fd0dc58ba26e90e9510a2219525d07620c8babeb70ef831826c00
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
-  benchmark (0.4.1) sha256=d4ef40037bba27f03b28013e219b950b82bace296549ec15a78016552f8d2cce
+  benchmark (0.5.0) sha256=465df122341aedcb81a2a24b4d3bd19b6c67c1530713fd533f3ff034e419236c
   bigdecimal (3.3.1) sha256=eaa01e228be54c4f9f53bf3cc34fe3d5e845c31963e7fcc5bedb05a4e7d52218
   brakeman (7.1.0) sha256=bbc708a75a53008490c8b9600b97fa85cb3d5a8818dd1560f18e0b89475d48af
   builder (3.3.0) sha256=497918d2f9dca528fdca4b88d84e4ef4387256d984b8154e9d5d3fe5a9c8835f
@@ -463,7 +464,7 @@ CHECKSUMS
   erb (5.0.2) sha256=d30f258143d4300fb4ecf430042ac12970c9bb4b33c974a545b8f58c1ec26c0f
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
   globalid (1.3.0) sha256=05c639ad6eb4594522a0b07983022f04aa7254626ab69445a0e493aa3786ff11
-  govuk-components (5.11.3) sha256=b3fbf5c040c93e0552220c6296382a8730a0398032639393edc88c68fb240dcc
+  govuk-components (5.13.0) sha256=d36569e1ee9a082a6fd9293f3e8a0c5919daec657a84ab4bfa4e595faabfd423
   govuk_design_system_formbuilder (5.11.0) sha256=15a65152008a839aa3ac391f0896614ab90f5ced226a5fa8ab6da93173b0a6f8
   govuk_markdown (2.0.3) sha256=30fc99b502d96cf81751cbfc115e3717f8252940735dc40ee6dc83b454b1b35e
   hashdiff (1.2.1) sha256=9c079dbc513dfc8833ab59c0c2d8f230fa28499cc5efb4b8dd276cf931457cd1
@@ -483,7 +484,7 @@ CHECKSUMS
   markdown-rails (2.1.0) sha256=b496b324281eb37662bac0bd8240d954bac2bcbf39a08e54ef47e5d73b9e569c
   matrix (0.4.2) sha256=71083ccbd67a14a43bfa78d3e4dc0f4b503b9cc18e5b4b1d686dc0f9ef7c4cc0
   mini_mime (1.1.5) sha256=8681b7e2e4215f2a159f9400b5816d85e9d8c6c6b491e96a12797e798f8bccef
-  minitest (5.25.5) sha256=391b6c6cb43a4802bfb7c93af1ebe2ac66a210293f4a3fb7db36f2fc7dc2c756
+  minitest (5.26.2) sha256=f021118a6185b9ba9f5af71f2ba103ad770c75afde9f2ab8da512677c550cde3
   mutex_m (0.3.0) sha256=cfcb04ac16b69c4813777022fdceda24e9f798e48092a2b817eb4c0a782b0751
   net-imap (0.5.10) sha256=f84d206a296bff48a3a10507567fc38b050d2a40c92ea0d448164f64e60d6205
   net-pop (0.1.2) sha256=848b4e982013c15b2f0382792268763b748cce91c9e91e36b0f27ed26420dff3
@@ -555,9 +556,9 @@ CHECKSUMS
   tzinfo-data (1.2025.2) sha256=a92375a1fbb47d38fe88fd514c40a38cc8f97d168da2a6479f15185e86470939
   unicode-display_width (3.1.5) sha256=bf566817855ee7ee3adcf7bace0d5906cb14401417db59193f8a5fcedf02dd4e
   unicode-emoji (4.0.4) sha256=2c2c4ef7f353e5809497126285a50b23056cc6e61b64433764a35eff6c36532a
-  uri (1.0.4) sha256=34485d137c079f8753a0ca1d883841a7ba2e5fae556e3c30c2aab0dde616344b
+  uri (1.1.1) sha256=379fa58d27ffb1387eaada68c749d1426738bd0f654d812fcc07e7568f5c57c6
   useragent (0.16.11) sha256=700e6413ad4bb954bb63547fa098dddf7b0ebe75b40cc6f93b8d54255b173844
-  view_component (4.0.2) sha256=80eb4a8ecf8ff4cf152aea4821a8748d071a2e3af04f0532efcbf5011e8e9f65
+  view_component (4.1.1) sha256=179f63b0db1d1a8f6af635dd684456b2bcdf6b6f4da2ef276bbe0579c17b377e
   vite_rails (3.0.19) sha256=195c44677bc05c1f94e7a69f1264e49d4bad2729ab06538ee858c2962f5bb500
   vite_ruby (3.9.2) sha256=e10a7c851b590cccab57904bc96c2eb078ed6e22560a778db1dcefa3818a4972
   webmock (3.26.1) sha256=4f696fb57c90a827c20aadb2d4f9058bbff10f7f043bd0d4c3f58791143b1cd7
