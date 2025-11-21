@@ -32,3 +32,6 @@ config/environments/*.local.yml
 
 # Ignore coverage reports
 /coverage
+
+# Ignore `.terraform` directory
+.terraform
