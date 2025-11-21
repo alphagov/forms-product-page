@@ -43,15 +43,6 @@ describe ZendeskTicketService do
         })).to have_been_made
     end
 
-    it "raises an exception if the request fails" do
-      stub_request(:post, "https://test.zendesk.com/api/v2/tickets.json")
-        .to_return_json(status: 401, body: { "error" => "Couldn't authenticate you" })
-
-      expect {
-        described_class.create!(comment: { body: "Test" })
-      }.to raise_error(/Creating Zendesk ticket failed/)
-    end
-
     it "assigns the ticket to the correct group and organisation" do
       allow(Settings.zendesk).to receive(:defaults).and_return({
         group_id: "forms",
@@ -66,6 +57,30 @@ describe ZendeskTicketService do
           "group_id" => "forms",
           "organization_id" => "gds",
         }) })).to have_been_made
+    end
+
+    context "when Zendesk returns an error" do
+      before do
+        allow(Settings.sentry).to receive(:dsn).and_return("foo")
+        load "config/initializers/sentry.rb"
+        setup_sentry_test
+
+        stub_request(:post, "https://test.zendesk.com/api/v2/tickets.json")
+          .to_return_json(status: 401, body: { "error" => "Couldn't authenticate you" })
+      end
+
+      after do
+        teardown_sentry_test
+      end
+
+      it "raises an exception and sends it to Sentry" do
+        expect {
+          described_class.create!(comment: { body: "Test" })
+        }.to raise_error ZendeskTicketService::CreateFailedError
+        expect(last_sentry_event).to be_present
+        expect(last_sentry_event[:extra][:zendesk_error_message]).to eq("Couldn't authenticate you")
+        expect(last_sentry_event[:extra][:zendesk_response_code]).to eq("401")
+      end
     end
   end
 end
