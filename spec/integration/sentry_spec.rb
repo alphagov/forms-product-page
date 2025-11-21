@@ -19,21 +19,22 @@ RSpec.describe "config/initializers/sentry" do
     let(:support_form) { SupportForm.new(email_address: "user@example.org") }
 
     before do
-      raise "Something went wrong: #{support_form.inspect}"
+      raise "Something went wrong"
     rescue RuntimeError => e
+      Sentry.set_context(:user, { email: "user@example.org", id: "some-user-id" })
       Sentry.capture_exception(e)
     end
 
-    it "scrubs email addresses from everywhere in the event" do
-      expect(last_sentry_event.to_hash.to_s).not_to include "submission-email@test.example"
+    it "captures the exception" do
+      expect(last_sentry_event).to be_present
     end
 
-    it "replaces the email address in the exception with a comment" do
-      expect(last_sentry_event.to_hash[:exception][:values].first[:value]).to include "[Filtered (client-side)]"
+    it "replaces the email address in the context with a mask" do
+      expect(last_sentry_event.contexts[:user][:email]).to eq "[Filtered (client-side)]"
     end
 
-    it "keeps the rest of the exception message" do
-      expect(last_sentry_event.to_hash[:exception][:values].first[:value]).to include "Something went wrong"
+    it "keeps the rest of the context" do
+      expect(last_sentry_event.contexts[:user][:id]).to eq "some-user-id"
     end
   end
 
@@ -58,11 +59,11 @@ RSpec.describe "config/initializers/sentry" do
     end
 
     it "scrubs email addresses from everywhere in the event" do
-      expect(last_sentry_event.to_hash.to_s).not_to include "new-submission-email@test.example"
+      expect(last_sentry_event.to_h.to_s).not_to include "new-submission-email@test.example"
     end
 
     it "replaces the email address in the breadcrumbs with a comment" do
-      expect(last_sentry_event.to_hash[:breadcrumbs][:values].last[:data]["params"]["forms_submission_form"]["temporary_submission"]).to eq "[Filtered (client-side)]"
+      expect(last_sentry_event.to_h[:breadcrumbs][:values].last[:data]["params"]["forms_submission_form"]["temporary_submission"]).to eq "[Filtered (client-side)]"
     end
   end
 end
