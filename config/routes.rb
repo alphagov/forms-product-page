@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   get "/support/question-about-forms" => "support#question_about_forms", as: :question_about_forms
   post "/support/question-about-forms" => "support#submit"
 
+  get "/json-submissions/v1/schema" => "json_submissions#schema_v1", as: :json_submissions_schema_v1
+
   match "/404", to: "errors#not_found", via: :all
   match "/500", to: "errors#internal_server_error", via: :all
 end
