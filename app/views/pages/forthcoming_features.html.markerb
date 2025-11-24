@@ -43,4 +43,4 @@ We'll update everyone with an account when we release new features. Or you can <
 
 There are many other features and iterations we know will be useful. We'll update this page when we know when we're likely to work on them.
 
-If you have any feedback about existing features, or need a feature that isn’t listed here, you can [contact us](https://www.forms.service.gov.uk/support) to let us know.
+If you have any feedback about existing features, or need a feature that isn’t listed here, you can [contact us](<%= support_path %>) to let us know.
