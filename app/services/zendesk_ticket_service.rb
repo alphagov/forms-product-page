@@ -1,4 +1,6 @@
 class ZendeskTicketService
+  class CreateFailedError < StandardError; end
+
   class << self
     def create!(...)
       new.create!(...)
@@ -39,7 +41,13 @@ private
     if response.is_a? Net::HTTPSuccess
       JSON.parse(response.body)
     else
-      raise "Creating Zendesk ticket failed: #{response.code}"
+      Sentry.with_scope do |scope|
+        scope.set_extra(:zendesk_error_message, JSON.parse(response.body)&.[]("error")) if response.body
+        scope.set_extra(:zendesk_response_code, response.code)
+        exception = CreateFailedError.new("Creating Zendesk ticket failed: #{response.code}")
+        Sentry.capture_exception(exception)
+        raise exception
+      end
     end
   end
 end
