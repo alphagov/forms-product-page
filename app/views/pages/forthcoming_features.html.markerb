@@ -13,8 +13,8 @@ We'll update everyone with an account when we release new features. Or you can <
 
 - Form components in Welsh so you can make a Welsh language form
 - Making a copy of a form
-- Getting each completed form as a JSON file - this can make it easier to use automated processing for form submissions
 - Allowing people to provide an answer if they select ‘None of the above’ from a question that asks them to select from a list of options
+- Making form metrics available from more than the last 7 days
 
 ## What we’re working on next
 
@@ -39,4 +39,8 @@ We'll update everyone with an account when we release new features. Or you can <
 - More detailed metrics about a form's performance and an integrated way to get feedback from people who fill in a form
 - Allowing people to fill in forms using information they've already provided to government
 
+## Other features
+
 There are many other features and iterations we know will be useful. We'll update this page when we know when we're likely to work on them.
+
+If you have any feedback about existing features, or need a feature that isn’t listed here, you can [contact us](https://www.forms.service.gov.uk/support) to let us know.
