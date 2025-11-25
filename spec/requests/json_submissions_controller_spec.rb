@@ -17,5 +17,9 @@ RSpec.describe JsonSubmissionsController do
     it "includes the URL as the $id" do
       expect(JSON.parse(response.body)["$id"]).to eq json_submissions_schema_v1_url
     end
+
+    it "is a valid JSON schema" do
+      expect(JSONSchemer.valid_schema?(JSON.parse(response.body))).to be true
+    end
   end
 end

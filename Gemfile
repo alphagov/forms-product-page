@@ -64,4 +64,7 @@ group :test do
 
   # Code coverage reporter
   gem "simplecov", "~> 0.22.0", require: false
+
+  # For validating the JSON schema for form submissions
+  gem "json_schemer"
 end
