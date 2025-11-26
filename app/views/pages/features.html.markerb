@@ -14,7 +14,7 @@ These are the steps to make a form with GOV.UK Forms.
 3. Provide privacy information, the email address you want completed forms to be sent to, and details about what will happen after a form is submitted.
 4. Make the form live.
 5. Publish a link to the form on GOV.UK along with any guidance people need to read before they complete the form.
-6. When people submit a completed form, the information will be sent in the body of an email to the email address you specified. You can also get the information in a comma-separated values (CSV) file.
+6. The answers for each completed form will be sent in the body of an email to the email address you specified. You can also get the answers in a CSV or JSON file.
 
 ## Features available now
 
@@ -85,7 +85,7 @@ A link to the privacy information will be added to the footer of your form.
 
 Each form needs an email address to be set for completed forms to be sent to when they're submitted. Data from completed forms will be sent to this email address in the body of an email.
 
-You can also get each completed form in a CSV file. This can make it easier to copy and paste, or import data into spreadsheets or other applications.
+You can also get each completed form in a CSV or JSON file. These formats can make it easier to copy and paste the data, or to import it into spreadsheets or other applications.
 
 ### People can check their answers before they submit a form
 
