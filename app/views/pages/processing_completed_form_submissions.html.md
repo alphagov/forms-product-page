@@ -48,6 +48,6 @@ You’ll need a software engineer to configure and maintain the S3 bucket for yo
 If you want to receive form submission in an AWS S3 bucket, [send us a support request](https://www.forms.service.gov.uk/support) confirming that you:
 
 * have a technical team with access to the AWS stack, who can set up and maintain an S3 bucket on your behalf
-*intend to configure the S3 bucket following relevant NCSC guidance (in particular the [cloud security guidance](https://www.ncsc.gov.uk/collection/cloud/using-cloud-services-securely/using-a-cloud-platform-securely) and [advice on configuring S3 buckets securely](https://www.ncsc.gov.uk/blog-post/theres-hole-my-bucket)
+* intend to configure the S3 bucket following relevant NCSC guidance (in particular the [cloud security guidance](https://www.ncsc.gov.uk/collection/cloud/using-cloud-services-securely/using-a-cloud-platform-securely) and [advice on configuring S3 buckets securely](https://www.ncsc.gov.uk/blog-post/theres-hole-my-bucket)
 
 Once you’ve raised the ticket, we’ll respond with the permissions you need to give us to start writing data to your S3 bucket.
