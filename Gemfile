@@ -27,7 +27,7 @@ gem "sentry-ruby"
 
 # For markdown rendering
 gem "govuk_markdown", "~> 2.0"
-gem "markdown-rails", "~> 2.1"
+gem "markdown-rails", "~> 2.2"
 
 # For GOV.UK branding
 gem "govuk-components"
