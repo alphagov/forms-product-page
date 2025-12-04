@@ -114,7 +114,7 @@ GEM
     config (5.6.1)
       deep_merge (~> 1.2, >= 1.2.1)
       ostruct
-    connection_pool (2.5.4)
+    connection_pool (2.5.5)
     crack (1.0.1)
       bigdecimal
       rexml
@@ -132,7 +132,7 @@ GEM
     erubi (1.13.1)
     globalid (1.3.0)
       activesupport (>= 6.1)
-    govuk-components (5.13.0)
+    govuk-components (5.13.1)
       html-attributes-utils (~> 1.0.0, >= 1.0.0)
       pagy (>= 6, < 10)
       view_component (>= 4.0, < 4.2)
@@ -156,7 +156,7 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     jmespath (1.6.2)
-    json (2.15.2)
+    json (2.17.1)
     json_schemer (2.4.0)
       bigdecimal
       hana (~> 1.3)
@@ -463,7 +463,7 @@ CHECKSUMS
   capybara (3.40.0) sha256=42dba720578ea1ca65fd7a41d163dd368502c191804558f6e0f71b391054aeef
   concurrent-ruby (1.3.5) sha256=813b3e37aca6df2a21a3b9f1d497f8cbab24a2b94cab325bffe65ee0f6cbebc6
   config (5.6.1) sha256=a9f0f0f9ffa6d12d43147a3fa1ab8486fe484c3098a350c6a2e0f32430e0d1cc
-  connection_pool (2.5.4) sha256=e9e1922327416091f3f6542f5f4446c2a20745276b9aa796dd0bb2fd0ea1e70a
+  connection_pool (2.5.5) sha256=e54ff92855753df1fd7c59fa04a398833355f27dd14c074f8c83a05f72a716ad
   crack (1.0.1) sha256=ff4a10390cd31d66440b7524eb1841874db86201d5b70032028553130b6d4c7e
   crass (1.0.6) sha256=dc516022a56e7b3b156099abc81b6d2b08ea1ed12676ac7a5657617f012bd45d
   date (3.5.0) sha256=5e74fd6c04b0e65d97ad4f3bb5cb2d8efb37f386cc848f46310b4593ffc46ee5
@@ -476,7 +476,7 @@ CHECKSUMS
   erb (6.0.0) sha256=2730893f9d8c9733f16cab315a4e4b71c1afa9cabc1a1e7ad1403feba8f52579
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
   globalid (1.3.0) sha256=05c639ad6eb4594522a0b07983022f04aa7254626ab69445a0e493aa3786ff11
-  govuk-components (5.13.0) sha256=d36569e1ee9a082a6fd9293f3e8a0c5919daec657a84ab4bfa4e595faabfd423
+  govuk-components (5.13.1) sha256=74808d8188a7de2c5e83e5a829c5f8ac3851df27f82410a4a2444cf53c24cfe5
   govuk_design_system_formbuilder (5.13.0) sha256=126ff4af70b36f06395e8f4f09d399944bcc10e9a41c2ff7d7773e81e92ca885
   govuk_markdown (2.0.3) sha256=30fc99b502d96cf81751cbfc115e3717f8252940735dc40ee6dc83b454b1b35e
   hana (1.3.7) sha256=5425db42d651fea08859811c29d20446f16af196308162894db208cac5ce9b0d
@@ -486,7 +486,7 @@ CHECKSUMS
   io-console (0.8.1) sha256=1e15440a6b2f67b6ea496df7c474ed62c860ad11237f29b3bd187f054b925fcb
   irb (1.15.3) sha256=4349edff1efa7ff7bfd34cb9df74a133a588ba88c2718098b3b4468b81184aaa
   jmespath (1.6.2) sha256=238d774a58723d6c090494c8879b5e9918c19485f7e840f2c1c7532cf84ebcb1
-  json (2.15.2) sha256=1068e1d966d2d0dcaf953eaed09c2d30e4104c64c1e3140c435d17be08d1fa27
+  json (2.17.1) sha256=e0e4824541336a44915436f53e7ea74c687314fb8f88080fa1456f6a34ead92e
   json_schemer (2.4.0) sha256=56cb6117bb5748d925b33ad3f415b513d41d25d0bbf57fe63c0a78ff05597c24
   language_server-protocol (3.17.0.5) sha256=fd1e39a51a28bf3eec959379985a72e296e9f9acfce46f6a79d31ca8760803cc
   lint_roller (1.1.0) sha256=2c0c845b632a7d172cb849cc90c1bce937a28c5c8ccccb50dfd46a485003cc87
