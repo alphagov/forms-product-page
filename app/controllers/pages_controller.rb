@@ -12,4 +12,5 @@ class PagesController < ApplicationController
   def cookies; end
   def privacy; end
   def terms_of_use; end
+  def processing_completed_form_submissions; end
 end
