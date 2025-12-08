@@ -43,7 +43,6 @@ You can also [join the cross-government low code community](https://www.gov.uk/s
 
 If your organisation has access to the AWS stack, you can opt to receive form submissions in an AWS S3 bucket instead of by email. Submissions are written to the S3 bucket as individual JSON or CSV files.
 
-You’ll need a software engineer to configure and maintain the S3 bucket for you - and to write and maintain code to extract the submission data from the S3 bucket and import it into your CRM system (or whatever system you’re using to do the processing).
 
 If you want to receive form submission in an AWS S3 bucket, [send us a support request](https://www.forms.service.gov.uk/support) confirming that you:
 
