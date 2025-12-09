@@ -83,9 +83,9 @@ A link to the privacy information will be added to the footer of your form.
 
 ### Set up how you get data from completed forms
 
-By default, data from completed forms is sent by email - to the email address you nominate when creating the form. You can opt to:
+By default, submisison data from completed forms is sent by email - to the address you nominate when creating the form. You can opt to:
 
-- receive submission data in a CSV or JSON file, as well as in the body of the email
+- receive submission data in a CSV or JSON file, attached to the email - as well as in the body of the email
 - receive submission data in an AWS S3 bucket, instead of by email
 
 [Read more about options for processing completed form submissions](https://www.forms.service.gov.uk/processing-completed-form-submissions).
