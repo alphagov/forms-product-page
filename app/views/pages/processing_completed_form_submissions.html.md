@@ -43,10 +43,9 @@ You can also [join the cross-government low code community](https://www.gov.uk/s
 
 If your organisation has access to the AWS stack, you can opt to receive form submissions in an AWS S3 bucket instead of by email. Submissions are written to the S3 bucket as individual JSON or CSV files.
 
-
-If you want to receive form submission in an AWS S3 bucket, [send us a support request](https://www.forms.service.gov.uk/support) confirming that you:
+If you want to receive form submissions in an AWS S3 bucket, [send us a support request](https://www.forms.service.gov.uk/support) confirming that you:
 
 * have a technical team with access to the AWS stack, who can set up and maintain an S3 bucket on your behalf
-* intend to configure the S3 bucket following relevant NCSC guidance (in particular the [cloud security guidance](https://www.ncsc.gov.uk/collection/cloud/using-cloud-services-securely/using-a-cloud-platform-securely) and [advice on configuring S3 buckets securely](https://www.ncsc.gov.uk/blog-post/theres-hole-my-bucket)
+* intend to configure the S3 bucket following relevant NCSC guidance (in particular the [cloud security guidance](https://www.ncsc.gov.uk/collection/cloud/using-cloud-services-securely/using-a-cloud-platform-securely) and [advice on configuring S3 buckets securely](https://www.ncsc.gov.uk/blog-post/theres-hole-my-bucket))
 
-Once you’ve raised the ticket, we’ll respond with the permissions you need to give us to start writing data to your S3 bucket.
+Once you’ve raised the ticket, we’ll respond and tell you what permissions you need to give us so we can start writing data to your S3 bucket.
