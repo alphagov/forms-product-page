@@ -12,24 +12,25 @@ We'll update everyone with an account when we release new features. Or you can <
 ## What we're working on now
 
 - Form components in Welsh so you can make a Welsh language form
-- Making a copy of a form
 - Allowing people to provide an answer if they select ‘None of the above’ from a question that asks them to select from a list of options
 
 ## What we’re working on next
 
-- Improving how you manage users and forms in an organisation
 - Sending a copy of the answers a person has provided to their email address
-- ‘Branching’ improvements to allow you to have more than 2 branches from a question
+- Sending email notifications to organisation admins when someone in their organisation makes a form live or creates a new form in an active group
+- Collating data from multiple completed forms into one file 
 
 ## Later in 2026
 
+- Further improvements for managing users and forms in an organisation
+- ‘Branching’ improvements to allow you to have more than 2 branches from a question
 - Allowing people to save their progress through a form and return later on
+- Customisable branding so you can change the way forms look
 - Allowing people to answer a group of questions multiple times
 - Opening up use of GOV.UK Forms to local government
 
 ## Further in the future
 
-- Customisable branding so you can change the way forms look
 - Previews of what each question will look like as you're adding them to your form
 - Opening up use of GOV.UK Forms to the wider public sector
 - A history of previous versions of a form, and the ability to revert back to them
