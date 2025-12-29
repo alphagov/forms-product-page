@@ -1,6 +1,7 @@
 module HostPatterns
   DEFAULT_HOST_PATTERNS = [
     /www\.forms\.service\.gov\.uk/,
+    /www\.[^.]*\.forms\.service\.gov\.uk/,
     /pr-[^.]*\.www\.review\.forms\.service\.gov\.uk/,
   ].freeze
 
