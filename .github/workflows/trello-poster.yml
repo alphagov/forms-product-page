@@ -1,0 +1,10 @@
+name: Trello Poster
+on:
+  pull_request:
+    types: [opened, edited]
+jobs:
+  trello-poster:
+    uses: alphagov/forms-deploy/.github/workflows/trello-poster.yml@main
+    secrets:
+      trello-api-token: ${{ secrets.TRELLO_API_TOKEN }}
+      trello-api-key: ${{ secrets.TRELLO_API_KEY }}
