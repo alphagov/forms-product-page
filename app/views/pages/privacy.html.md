@@ -1,6 +1,6 @@
 # Privacy notice: how we use your data
 
-Last updated: 26 August 2025
+Last updated: 19 January 2025
 
 GOV.UK Forms is a platform provided by the Government Digital Service (GDS), which is part of the Department for Science, Innovation and Technology. The GOV.UK Forms platform lets UK government teams create online forms to collect information from people and organisations.
 
@@ -109,10 +109,6 @@ We will not:
 - share your data with third parties for marketing purposes
 
 We will share your data if we are required to do so by law – for example, by court order - or where doing so would help to prevent fraud or other crime.
-
-## Children's privacy protection
-
-We understand the importance of protecting children's privacy online. Our services are not designed for, or intentionally targeted at, children 13 years of age or younger. It is not our policy to intentionally collect or maintain data about anyone under the age of 13.
 
 ## What your rights are
 
