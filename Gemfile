@@ -34,7 +34,7 @@ gem "govuk-components"
 gem "govuk_design_system_formbuilder"
 
 # For pausing pipelines
-gem "aws-sdk-codepipeline", "~> 1.109"
+gem "aws-sdk-codepipeline", "~> 1.111"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
