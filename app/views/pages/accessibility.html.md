@@ -32,7 +32,7 @@ We know that some parts of the platform are not yet fully accessible:
 
 We're always looking to improve the accessibility of the website and platform.
 
-If you find any problems not listed on this page, or think we're not meeting accessibility requirements, email us at [govuk-forms@digital.cabinet-office.gov.uk](mailto:govuk-forms@digital.cabinet-office.gov.uk).
+If you find any problems not listed on this page, or think we're not meeting accessibility requirements, [contact us](https://www.forms.service.gov.uk/support).
 
 ## Enforcement procedure
 
