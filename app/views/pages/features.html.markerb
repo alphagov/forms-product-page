@@ -69,10 +69,6 @@ So, for example, you can:
 
 You can route someone to an ‘exit page’ based on their response to a question. You can use the exit page to tell them why they cannot use the form and explain what they should do instead.
 
-### Forms use GOV.UK Design System styles, components and patterns
-
-Using these tested and accessible designs means you do not have to worry about the visual and interface design of your forms. And they'll automatically look consistent with GOV.UK.
-
 ### Provide privacy information
 
 To comply with the UK General Data Protection Regulation (UK GDPR), you'll need to provide a link to privacy information for the people who'll enter their data into your form.
@@ -121,6 +117,10 @@ The contact information will be displayed at the bottom of every page of the for
 
 It will also be shown in an automatic email confirming that a form's been submitted - if someone chooses to receive this.
 
+### Welsh forms
+
+You can make a Welsh version of a form. People will be able to switch between English and Welsh as they go through the form.
+
 ### Prepare changes to a live form in a draft
 
 You can make a draft version of a live form so you can prepare changes to it. This means you can share the new draft for review before you make the changes live. It also minimises disruption to people who might be filling in the form when you update it.
@@ -132,6 +132,10 @@ Use simple metrics to see how many forms were submitted and the completion rate 
 ### Manage who can create and edit forms
 
 Your organisation can control who has access to different forms and who can make them live.
+
+### Forms use GOV.UK Design System styles, components and patterns
+
+Using these tested and accessible designs means you do not have to worry about the visual and interface design of your forms. And they'll automatically look consistent with GOV.UK.
 
 ## Updates and forthcoming features
 
