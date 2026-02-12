@@ -6,15 +6,20 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "pages#index"
 
-  get "/get-started" => "pages#get_started"
-  get "/features" => "pages#features"
-  get "/forthcoming-features" => "pages#forthcoming_features"
-  get "/create-good-forms" => "pages#create_good_forms"
   get "/accessibility" => "pages#accessibility"
   get "/cookies" => "pages#cookies"
   get "/privacy" => "pages#privacy"
   get "/terms-of-use" => "pages#terms_of_use"
-  get "/processing-completed-form-submissions" => "pages#processing_completed_form_submissions"
+
+  get "/using-forms" => "pages#using_forms", as: :using_forms
+
+  get "/using-forms/:slug" => "pages#using_forms_page", as: :using_forms_page
+
+  get "/get-started" => redirect("/using-forms/get-started"), as: :get_started
+  get "/features" => redirect("/using-forms/features")
+  get "/forthcoming-features" => redirect("/using-forms/forthcoming-features")
+  get "/create-good-forms" => redirect("/using-forms/create-good-forms")
+  get "/processing-completed-form-submissions" => redirect("/using-forms/processing-completed-form-submissions")
 
   get "/mailing-list" => redirect("https://service.us12.list-manage.com/subscribe?u=cb74eb9a6898b0e5870fede0a&id=451fe4c1e1")
 

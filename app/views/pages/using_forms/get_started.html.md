@@ -1,10 +1,14 @@
+---
+navigation_order: 2
+---
+
 # Get started
 
 GOV.UK Forms is a new platform that makes it easy to create accessible online
 forms for the GOV.UK website.
 
 Because it’s still in the early stages of development,
-[the features available are limited](<%= features_path %>).
+[the features available are limited](<%= using_forms_page_path(slug: "features") %>).
 So it will not be suitable for creating all types of online form.
 
 ## Create an account to try it out
@@ -14,6 +18,7 @@ If you’re from a central government organisation you can create an account to 
 Some departments are restricting who can create an account from their organisation. We’ll tell you if this affects you.
 
 You’ll need to use your government email address to create an account.
+
 
 <%= govuk_start_button text: "Create an account", href: "#{Settings.forms_admin.base_url}/sign-up" %>
 
@@ -25,7 +30,7 @@ You’ll only be able to make forms live if you get permission from your organis
 
 ## If your organisation’s new to GOV.UK Forms
 
-Before anyone from your organisation can make any forms live, someone from your organisation will need to agree to a ‘Memorandum of Understanding’ with GOV.UK Forms. 
+Before anyone from your organisation can make any forms live, someone from your organisation will need to agree to a ‘Memorandum of Understanding’ with GOV.UK Forms.
 
 At least one person will also need to agree to be your organisation’s GOV.UK Forms admin. They’ll manage who is able to make forms live.
 
@@ -37,7 +42,7 @@ If GOV.UK Forms doesn’t meet your needs yet, you can:
 
 - [subscribe to our mailing list](<%= mailing_list_path %>)
 to get updates about new features
-- [read about our forthcoming features](<%= forthcoming_features_path %>)
+- [read about our forthcoming features](<%= using_forms_page_path(slug: "forthcoming-features") %>)
 
 ## Contact us
 

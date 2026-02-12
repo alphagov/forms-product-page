@@ -26,6 +26,14 @@ class ApplicationMarkdown < GovukMarkdown::Renderer
     ::Redcarpet::Markdown.new(self.class.new(**features), **features)
   end
 
+  def preprocess(content)
+    _frontmatter, body = extract_frontmatter(content)
+    rendered_body = render inline: body, handler: :erb
+    # Rails can annotate inline templates with HTML comments. Strip them before
+    # markdown conversion so they do not appear as visible text.
+    rendered_body.gsub(/<!--(.*?)-->/m, "").strip
+  end
+
 protected
 
   def base_controller
@@ -33,6 +41,13 @@ protected
   end
 
 private
+
+  def extract_frontmatter(content)
+    frontmatter_match = content.match(/\A---\s*\r?\n(?<yaml>.*?)\r?\n---\s*(?:\r?\n|$)/m)
+    return [nil, content] unless frontmatter_match
+
+    [frontmatter_match[:yaml], content.delete_prefix(frontmatter_match[0])]
+  end
 
   def features
     Array(enable).index_with { |_feature| true }

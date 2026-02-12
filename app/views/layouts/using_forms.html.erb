@@ -1,0 +1,16 @@
+<% content_for :main do %>
+  <div class="govuk-width-container">
+    <main class="govuk-main-wrapper" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+          <%= render(SideNavigationComponent::View.new(navigation_items: using_forms_navigation_items)) %>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+          <%= yield %>
+        </div>
+      </div>
+    </main>
+  </div>
+<% end %>
+
+<%= render template: "layouts/application" %>

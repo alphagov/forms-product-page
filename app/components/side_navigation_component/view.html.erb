@@ -1,0 +1,12 @@
+<nav class="app-side-navigation" aria-label="Side navigation">
+  <ul class="app-side-navigation__list">
+    <% navigation_items.each do |item| %>
+      <% item_classes = ["app-side-navigation__item"] %>
+      <% is_active = current_page?(item[:href]) %>
+      <% item_classes << "app-side-navigation__item--active" if is_active %>
+      <li class="<%= item_classes.join(" ") %>">
+        <%= link_to(item[:text], item[:href], aria: (is_active ? { current: "location" } : {})) %>
+      </li>
+    <% end %>
+  </ul>
+</nav>
