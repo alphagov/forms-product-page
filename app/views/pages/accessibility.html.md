@@ -22,12 +22,6 @@ We've also made the text as simple as possible to understand.
 
 [AbilityNet](https://mcmw.abilitynet.org.uk/) has advice on making your device easier to use if you have a disability.
 
-## How accessible the website and platform are
-
-We know that some parts of the platform are not yet fully accessible:
-
-- there’s only one way for ‘super admin’ users to access the list of users in the form builder’s user management pages. Some people may find it harder to navigate to this page, as described under the heading 'Non-accessible content'.
-
 ## Feedback and contact information
 
 We're always looking to improve the accessibility of the website and platform.
@@ -56,21 +50,11 @@ This website is fully compliant with the Web Content Accessibility Guidelines (W
 
 The Digital Accessibility Centre (DAC) tested the GOV.UK Forms platform on 28 March 2024.
 
-The platform is partially compliant with the WCAG version 2.2 AA standard due to the non-compliances listed below.
-
-## Non-accessible content
-
-The content listed below is non-accessible for the following reasons:
-
-### Non-compliance with the accessibility regulations
-
-There's only one way for 'super admin' users to access the list of users in the form builder's user management pages. This does not meet WCAG 2.2 level AA [success criterion 2.4.5 (Multiple Ways)](https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways.html).
-
-We plan to resolve this by the end of 2025.
+This website is fully compliant with the Web Content Accessibility Guidelines (WCAG) version 2.2 AA standard.
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 5 June 2024. It was last reviewed and updated on 21 August 2025.
+This statement was prepared on 5 June 2024. It was last reviewed and updated on 6 February 2026.
 
 This website was last tested on 8 June 2022. The test was carried out by GDS.
 
