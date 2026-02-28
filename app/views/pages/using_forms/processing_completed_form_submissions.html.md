@@ -1,3 +1,9 @@
+---
+navigation_order: 5
+page_title: Processing completed form submissions
+page_description: Ways to receive, route, and automate GOV.UK Forms submission data.
+---
+
 # Processing completed form submissions
 
 GOV.UK Forms sends submissions to you one at a time, as they come in.

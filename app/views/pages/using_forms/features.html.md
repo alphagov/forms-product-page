@@ -1,5 +1,8 @@
-<% set_page_title('How GOV.UK Forms works') %>
-<% set_page_description('The process for creating a form and the features already available.') %>
+---
+navigation_order: 3
+page_title: How GOV.UK Forms works
+page_description: The process for creating a form and the features already available.
+---
 
 # How GOV.UK Forms works
 
@@ -65,7 +68,7 @@ So, for example, you can:
 - ask one set of questions for people who answer 'Yes' and another set for people who answer 'No'
 - ask one set of questions if the answer is 'A' and another set if the answer is 'B', 'C' or 'D'
 
-### Add an ‘exit page’ to remove someone from a form 
+### Add an ‘exit page’ to remove someone from a form
 
 You can route someone to an ‘exit page’ based on their response to a question. You can use the exit page to tell them why they cannot use the form and explain what they should do instead.
 
@@ -143,5 +146,5 @@ When new features are released, we'll email users of the product and update this
 
 You can also:
 
-- <%= govuk_link_to "read about our forthcoming features", forthcoming_features_path %>
-- <%= govuk_link_to "join our mailing list to get updates", mailing_list_path %> 
+- [read about our forthcoming features](<%= using_forms_page_path(slug: "forthcoming-features") %>)
+- [join our mailing list to get updates](<%= mailing_list_path %>)

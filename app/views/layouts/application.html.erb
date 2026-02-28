@@ -35,7 +35,7 @@
     <% if content_for?(:cookie_banner) %>
       <%= yield :cookie_banner %>
     <% else %>
-      <%= render partial: "pages/cookie_banner" %>
+      <%= render partial: "partials/cookie_banner" %>
     <% end %>
 
     <%= render(HeaderComponent::View.new(
@@ -43,11 +43,7 @@
     )) %>
 
     <%= render(ServiceNavigationComponent::View.new(
-      navigation_items: [
-        {text: "Get started", href: get_started_path},
-        {text: "Features", href: features_path},
-        {text: "Support", href: support_path},
-      ],
+      navigation_items: service_navigation_items,
       featured_link: {text: "Sign in", href: Settings.forms_admin.base_url}
     )) %>
 

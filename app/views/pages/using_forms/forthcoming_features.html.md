@@ -1,13 +1,16 @@
-<% set_page_title('Forthcoming features') %>
-<% set_page_description("The features we're working on next and when we plan to release them.") %>
+---
+navigation_order: 6
+page_title: Forthcoming features
+page_description: The features we're working on next and when we plan to release them.
+---
 
 # Forthcoming features
- 
+
 These are the features we're working on next and approximately when we hope to release them.
 
 This information is just a guide. It's not everything we're doing, and things may move.
 
-We'll update everyone with an account when we release new features. Or you can <%= govuk_link_to "sign up to our mailing list for updates", mailing_list_path %>.
+We'll update everyone with an account when we release new features. Or you can [sign up to our mailing list for updates](<%= mailing_list_path %>).
 
 ## What we're working on now
 
