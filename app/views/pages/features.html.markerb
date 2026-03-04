@@ -82,7 +82,8 @@ A link to the privacy information will be added to the footer of your form.
 By default, data from each completed form is sent in the body of an email - to the address you nominate when creating the form. You can opt to:
 
 - get data from each completed form in a CSV or JSON file, attached to the email - as well as in the body of the email
-- get data from completed forms in an AWS S3 bucket, instead of by email
+- get data from completed forms sent to an AWS S3 bucket, instead of by email
+- get a daily CSV of the data from the previous day’s submissions to a form, in addition to the individual completed form emails
 
 [Read more about options for processing completed form submissions](https://www.forms.service.gov.uk/processing-completed-form-submissions).
 
