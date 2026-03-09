@@ -31,7 +31,7 @@ gem "markdown-rails", "~> 2.1"
 
 # For GOV.UK branding
 gem "govuk-components", "~> 6"
-gem "govuk_design_system_formbuilder"
+gem "govuk_design_system_formbuilder", "~> 6"
 
 # For pausing pipelines
 gem "aws-sdk-codepipeline", "~> 1.112"
