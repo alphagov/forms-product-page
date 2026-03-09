@@ -1,7 +1,6 @@
 @use "pkg:govuk-frontend" as govuk with (
   $govuk-assets-path: "@govuk/assets/",
   $govuk-global-styles: true,
-  $govuk-new-typography-scale: true
 );
 
 @use "../styles/borders";
@@ -30,7 +29,7 @@
 
 div.feature-panel {
   text-align: left;
-  border: 3px solid govuk.govuk-colour("light-grey");
+  border: 3px solid govuk.govuk-colour("black", $variant: "tint-95");
   box-sizing: border-box;
 }
 

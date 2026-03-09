@@ -60,7 +60,7 @@
   }
 
   .govuk-link:focus {
-    color: govuk.$govuk-text-colour;
+    color: govuk.govuk-functional-colour(text);
   }
 
   &__title {
