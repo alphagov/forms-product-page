@@ -5,7 +5,6 @@
 );
 
 @use "../styles/borders";
-@use "../styles/breadcrumbs";
 @use "../styles/hero";
 @use "../styles/image";
 @use "../styles/masthead";
@@ -55,10 +54,6 @@ div.feature-panel {
   margin-bottom: govuk-spacing(9);
 }
 
-.hero-breadcrumb-banner {
-  background-color: govuk.$govuk-brand-colour;
-}
-
 @media (max-width: 732px) {
   #index-hero-body {
     .govuk-button {
@@ -80,8 +75,4 @@ div.feature-panel {
 #main-content {
   display: block;
   margin-bottom: govuk.govuk-spacing(9);
-}
-
-.hero-breadcrumb-banner {
-  background-color: govuk.$govuk-brand-colour;
 }
