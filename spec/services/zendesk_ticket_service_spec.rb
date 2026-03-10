@@ -78,8 +78,8 @@ describe ZendeskTicketService do
           described_class.create!(comment: { body: "Test" })
         }.to raise_error ZendeskTicketService::CreateFailedError
         expect(last_sentry_event).to be_present
-        expect(last_sentry_event[:extra][:zendesk_error_message]).to eq("Couldn't authenticate you")
-        expect(last_sentry_event[:extra][:zendesk_response_code]).to eq("401")
+        expect(last_sentry_event.extra[:zendesk_error_message]).to eq("Couldn't authenticate you")
+        expect(last_sentry_event.extra[:zendesk_response_code]).to eq("401")
       end
     end
   end
