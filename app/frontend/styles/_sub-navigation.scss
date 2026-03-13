@@ -11,7 +11,7 @@
   }
 
   &__item {
-    border-bottom: 1px govuk.$govuk-border-colour solid;
+    border-bottom: 1px govuk.govuk-functional-colour(border) solid;
     display: block;
     padding: govuk.govuk-spacing(2) 0;
 
@@ -36,7 +36,7 @@
 
     a:link,
     a:visited {
-      color: govuk.$govuk-text-colour;
+      color: govuk.govuk-functional-colour(text);
     }
   }
 }

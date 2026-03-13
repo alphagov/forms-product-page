@@ -8,16 +8,16 @@ pre code {
   padding: govuk.govuk-spacing(4);
   overflow-x: auto;
   border: govuk.$govuk-focus-width solid transparent;
-  outline: 1px solid govuk.$govuk-border-colour;
-  background-color: govuk.govuk-colour("light-grey");
+  outline: 1px solid govuk.govuk-functional-colour(border);
+  background-color: govuk.govuk-colour("black", $variant: "tint-95");
 
   @include govuk.govuk-font-size($size: 19);
   @include govuk.govuk-responsive-margin(4, "bottom");
   @include govuk.govuk-typography-common($font-family: $app-code-font);
 
   &:focus {
-    border: govuk.$govuk-focus-width solid govuk.$govuk-input-border-colour;
-    outline: govuk.$govuk-focus-width solid govuk.$govuk-focus-colour;
+    border: govuk.$govuk-focus-width solid govuk.govuk-functional-colour(input-border);
+    outline: govuk.$govuk-focus-width solid govuk.govuk-functional-colour(focus);
   }
 
 }

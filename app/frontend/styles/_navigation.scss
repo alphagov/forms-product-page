@@ -49,25 +49,25 @@
     a:link,
     a:visited {
       display: inline-block;
-      color: govuk.$govuk-link-colour;
+      color: govuk.govuk-functional-colour(link);
       text-decoration: none;
       padding: govuk.govuk-spacing(2) 0;
     }
 
     a:focus {
-      color: govuk.$govuk-text-colour;
-      background-color: govuk.$govuk-focus-colour;
-      outline: 3px solid govuk.$govuk-focus-colour;
+      color: govuk.govuk-functional-colour(text);
+      background-color: govuk.govuk-functional-colour(focus);
+      outline: 3px solid govuk.govuk-functional-colour(focus);
     }
 
     &-active {
       padding-left: govuk.govuk-spacing(1);
-      border-left: 5px solid govuk.$govuk-text-colour;
+      border-left: 5px solid govuk.govuk-functional-colour(text);
 
       @include govuk.govuk-media-query(tablet) {
         padding-left: 0;
         border-left: 0;
-        border-color: govuk.$govuk-text-colour;
+        border-color: govuk.govuk-functional-colour(text);
       }
     }
   }
