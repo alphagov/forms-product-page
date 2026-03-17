@@ -14,8 +14,8 @@
 
 
 .masthead {
-  background-color: govuk.$govuk-brand-colour;
-  border-bottom: 1px solid govuk.$govuk-brand-colour;
+  background-color: govuk.govuk-functional-colour(brand);
+  border-bottom: 1px solid govuk.govuk-functional-colour(brand);
   @include govuk.govuk-responsive-margin(8, "bottom");
   @include govuk.govuk-responsive-padding(6, "bottom");
   @include govuk.govuk-responsive-padding(6, "top");

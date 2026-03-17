@@ -1,14 +1,11 @@
 @use "pkg:govuk-frontend" as govuk with (
   $govuk-assets-path: "@govuk/assets/",
   $govuk-global-styles: true,
-  $govuk-new-typography-scale: true
 );
 
 @use "../styles/borders";
-@use "../styles/breadcrumbs";
 @use "../styles/hero";
 @use "../styles/image";
-@use "../styles/inverted-button";
 @use "../styles/masthead";
 @use "../../components/metrics_summary_component";
 @use "../../components/service_navigation_component";
@@ -32,7 +29,7 @@
 
 div.feature-panel {
   text-align: left;
-  border: 3px solid govuk.govuk-colour("light-grey");
+  border: 3px solid govuk.govuk-colour("black", $variant: "tint-95");
   box-sizing: border-box;
 }
 
@@ -56,10 +53,6 @@ div.feature-panel {
   margin-bottom: govuk-spacing(9);
 }
 
-.hero-breadcrumb-banner {
-  background-color: govuk.$govuk-brand-colour;
-}
-
 @media (max-width: 732px) {
   #index-hero-body {
     .govuk-button {
@@ -81,8 +74,4 @@ div.feature-panel {
 #main-content {
   display: block;
   margin-bottom: govuk.govuk-spacing(9);
-}
-
-.hero-breadcrumb-banner {
-  background-color: govuk.$govuk-brand-colour;
 }

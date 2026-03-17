@@ -14,7 +14,7 @@
 @use "pkg:govuk-frontend" as govuk;
 
 .related-items {
-  border-top: 10px solid govuk.$govuk-brand-colour;;
+  border-top: 10px solid govuk.govuk-functional-colour(brand);
   margin: govuk.govuk-spacing(4) 0;
 
   &__title {
