@@ -53,10 +53,15 @@ resource "aws_ecs_task_definition" "task" {
       portMappings = [
         {
           containerPort = 3000
+          hostPort      = 3000
           protocol      = "tcp"
           appProtocol   = "http"
         }
       ]
+
+      mountPoints    = []
+      systemControls = []
+      volumesFrom    = []
 
       logConfiguration = {
         logDriver = "awslogs"
@@ -72,6 +77,7 @@ resource "aws_ecs_task_definition" "task" {
         interval    = 30
         retries     = 5
         startPeriod = 180
+        timeout     = 5
       }
     }
   ])
