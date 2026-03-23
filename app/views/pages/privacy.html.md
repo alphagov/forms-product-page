@@ -50,7 +50,7 @@ If you create an account to use GOV.UK Forms, we'll collect your:
 - email address
 - organisation
 
-We may share these details with people at your organisation or related organisations involved in monitoring access to specific technologies, or in managing form creation or website publishing. We do this to help manage access to GOV.UK Forms and to ensure that only legitimate users have access.
+We may share these details with people at your organisation or related organisations involved in monitoring access to specific technologies, or in managing form creation or website publishing. We do this to help manage access to GOV.UK Forms, to ensure that only legitimate users have access, and to provide visibility of form creation and publishing activity. 
 
 We use the Auth0 service to authenticate your email address when you sign in to use GOV.UK Forms. This involves us sharing your email address with Auth0 as a data processor. For more information you can [read about how Auth0 processes data](https://auth0.com/docs/secure/data-privacy-and-compliance/data-processing).
 
