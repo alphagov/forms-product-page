@@ -83,7 +83,7 @@ By default, data from each completed form is sent in the body of an email - to t
 
 - get data from each completed form in a CSV or JSON file, attached to the email - as well as in the body of the email
 - get data from completed forms sent to an AWS S3 bucket, instead of by email
-- get a daily CSV of the data from the previous day’s submissions to a form, in addition to the individual completed form emails
+- get a daily or weekly CSV of all submissions to a form from the previous day or week, in addition to the individual completed form emails
 
 [Read more about options for processing completed form submissions](https://www.forms.service.gov.uk/processing-completed-form-submissions).
 
