@@ -1,0 +1,18 @@
+<% set_page_title('About GOV.UK Forms') %>
+<% set_page_description('The process for creating a form.') %>
+
+# About GOV.UK Forms
+
+GOV.UK Forms is a new platform that makes it easy to create accessible online forms for the GOV.UK website.
+
+## Creating a form using GOV.UK Forms
+
+These are the steps to make a form with GOV.UK Forms.
+
+1. Create a form and give the form a name.
+2. Add questions to your form to collect the information you need.
+3. Provide privacy information, the email address you want completed forms to be sent to, and details about what will happen after a form is submitted.
+4. Make the form live.
+5. Publish a link to the form on GOV.UK along with any guidance people need to read before they complete the form.
+6. By default, answers for each completed form will be sent in the body of an email - to the email address you specified. You can also get the answers in a CSV or JSON file.
+

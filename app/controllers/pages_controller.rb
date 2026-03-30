@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     render(layout: "layouts/homepage")
   end
 
+  def about; end
   def get_started; end
   def features; end
   def create_good_forms; end
