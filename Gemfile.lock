@@ -79,11 +79,11 @@ GEM
       public_suffix (>= 2.0.2, < 7.0)
     ast (2.4.3)
     aws-eventstream (1.4.0)
-    aws-partitions (1.1209.0)
-    aws-sdk-codepipeline (1.112.0)
-      aws-sdk-core (~> 3, >= 3.241.4)
+    aws-partitions (1.1235.0)
+    aws-sdk-codepipeline (1.113.0)
+      aws-sdk-core (~> 3, >= 3.244.0)
       aws-sigv4 (~> 1.5)
-    aws-sdk-core (3.241.4)
+    aws-sdk-core (3.244.0)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.992.0)
       aws-sigv4 (~> 1.9)
@@ -94,7 +94,7 @@ GEM
     aws-sigv4 (1.12.1)
       aws-eventstream (~> 1, >= 1.0.2)
     base64 (0.3.0)
-    bigdecimal (4.1.0)
+    bigdecimal (4.1.1)
     brakeman (8.0.4)
       racc
     builder (3.3.0)
@@ -414,7 +414,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  aws-sdk-codepipeline (~> 1.112)
+  aws-sdk-codepipeline (~> 1.113)
   brakeman (~> 8.0.4)
   bundler-audit (~> 0.9.3)
   capybara
@@ -455,12 +455,12 @@ CHECKSUMS
   addressable (2.8.7) sha256=462986537cf3735ab5f3c0f557f14155d778f4b43ea4f485a9deb9c8f7c58232
   ast (2.4.3) sha256=954615157c1d6a382bc27d690d973195e79db7f55e9765ac7c481c60bdb4d383
   aws-eventstream (1.4.0) sha256=116bf85c436200d1060811e6f5d2d40c88f65448f2125bc77ffce5121e6e183b
-  aws-partitions (1.1209.0) sha256=c60a2e305dfdd9e21ecb92f8f78befe95c31eaa984750a733b16903928922981
-  aws-sdk-codepipeline (1.112.0) sha256=5c02dddb8371559c69364ad60ddd7783a09f1b19484c40e9e6228cd2adb61ee4
-  aws-sdk-core (3.241.4) sha256=a42ccba8c24ea9800e7b6c40aa201c967458f7c460044a6eebf64fbf1226e4fd
+  aws-partitions (1.1235.0) sha256=84eb9aec5c532c7c0aa008f5ebe4cac38488fa008da20aac1ae3e49eaf3f6240
+  aws-sdk-codepipeline (1.113.0) sha256=99b92d90508673b4421e3bb7b320f76dcc46a2259d998c9dd5be4238d09363ef
+  aws-sdk-core (3.244.0) sha256=3e458c078b0c5bdee95bc370c3a483374b3224cf730c1f9f0faf849a5d9a18ea
   aws-sigv4 (1.12.1) sha256=6973ff95cb0fd0dc58ba26e90e9510a2219525d07620c8babeb70ef831826c00
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
-  bigdecimal (4.1.0) sha256=6dc07767aa3dc456ccd48e7ae70a07b474e9afd7c5bc576f80bd6da5c8dd6cae
+  bigdecimal (4.1.1) sha256=1c09efab961da45203c8316b0cdaec0ff391dfadb952dd459584b63ebf8054ca
   brakeman (8.0.4) sha256=7bf921fa9638544835df9aa7b3e720a9a72c0267f34f92135955edd80d4dcf6f
   builder (3.3.0) sha256=497918d2f9dca528fdca4b88d84e4ef4387256d984b8154e9d5d3fe5a9c8835f
   bundler-audit (0.9.3) sha256=81c8766c71e47d0d28a0f98c7eed028539f21a6ea3cd8f685eb6f42333c9b4e9
