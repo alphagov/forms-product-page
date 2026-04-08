@@ -14,7 +14,7 @@ gem "tzinfo"
 gem "tzinfo-data"
 
 # For compiling our frontend assets
-gem "vite_rails", "~> 3.0"
+gem "vite_rails", "~> 3.10"
 
 # For structured logging
 gem "lograge", "~> 0.14"
