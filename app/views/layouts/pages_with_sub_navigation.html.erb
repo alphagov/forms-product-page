@@ -1,0 +1,35 @@
+<% content_for :container do %>
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-quarter">
+        <%= render(SubNavigationComponent::View.new(
+          current_path: request.fullpath,
+          navigation_items: [
+            { text: "Get started", href: get_started_path },
+            {
+              text: "About",
+              href: about_path,
+              navigation_items: [
+                { text: "Features", href: features_path },
+                { text: "Forthcoming features", href: forthcoming_features_path },
+                { text: "How to make good forms", href: create_good_forms_path },
+                { text: "Processing form submissions", href: processing_completed_form_submissions_path },
+              ],
+            },
+          ],
+        )) %>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <main
+          class="govuk-main-wrapper govuk-main-wrapper--with-sub-navigation"
+          id="main-content"
+          role="main"
+          >
+          <%= yield %>
+        </main>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= render template: "layouts/application" %>
