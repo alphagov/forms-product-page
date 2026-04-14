@@ -1,4 +1,4 @@
-# GOV.UK Forms Product Pages [![Tests](https://github.com/alphagov/forms-product-page/actions/workflows/test.yml/badge.svg)](https://github.com/alphagov/forms-product-page/actions/workflows/test.yml)
+# GOV.UK Forms Product Pages [![Tests](https://github.com/govuk-forms/forms-product-page/actions/workflows/test.yml/badge.svg)](https://github.com/govuk-forms/forms-product-page/actions/workflows/test.yml)
 
 [GOV.UK Forms Product Pages](https://www.forms.service.gov.uk/) consist of the main product page content used for onboarding new users of GOV.UK Forms, and its supporting pages (for example, the accessibility statement and privacy policy). It is implemented as a Rails app.
 
@@ -21,7 +21,7 @@ We recommend using a version manager to install and manage these, such as:
 
 ```bash
 # 1. Clone the git repository and change directory to the new folder
-git clone git@github.com:alphagov/forms-product-page.git
+git clone git@github.com:govuk-forms/forms-product-page.git
 cd forms-product-page
 
 # 2. Run the setup script
@@ -156,7 +156,7 @@ If you want to deliberately raise an exception to test, uncomment out the trigge
 
 The forms-product-page app is containerised (see [Dockerfile](Dockerfile)) and can be deployed in the same way you'd normally deploy a containerised app.
 
-We host our apps using Amazon Web Services (AWS). You can [read about how deployments happen on our team wiki](https://github.com/alphagov/forms-team/wiki/Deploying-code-changes-AWS), if you have access.
+We host our apps using Amazon Web Services (AWS). You can [read about how deployments happen on our team wiki](https://github.com/govuk-forms/forms-team/wiki/Deploying-code-changes-AWS), if you have access.
 
 ### Logging
 
@@ -167,7 +167,7 @@ We host our apps using Amazon Web Services (AWS). You can [read about how deploy
 
 ### Updating Docker files
 
-To update the version of [Alpine Linux] and Ruby used in the Dockerfile, use the [update_app_versions.sh script in forms-deploy](https://github.com/alphagov/forms-deploy/blob/main/support/update_app_versions.sh)
+To update the version of [Alpine Linux] and Ruby used in the Dockerfile, use the [update_app_versions.sh script in forms-deploy](https://github.com/govuk-forms/forms-deploy/blob/main/support/update_app_versions.sh)
 
 [Alpine Linux]: https://www.alpinelinux.org/
 

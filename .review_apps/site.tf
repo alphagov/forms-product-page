@@ -28,8 +28,8 @@ provider "aws" {
   default_tags {
     tags = {
       Environment = "review"
-      Deployment  = "github.com/alphagov/forms-product-page/.review_apps"
-      PullRequest = "https://github.com/alphagov/forms-product-page/pull/${var.pull_request_number}"
+      Deployment  = "github.com/govuk-forms/forms-product-page/.review_apps"
+      PullRequest = "https://github.com/govuk-forms/forms-product-page/pull/${var.pull_request_number}"
     }
   }
 }
