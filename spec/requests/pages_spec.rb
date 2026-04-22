@@ -16,9 +16,11 @@ RSpec.describe "Pages", type: :request do
   end
 
   %w[get-started
+     about
      features
      forthcoming-features
      create-good-forms
+     processing-completed-form-submissions
      accessibility
      privacy
      support
