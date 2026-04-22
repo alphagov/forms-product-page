@@ -1,0 +1,4 @@
+<h2 class="govuk-heading-m"><%= t("performance_data.subtitle") %></h2>
+<%= render MetricsSummaryComponent::View.new(@performance_data) %>
+<p>last updated: <%= @last_updated %></p>
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">

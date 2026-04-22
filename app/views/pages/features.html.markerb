@@ -1,26 +1,11 @@
-<% set_page_title('How GOV.UK Forms works') %>
-<% set_page_description('The process for creating a form and the features already available.') %>
+<% set_page_title('Features') %>
+<% set_page_description('The features already available.') %>
 
-# How GOV.UK Forms works
-
-GOV.UK Forms is a new platform that makes it easy to create accessible online forms for the GOV.UK website.
-
-## Creating a form using GOV.UK Forms
-
-These are the steps to make a form with GOV.UK Forms.
-
-1. Create a form and give the form a name.
-2. Add questions to your form to collect the information you need.
-3. Provide privacy information, the email address you want completed forms to be sent to, and details about what will happen after a form is submitted.
-4. Make the form live.
-5. Publish a link to the form on GOV.UK along with any guidance people need to read before they complete the form.
-6. By default, answers for each completed form will be sent in the body of an email - to the email address you specified. You can also get the answers in a CSV or JSON file.
-
-## Features available now
+# Features
 
 GOV.UK Forms is in public beta. This means it’s fully operational and supported, but we’re regularly adding new features, focusing on the most commonly needed features first.
 
-### Create questions
+## Create questions
 
 You can create questions to ask for:
 
@@ -42,13 +27,13 @@ You can also:
 - make a question optional
 - let people add multiple responses to a single question (for example, to provide the names of all their household members)
 
-### Help people answer questions accurately and easily
+## Help people answer questions accurately and easily
 
 When people complete a form, their responses will be validated to make sure they're in the correct format. For example, a question asking for an email address will only accept an answer in the format of an email address.
 
 For questions that ask for certain types of personal information (such as a name, address or date of birth) the input field will be encoded so people can use their browser or assistive technology to answer more easily. For example, by completing the field with information saved in their browser.
 
-### Add a route to skip questions based on a specific answer
+## Add a route to skip questions based on a specific answer
 
 You can add a route to a question where people select only one option from a list. You'll specify which option the route starts from and, if someone selects that option, they'll be skipped forward to a later question, the end of the form, or an exit page to remove them from the form.
 
@@ -56,7 +41,7 @@ People who select any other answer will continue to the next question and throug
 
 For example, you could ask someone a Yes/No question about something and only ask further questions about that thing if they select 'Yes'. Anyone who answers 'No' will be skipped forward to the next question that's relevant for them.
 
-### Add a second route to create 2 'branches' of questions
+## Add a second route to create 2 'branches' of questions
 
 If you need to, you can add a second route to make people who select any other answer skip the questions you sent the first route to. This will give you 2 sets of questions - or 'branches' - based on one answer.
 
@@ -65,11 +50,11 @@ So, for example, you can:
 - ask one set of questions for people who answer 'Yes' and another set for people who answer 'No'
 - ask one set of questions if the answer is 'A' and another set if the answer is 'B', 'C' or 'D'
 
-### Add an ‘exit page’ to remove someone from a form 
+## Add an ‘exit page’ to remove someone from a form
 
 You can route someone to an ‘exit page’ based on their response to a question. You can use the exit page to tell them why they cannot use the form and explain what they should do instead.
 
-### Provide privacy information
+## Provide privacy information
 
 To comply with the UK General Data Protection Regulation (UK GDPR), you'll need to provide a link to privacy information for the people who'll enter their data into your form.
 
@@ -77,7 +62,7 @@ The privacy information needs to include your purposes for collecting the data, 
 
 A link to the privacy information will be added to the footer of your form.
 
-### Set up how you get data from completed forms
+## Set up how you get data from completed forms
 
 By default, data from each completed form is sent in the body of an email - to the address you nominate when creating the form. You can opt to:
 
@@ -87,21 +72,21 @@ By default, data from each completed form is sent in the body of an email - to t
 
 [Read more about options for processing completed form submissions](https://www.forms.service.gov.uk/processing-completed-form-submissions).
 
-### People can check their answers before they submit a form
+## People can check their answers before they submit a form
 
 People will be shown a summary page when they have answered all the questions in a form. They will be able to review and check their answers before they submit the form. This will help to avoid errors or missing information.
 
-### Add a declaration for people to agree to
+## Add a declaration for people to agree to
 
 You can add a declaration that people must confirm they understand and agree to before they submit their completed form.
 
 You might want to add a declaration if, for example, you need people to confirm they have provided accurate information, or that they understand the consequences of providing false information.
 
-### Take a payment along with a form submission
+## Take a payment along with a form submission
 
 You can set up a page at the end of a form to take instant payments using [GOV⁠.⁠UK Pay](https://www.payments.service.gov.uk/). You'll need to set up a GOV.UK Pay account and a payment service provider if you don't already have these.
 
-### Tell people what will happen next
+## Tell people what will happen next
 
 Content you add about what will happen after the form is submitted will be shown:
 
@@ -110,7 +95,7 @@ Content you add about what will happen after the form is submitted will be shown
 
 This will help to set their expectations and avoid unnecessary contact.
 
-### Provide contact information for people to get help
+## Provide contact information for people to get help
 
 You must provide at least one way for people to get help if they get stuck while filling in your form. It can be an email address, phone number or a link to online help.
 
@@ -118,23 +103,23 @@ The contact information will be displayed at the bottom of every page of the for
 
 It will also be shown in an automatic email confirming that a form's been submitted - if someone chooses to receive this.
 
-### Welsh forms
+## Welsh forms
 
 You can make a Welsh version of a form. People will be able to switch between English and Welsh as they go through the form.
 
-### Prepare changes to a live form in a draft
+## Prepare changes to a live form in a draft
 
 You can make a draft version of a live form so you can prepare changes to it. This means you can share the new draft for review before you make the changes live. It also minimises disruption to people who might be filling in the form when you update it.
 
-### See how well your forms are working
+## See how well your forms are working
 
 Use simple metrics to see how many forms were submitted and the completion rate by day.
 
-### Manage who can create and edit forms
+## Manage who can create and edit forms
 
 Your organisation can control who has access to different forms and who can make them live.
 
-### Forms use GOV.UK Design System styles, components and patterns
+## Forms use GOV.UK Design System styles, components and patterns
 
 Using these tested and accessible designs means you do not have to worry about the visual and interface design of your forms. And they'll automatically look consistent with GOV.UK.
 
@@ -145,4 +130,4 @@ When new features are released, we'll email users of the product and update this
 You can also:
 
 - <%= govuk_link_to "read about our forthcoming features", forthcoming_features_path %>
-- <%= govuk_link_to "join our mailing list to get updates", mailing_list_path %> 
+- <%= govuk_link_to "join our mailing list to get updates", mailing_list_path %>

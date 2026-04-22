@@ -1,90 +1,56 @@
-<!DOCTYPE html>
-<html lang="en" class="govuk-template">
-  <head>
-    <meta charset="utf-8" />
-    <title><%= page_title %></title>
+<% content_for :body_start do %>
+  <% if content_for?(:cookie_banner) %>
+    <%= yield :cookie_banner %>
+  <% else %>
+    <%= render partial: "application/cookie_banner" %>
+  <% end %>
+<% end %>
 
-    <%= page_description %>
-    <%= page_robots %>
+<% content_for :header do %>
+  <%= render(HeaderComponent::View.new(
+    phase_name: "Beta"
+  )) %>
 
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <%= render(ServiceNavigationComponent::View.new(
+    navigation_items: [
+      {text: "Get started", href: get_started_path},
+      # TODO: we need a better way to manage whether a service navigation link is active or not
+      {text: "About", href: about_path, active_when: [
+        features_path, forthcoming_features_path, create_good_forms_path, processing_completed_form_submissions_path,
+      ]},
+      {text: "Support", href: support_path},
+    ],
+    featured_link: {text: "Sign in", href: Settings.forms_admin.base_url}
+  )) %>
+<% end %>
 
-    <%= vite_stylesheet_tag 'application.scss' %>
-    <%= vite_client_tag %>
+<% content_for :before_content do %>
+  <%= yield :back_link %>
+<% end %>
 
-    <meta name="theme-color" content="#1d70b8">
-    <link rel="icon" sizes="48x48" href="<%= vite_asset_path "#{govuk_assets_path}/images/favicon.ico" %>">
-    <link rel="icon" sizes="any" href="<%= vite_asset_path "#{govuk_assets_path}/images/favicon.svg" %>" type="image/svg+xml">
-    <link rel="mask-icon" href="<%= vite_asset_path "#{govuk_assets_path}/images/govuk-icon-mask.svg" %>" color="#1d70b8">
-    <link rel="apple-touch-icon" href="<%= vite_asset_path "#{govuk_assets_path}/images/govuk-icon-180.png"%>">
-    <%# This manifest file and the icons it references are currently being served from the `public` folder. %>
-    <%# TODO: update the build to either generate the manifest with references to fingerprinted assets, or automatically copy the manifest and its dependencies to `public`. %>
-    <%# https://trello.com/c/zXttaPrR/3450-update-frontend-build-to-handle-manifestjson-automatically %>
-    <link rel="manifest" href="/manifest.json">
-    <meta property="og:image" content="<%= vite_asset_path "#{govuk_assets_path}/images/govuk-opengraph-image.png" %>">
-  </head>
+<% unless content_for?(:content) %>
+  <% content_for :content do %>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <%= yield %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
 
-  <body class="govuk-template__body">
-    <script>
-      document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
-    </script>
-
-    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
-
-    <% if content_for?(:cookie_banner) %>
-      <%= yield :cookie_banner %>
-    <% else %>
-      <%= render partial: "pages/cookie_banner" %>
-    <% end %>
-
-    <%= render(HeaderComponent::View.new(
-      phase_name: "Beta"
-    )) %>
-
-    <%= render(ServiceNavigationComponent::View.new(
-      navigation_items: [
-        {text: "Get started", href: get_started_path},
-        {text: "Features", href: features_path},
-        {text: "Support", href: support_path},
-      ],
-      featured_link: {text: "Sign in", href: Settings.forms_admin.base_url}
-    )) %>
-
-    <% if content_for?(:main) %>
-      <%= yield(:main) %>
-    <% else %>
-      <div class="govuk-width-container">
-
-        <%= yield :back_link %>
-
-        <main
-          class="govuk-main-wrapper"
-          id="main-content"
-          role="main"
-          >
-          <div class="govuk-grid-row">
-            <div class="govuk-grid-column-two-thirds">
-              <%= yield %>
-            </div>
-          </div>
-        </main>
+<% content_for :footer do %>
+  <%= govuk_footer meta_items_title: t("footer.meta_items_title"), meta_items: do |footer| %>
+    <%= footer.with_meta_html do %>
+      <div class="govuk-footer__meta-custom">
+        Built by the
+        <a
+          href="https://www.gov.uk/government/organisations/government-digital-service"
+          class="govuk-footer__link"
+          >Government Digital Service</a
+        >
       </div>
     <% end %>
+  <% end %>
+<% end %>
 
-    <%= govuk_footer meta_items_title: t("footer.meta_items_title"), meta_items: do |footer| %>
-      <%= footer.with_meta_html do %>
-        <div class="govuk-footer__meta-custom">
-          Built by the
-          <a
-            href="https://www.gov.uk/government/organisations/government-digital-service"
-            class="govuk-footer__link"
-            >Government Digital Service</a
-          >
-        </div>
-      <% end %>
-    <% end %>
-    <%= vite_javascript_tag 'application' %>
-  </body>
-</html>
+<%= render template: "layouts/base" %>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "pages#index"
 
+  get "/about" => "pages#about"
   get "/get-started" => "pages#get_started"
   get "/features" => "pages#features"
   get "/forthcoming-features" => "pages#forthcoming_features"

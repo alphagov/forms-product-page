@@ -1,0 +1,54 @@
+@use "pkg:govuk-frontend" as govuk;
+
+.app-sub-navigation {
+  @include govuk.govuk-font($size: 19);
+
+  @include govuk.govuk-responsive-margin(7, "top");
+  @include govuk.govuk-responsive-padding(9, "bottom");
+  padding-right: govuk.govuk-spacing(6);
+}
+
+.app-sub-navigation__item {
+  &--with-separator {
+    margin-top: govuk.govuk-spacing(3);
+    border-top: 1px solid govuk.govuk-functional-colour(border);
+    padding-top: govuk.govuk-spacing(1);
+  }
+
+  .app-sub-navigation__item {
+    &:first-child {
+      padding-top: govuk.govuk-spacing(1);
+    }
+  }
+}
+
+.app-sub-navigation__link {
+  @include govuk.govuk-link-common;
+  @include govuk.govuk-link-style-no-underline;
+  @include govuk.govuk-link-style-no-visited-state;
+
+  display: block;
+  padding: govuk.govuk-spacing(1) 0;
+  position: relative;
+  top: 5px;
+}
+
+.app-sub-navigation__item--active > .app-sub-navigation__link {
+  @include govuk.govuk-font(19, $weight: bold);
+  position: relative;
+  // These two lines stop the width of the item jumping so much
+  // between selected and unselected states
+  left: -0.5px;
+  letter-spacing: -0.01em;
+}
+
+.app-sub-navigation__item .app-sub-navigation__item .app-sub-navigation__link {
+  padding-left: govuk.govuk-spacing(3);
+  padding-right: govuk.govuk-spacing(1);
+}
+
+.app-sub-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
