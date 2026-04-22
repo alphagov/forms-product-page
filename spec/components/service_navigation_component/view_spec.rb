@@ -7,7 +7,7 @@ end
 RSpec.describe ServiceNavigationComponent::View, type: :component do
   let(:navigation_items) do
     [
-      { text: "Features", href: "/features" },
+      { text: "About", href: "/about" },
       { text: "Support", href: "/support" },
     ]
   end
@@ -61,7 +61,7 @@ RSpec.describe ServiceNavigationComponent::View, type: :component do
       end
     end
 
-    %w[features support].each do |view|
+    %w[about support].each do |view|
       context "when on the #{view} page" do
         let(:current_page) { "/#{view}" }
 
