@@ -14,10 +14,7 @@
   <%= render(ServiceNavigationComponent::View.new(
     navigation_items: [
       {text: "Get started", href: get_started_path},
-      # TODO: we need a better way to manage whether a service navigation link is active or not
-      {text: "About", href: about_path, active_when: [
-        features_path, forthcoming_features_path, create_good_forms_path, processing_completed_form_submissions_path,
-      ]},
+      {text: "About", href: about_path, active_when: about_path},
       {text: "Support", href: support_path},
     ],
     featured_link: {text: "Sign in", href: Settings.forms_admin.base_url}

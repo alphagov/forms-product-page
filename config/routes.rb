@@ -6,16 +6,23 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "pages#index"
 
-  get "/about" => "pages#about"
-  get "/get-started" => "pages#get_started"
-  get "/features" => "pages#features"
-  get "/forthcoming-features" => "pages#forthcoming_features"
-  get "/create-good-forms" => "pages#create_good_forms"
   get "/accessibility" => "pages#accessibility"
   get "/cookies" => "pages#cookies"
   get "/privacy" => "pages#privacy"
   get "/terms-of-use" => "pages#terms_of_use"
-  get "/processing-completed-form-submissions" => "pages#processing_completed_form_submissions"
+
+  get "/get-started" => "pages#get_started"
+
+  get "/about" => "pages#about"
+  get "/about/features" => "pages#features", as: :features
+  get "/about/forthcoming-features" => "pages#forthcoming_features", as: :forthcoming_features
+  get "/about/create-good-forms" => "pages#create_good_forms", as: :create_good_forms
+  get "/about/processing-completed-form-submissions" => "pages#processing_completed_form_submissions", as: :processing_completed_form_submissions
+
+  get "/features" => redirect("/about/features")
+  get "/forthcoming-features" => redirect("/about/forthcoming-features")
+  get "/create-good-forms" => redirect("/about/create-good-forms")
+  get "/processing-completed-form-submissions" => redirect("/about/processing-completed-form-submissions")
 
   get "/mailing-list" => redirect("https://service.us12.list-manage.com/subscribe?u=cb74eb9a6898b0e5870fede0a&id=451fe4c1e1")
 
