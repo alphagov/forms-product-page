@@ -35,8 +35,8 @@
 
 <p>This cookies statement applies to the:</p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>GOV.UK Forms website at https://www.forms.service.gov.uk</li>
-  <li>GOV.UK Forms platform at https://admin.forms.service.gov.uk</li>
+  <li>GOV.UK Forms website at <%= root_url.delete_suffix("/") %></li>
+  <li>GOV.UK Forms platform at <%= Settings.forms_admin.base_url %></li>
 </ul>
 
 <p>There’s a separate cookies statement for forms created using the platform.</p>
