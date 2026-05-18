@@ -1,0 +1,20 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "services": {
+    "forms-product-page": {
+      "source": {
+        "repo": "theseanything/forms-product-page",
+        "branch": "main"
+      },
+      "build": {},
+      "deploy": {
+        "ipv6EgressEnabled": false,
+        "multiRegionConfig": {
+          "europe-west4-drams3a": {
+            "numReplicas": 1
+          }
+        }
+      }
+    }
+  }
+}
