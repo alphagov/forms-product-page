@@ -1,0 +1,173 @@
+<% set_page_title('Data protection and security') %>
+<% set_page_description('Data protection and security') %>
+
+# Data protection and security
+
+## Data processing, hosting and infrastructure
+
+GOV.UK Forms collects the data people enter into forms your organisation
+publishes using the GOV.UK Forms platform, then delivers it to your
+organisation as form submissions. GDS (part of the Department for
+Science, Innovation and Technology) is a data processor for form
+submission data. Your organisation is the data controller for this data.
+
+We also collect data for form creators so we can manage their access to
+GOV.UK Forms, provide support and operate the platform. GDS is the data
+controller for this data.
+
+### Form submission data
+
+Form submission data is processed in data centres in the UK.
+
+As part of our infrastructure monitoring and altering process, we log
+technical data - including the IP address and user agent of people
+filling in forms. This data does not include any answers given to form
+questions. Logs are transferred to our provider's cloud service, hosted
+in the EU.
+
+### Form creator data
+
+We use a third party helpdesk platform to manage support requests from
+form creators and other users of the GOV.UK Forms platform. So we can
+respond, we collect personal data from the person making the support
+request - for example, name and email address. This data is processed on
+infrastructure hosted in the EU.
+
+We use a third party authentication platform to authenticate form
+creators when they sign in to the GOV.UK Forms platform. This involves
+processing the form creator's email address on infrastructure hosted in
+the UK.
+
+## Encryption of data
+
+GOV.UK Forms enforces HTTPS for all web traffic to end users. We use TLS
+when sending and receiving data from sub-processors and between internal
+components of GOV.UK Forms.
+
+We assume that any mail server used by your organisation to receive
+submissions meets the [government secure email
+policy](https://www.gov.uk/guidance/securing-government-email),
+including:
+
+- supporting [Transport Layer Security Version
+  1.2](https://www.gov.uk/government/publications/email-security-standards/transport-layer-security-tls)
+  (TLS 1.2) or later
+- [publishing a Mail Transfer Agent Strict Transport Security (MTA-STS)
+  policy](https://www.security.gov.uk/guidance/email-guidance/mta-sts/)
+  for all of your domains that receive email
+- implementing spam and malware filtering
+- enforcing DMARC on inbound email
+- setting up DMARC and TLS reporting (TLS-RPT) and reviewing the data
+  regularly
+
+We use opportunistic TLS to deliver form submissions to a configured
+email address. This means we always attempt a secure connection with the
+receiving mail server, using TLS 1.3 by default and falling back to
+earlier versions if necessary. If no secure connection can be
+established, the submission email will be sent unencrypted.
+
+### Data at rest
+
+All data stored by GOV.UK Forms, including backups, are encrypted at
+rest.
+
+## Submission data retention
+
+Form submission data is retained for up to 30 days in case of failed
+delivery, then automatically deleted.
+
+## Authentication and access control
+
+Form creators sign in to GOV.UK Forms using a one-time password sent to
+their public sector email address.
+
+Once signed in, form creators can see forms belonging to their
+organisation. Which of the organisation's forms are visible depends on
+the form creator's permissions. We provide logical separation at the
+application layer between organisations and forms.
+
+Form creators can only nominate official public sector email addresses
+to receive form submissions. You may want to implement rules on your
+mail server to restrict who or what can send emails to the mailbox. For
+example, you could configure it to only accept submission emails sent
+from GOV.UK Forms.
+
+Forms published on GOV.UK Forms are unauthenticated. While a person is
+filling in a form, their answers are held in a browser session
+accessible to anyone using that browser. Once the form is submitted, the
+answers are no longer accessible to the person who submitted the form.
+
+## Application security and development
+
+### Vulnerability scanning
+
+We check third party dependencies for known vulnerabilities and use
+static code analysis on our own code.
+
+### Independent testing
+
+An independent CHECK-approved company conducts a penetration test of the
+system once a year.
+
+### Logging and monitoring
+
+We collect event logs from multiple sources and use a central service to
+protectively monitor these for indicators of attacks, misuse and
+malfunction.
+
+## Protection against malware
+
+Form creators can ask users to upload files (for example, to provide
+evidence of something). Before they're submitted and delivered to you,
+these files are uploaded to an S3 bucket and scanned by [AWS GuardDuty
+Malware Protection for
+S3](https://docs.aws.amazon.com/guardduty/latest/ug/how-malware-protection-for-s3-gdu-works.html).
+Forms can only be submitted when all files are labelled
+“NO_THREATS_FOUND”.
+
+However, we do not guarantee that form submissions data (including
+uploaded files) are safe. It's your organisation's responsibility to
+assess risks and ensure that you're satisfied before making any forms
+live on GOV.UK Forms.
+
+## Availability and resilience
+
+GOV.UK Forms infrastructure is designed with redundancy across multiple
+AWS availability zones. We use resilient managed datastores including
+Amazon S3, RDS Aurora and ElastiCache. Static assets are served through
+a CDN. The infrastructure can scale to accommodate traffic spikes and
+growth in use of the platform.
+
+We use automated monitoring to detect and alert us to potential
+incidents and reliability issues - including service availability,
+latency and correctness of the service.
+
+## Vulnerability and security disclosure
+
+Any vulnerability or security issues should be responsibly disclosed
+through the [vulnerability reporting
+service](https://vulnerability-reporting.service.security.gov.uk/).
+
+## Governance
+
+GOV.UK Forms has a Senior Responsible Owner (SRO) who is a senior civil
+servant accountable for all aspects of its governance.
+
+Our Information Security team conducts risk assessments, reviews
+alignment with departmental and government security policies, arranges
+assurance activities and reports findings to the SRO and the Chief
+Information Security Officer. Where necessary, risk management decisions
+are escalated to the Senior Leadership Team.
+
+Risk treatment activities are overseen by the Information Security team
+through a security working group.
+
+Our Information Security team oversees compliance with data protection
+legislation. We check compliance with public sector accessibility
+requirements through internal reviews and periodic external audits.
+
+## What to do if you have a question
+
+If your organisation is using - or considering using - GOV.UK Forms,
+<%= govuk_link_to "submit a support request", "https://www.forms.service.gov.uk/support" %>
+with any questions.
