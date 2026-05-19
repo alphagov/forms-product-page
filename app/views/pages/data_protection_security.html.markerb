@@ -49,7 +49,7 @@ submissions meets the [government secure email
 policy](https://www.gov.uk/guidance/securing-government-email),
 including:
 
-- supporting [Transport Layer Security Version
+- supporting [Transport Layer Security version
   1.2](https://www.gov.uk/government/publications/email-security-standards/transport-layer-security-tls)
   (TLS 1.2) or later
 - [publishing a Mail Transfer Agent Strict Transport Security (MTA-STS)
