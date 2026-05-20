@@ -26,6 +26,7 @@ RSpec.describe "Pages", type: :request do
     about/forthcoming-features
     about/create-good-forms
     about/processing-completed-form-submissions
+    about/data-protection-security
   ].each do |page|
     describe "GET /#{page}" do
       it "returns ok" do

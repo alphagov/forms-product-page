@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get "/about/forthcoming-features" => "pages#forthcoming_features", as: :forthcoming_features
   get "/about/create-good-forms" => "pages#create_good_forms", as: :create_good_forms
   get "/about/processing-completed-form-submissions" => "pages#processing_completed_form_submissions", as: :processing_completed_form_submissions
+  get "/about/data-protection-security" => "pages#data_protection_security", as: :data_protection_security
 
   get "/features" => redirect("/about/features")
   get "/forthcoming-features" => redirect("/about/forthcoming-features")
